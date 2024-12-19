@@ -36,9 +36,11 @@ namespace GUI
             {
                 MessageBox.Show("OTP chính xác! Vui lòng đặt lại mật khẩu mới.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Chuyển đến form đặt lại mật khẩu
-                ResetPassword resetPasswordForm = new ResetPassword(userEmail, taiKhoanBUS);
-                resetPasswordForm.ShowDialog();
+                this.Hide(); // Ẩn form hiện tại trước khi mở form mới
+                using (ResetPassword resetPasswordForm = new ResetPassword(userEmail, taiKhoanBUS))
+                {
+                    resetPasswordForm.ShowDialog();
+                }
                 this.Close();
             }
             else
@@ -56,6 +58,18 @@ namespace GUI
                 {
                     MessageBox.Show($"OTP không chính xác! Bạn còn {MaxAttempts - attemptCount} lần thử.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void ConfirmOtp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Gọi sự kiện Click của button
+                btnXacnhan.PerformClick();
+                // Ngăn Enter thực hiện hành động mặc định khác
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
     }

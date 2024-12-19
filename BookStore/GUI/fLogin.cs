@@ -144,5 +144,10 @@ namespace GUI
             txtTaikhoan.Clear();
             txtMatkhau.Clear();
         }
+
+        private void txtTaikhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

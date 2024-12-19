@@ -85,6 +85,7 @@
             // 
             // txtTaikhoan
             // 
+            this.txtTaikhoan.BorderRadius = 8;
             this.txtTaikhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTaikhoan.DefaultText = "";
             this.txtTaikhoan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -101,9 +102,11 @@
             this.txtTaikhoan.SelectedText = "";
             this.txtTaikhoan.Size = new System.Drawing.Size(310, 36);
             this.txtTaikhoan.TabIndex = 6;
+            this.txtTaikhoan.TextChanged += new System.EventHandler(this.txtTaikhoan_TextChanged);
             // 
             // txtMatkhau
             // 
+            this.txtMatkhau.BorderRadius = 8;
             this.txtMatkhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatkhau.DefaultText = "";
             this.txtMatkhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -141,12 +144,13 @@
             // btnQuenmatkhau
             // 
             this.btnQuenmatkhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnQuenmatkhau.BorderRadius = 8;
             this.btnQuenmatkhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnQuenmatkhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnQuenmatkhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnQuenmatkhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnQuenmatkhau.FillColor = System.Drawing.Color.White;
-            this.btnQuenmatkhau.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuenmatkhau.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.btnQuenmatkhau.ForeColor = System.Drawing.Color.Black;
             this.btnQuenmatkhau.Location = new System.Drawing.Point(621, 295);
             this.btnQuenmatkhau.Name = "btnQuenmatkhau";

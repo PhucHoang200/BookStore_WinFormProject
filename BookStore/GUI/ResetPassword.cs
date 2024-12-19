@@ -63,5 +63,17 @@ namespace GUI
                 return Convert.ToBase64String(hashedBytes);
             }
         }
+
+        private void ResetPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Gọi sự kiện Click của button
+                btnXacNhan.PerformClick();
+                // Ngăn Enter thực hiện hành động mặc định khác
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
