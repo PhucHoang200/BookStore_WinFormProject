@@ -32,13 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimkiemtacgia = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemtacgia = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.datagridviewTacgia = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewTacgia)).BeginInit();
@@ -51,9 +49,27 @@
             this.guna2Panel1.Controls.Add(this.txtTimkiemtacgia);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(816, 76);
+            this.guna2Panel1.Size = new System.Drawing.Size(1088, 94);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BorderRadius = 8;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Location = new System.Drawing.Point(611, 27);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(238, 44);
+            this.btnRefesh.TabIndex = 2;
+            this.btnRefesh.Text = "Làm mới";
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimkiemtacgia
             // 
@@ -64,11 +80,13 @@
             this.btnTimkiemtacgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTimkiemtacgia.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiemtacgia.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemtacgia.Location = new System.Drawing.Point(245, 22);
+            this.btnTimkiemtacgia.Location = new System.Drawing.Point(327, 27);
+            this.btnTimkiemtacgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTimkiemtacgia.Name = "btnTimkiemtacgia";
-            this.btnTimkiemtacgia.Size = new System.Drawing.Size(192, 36);
+            this.btnTimkiemtacgia.Size = new System.Drawing.Size(215, 44);
             this.btnTimkiemtacgia.TabIndex = 1;
-            this.btnTimkiemtacgia.Text = "Tìm kiếm tác giả";
+            this.btnTimkiemtacgia.Text = "Tìm kiếm";
+            this.btnTimkiemtacgia.Click += new System.EventHandler(this.btnTimkiemtacgia_Click);
             // 
             // txtTimkiemtacgia
             // 
@@ -82,22 +100,23 @@
             this.txtTimkiemtacgia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiemtacgia.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtTimkiemtacgia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimkiemtacgia.Location = new System.Drawing.Point(25, 22);
-            this.txtTimkiemtacgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimkiemtacgia.Location = new System.Drawing.Point(33, 27);
+            this.txtTimkiemtacgia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTimkiemtacgia.Name = "txtTimkiemtacgia";
             this.txtTimkiemtacgia.PasswordChar = '\0';
             this.txtTimkiemtacgia.PlaceholderText = "Nhập tên tác giả";
             this.txtTimkiemtacgia.SelectedText = "";
-            this.txtTimkiemtacgia.Size = new System.Drawing.Size(195, 36);
+            this.txtTimkiemtacgia.Size = new System.Drawing.Size(260, 44);
             this.txtTimkiemtacgia.TabIndex = 0;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.datagridviewTacgia);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 76);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 94);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(816, 401);
+            this.guna2Panel2.Size = new System.Drawing.Size(1088, 493);
             this.guna2Panel2.TabIndex = 1;
             // 
             // datagridviewTacgia
@@ -114,9 +133,6 @@
             this.datagridviewTacgia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.datagridviewTacgia.ColumnHeadersHeight = 35;
             this.datagridviewTacgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.datagridviewTacgia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,9 +144,11 @@
             this.datagridviewTacgia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridviewTacgia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewTacgia.Location = new System.Drawing.Point(0, 0);
+            this.datagridviewTacgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datagridviewTacgia.Name = "datagridviewTacgia";
             this.datagridviewTacgia.RowHeadersVisible = false;
-            this.datagridviewTacgia.Size = new System.Drawing.Size(816, 401);
+            this.datagridviewTacgia.RowHeadersWidth = 51;
+            this.datagridviewTacgia.Size = new System.Drawing.Size(1088, 493);
             this.datagridviewTacgia.TabIndex = 0;
             this.datagridviewTacgia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewTacgia.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -154,40 +172,16 @@
             this.datagridviewTacgia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewTacgia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã tác giả";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên tác giả";
-            this.Column2.Name = "Column2";
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BorderRadius = 8;
-            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(462, 22);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(100, 36);
-            this.btnRefesh.TabIndex = 2;
-            this.btnRefesh.Text = "Refesh";
-            // 
             // UC_TacgiasachEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_TacgiasachEmployee";
-            this.Size = new System.Drawing.Size(816, 477);
+            this.Size = new System.Drawing.Size(1088, 587);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewTacgia)).EndInit();
@@ -200,8 +194,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewTacgia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private Guna.UI2.WinForms.Guna2Button btnTimkiemtacgia;
         private Guna.UI2.WinForms.Guna2TextBox txtTimkiemtacgia;
         private Guna.UI2.WinForms.Guna2Button btnRefesh;

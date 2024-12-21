@@ -55,8 +55,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KhachHangDAL.cs" />
+    <Compile Include="NhaXuatBanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SachDAL.cs" />
+    <Compile Include="TacGiaDAL.cs" />
     <Compile Include="TaiKhoanDAL.cs" />
+    <Compile Include="TheLoaiDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

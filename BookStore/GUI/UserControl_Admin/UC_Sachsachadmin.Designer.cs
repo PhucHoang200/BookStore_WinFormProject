@@ -28,22 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTimkiemsach = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemsach = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.datagridviewSach = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewSach)).BeginInit();
@@ -56,8 +49,9 @@
             this.guna2Panel1.Controls.Add(this.txtTimkiemsach);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(816, 76);
+            this.guna2Panel1.Size = new System.Drawing.Size(1088, 94);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnTimkiemsach
@@ -69,11 +63,13 @@
             this.btnTimkiemsach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTimkiemsach.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnTimkiemsach.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemsach.Location = new System.Drawing.Point(245, 22);
+            this.btnTimkiemsach.Location = new System.Drawing.Point(327, 27);
+            this.btnTimkiemsach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTimkiemsach.Name = "btnTimkiemsach";
-            this.btnTimkiemsach.Size = new System.Drawing.Size(160, 36);
+            this.btnTimkiemsach.Size = new System.Drawing.Size(201, 44);
             this.btnTimkiemsach.TabIndex = 5;
-            this.btnTimkiemsach.Text = "Tìm kiếm sách";
+            this.btnTimkiemsach.Text = "Tìm kiếm";
+            this.btnTimkiemsach.Click += new System.EventHandler(this.btnTimkiemsach_Click);
             // 
             // btnRefesh
             // 
@@ -84,11 +80,13 @@
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(430, 22);
+            this.btnRefesh.Location = new System.Drawing.Point(573, 27);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(100, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(190, 44);
             this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Refesh";
+            this.btnRefesh.Text = "Làm mới";
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // txtTimkiemsach
             // 
@@ -102,60 +100,55 @@
             this.txtTimkiemsach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiemsach.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtTimkiemsach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimkiemsach.Location = new System.Drawing.Point(25, 22);
-            this.txtTimkiemsach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimkiemsach.Location = new System.Drawing.Point(33, 27);
+            this.txtTimkiemsach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTimkiemsach.Name = "txtTimkiemsach";
             this.txtTimkiemsach.PasswordChar = '\0';
             this.txtTimkiemsach.PlaceholderText = "Nhập thông tin tìm kiếm";
             this.txtTimkiemsach.SelectedText = "";
-            this.txtTimkiemsach.Size = new System.Drawing.Size(206, 36);
+            this.txtTimkiemsach.Size = new System.Drawing.Size(275, 44);
             this.txtTimkiemsach.TabIndex = 0;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.datagridviewSach);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 76);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 94);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(816, 401);
+            this.guna2Panel2.Size = new System.Drawing.Size(1088, 493);
             this.guna2Panel2.TabIndex = 1;
             // 
             // datagridviewSach
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagridviewSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.datagridviewSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.datagridviewSach.ColumnHeadersHeight = 35;
             this.datagridviewSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.datagridviewSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewSach.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridviewSach.DefaultCellStyle = dataGridViewCellStyle9;
             this.datagridviewSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridviewSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewSach.Location = new System.Drawing.Point(0, 0);
+            this.datagridviewSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datagridviewSach.Name = "datagridviewSach";
             this.datagridviewSach.RowHeadersVisible = false;
-            this.datagridviewSach.Size = new System.Drawing.Size(816, 401);
+            this.datagridviewSach.RowHeadersWidth = 51;
+            this.datagridviewSach.Size = new System.Drawing.Size(1088, 493);
             this.datagridviewSach.TabIndex = 0;
             this.datagridviewSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -179,50 +172,16 @@
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã sách";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên sách";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tác giả";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Thể loại";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Nhà xuất bản";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Năm xuất bản";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Số lượng tồn";
-            this.Column7.Name = "Column7";
-            // 
             // UC_Sachsachadmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_Sachsachadmin";
-            this.Size = new System.Drawing.Size(816, 477);
+            this.Size = new System.Drawing.Size(1088, 587);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewSach)).EndInit();
@@ -238,12 +197,5 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewSach;
         private Guna.UI2.WinForms.Guna2Button btnTimkiemsach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
