@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelSide = new Guna.UI2.WinForms.Guna2Panel();
             this.btnThongke = new Guna.UI2.WinForms.Guna2Button();
@@ -39,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelControls = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -67,7 +69,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(215, 604);
+            this.guna2Panel1.Size = new System.Drawing.Size(215, 700);
             this.guna2Panel1.TabIndex = 0;
             // 
             // panelSide
@@ -197,8 +199,20 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(215, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(873, 53);
+            this.guna2Panel2.Size = new System.Drawing.Size(985, 53);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.CustomClick = true;
+            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(924, 3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(58, 47);
+            this.guna2ControlBox1.TabIndex = 2;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -206,7 +220,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.HighlightText;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(758, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(870, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(55, 47);
             this.guna2ControlBox2.TabIndex = 1;
@@ -221,7 +235,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(215, 53);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(873, 87);
+            this.guna2Panel3.Size = new System.Drawing.Size(985, 87);
             this.guna2Panel3.TabIndex = 2;
             // 
             // label5
@@ -270,33 +284,27 @@
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControls.Location = new System.Drawing.Point(215, 140);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(873, 464);
+            this.panelControls.Size = new System.Drawing.Size(985, 560);
             this.panelControls.TabIndex = 3;
             // 
-            // guna2ControlBox1
+            // guna2Elipse1
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.CustomClick = true;
-            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(812, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(58, 47);
-            this.guna2ControlBox1.TabIndex = 2;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // fDashboardEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 604);
+            this.ClientSize = new System.Drawing.Size(1200, 700);
             this.ControlBox = false;
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fDashboardEmployee";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
@@ -329,5 +337,6 @@
         private Guna.UI2.WinForms.Guna2Button btnKhachhang;
         private Guna.UI2.WinForms.Guna2Button btnDonhang;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

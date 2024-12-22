@@ -44,7 +44,7 @@
             this.btnLoaisach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoaisach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLoaisach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoaisach.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLoaisach.FillColor = System.Drawing.SystemColors.HighlightText;
             this.btnLoaisach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaisach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnLoaisach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;

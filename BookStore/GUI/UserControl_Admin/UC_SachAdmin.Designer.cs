@@ -58,7 +58,7 @@
             this.btnSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSach.FillColor = System.Drawing.Color.Empty;
+            this.btnSach.FillColor = System.Drawing.SystemColors.HighlightText;
             this.btnSach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.btnSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnSach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
@@ -78,7 +78,7 @@
             this.btnNhaxuatban.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNhaxuatban.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnNhaxuatban.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhaxuatban.FillColor = System.Drawing.Color.Empty;
+            this.btnNhaxuatban.FillColor = System.Drawing.SystemColors.HighlightText;
             this.btnNhaxuatban.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.btnNhaxuatban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnNhaxuatban.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
@@ -97,7 +97,7 @@
             this.btnTacgia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTacgia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTacgia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTacgia.FillColor = System.Drawing.Color.Empty;
+            this.btnTacgia.FillColor = System.Drawing.SystemColors.HighlightText;
             this.btnTacgia.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.btnTacgia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnTacgia.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
@@ -117,7 +117,7 @@
             this.btnLoaisach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoaisach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLoaisach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoaisach.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLoaisach.FillColor = System.Drawing.SystemColors.HighlightText;
             this.btnLoaisach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.btnLoaisach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnLoaisach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
