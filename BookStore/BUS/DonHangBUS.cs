@@ -19,17 +19,28 @@ namespace BUS
             _dal = new DonHangDAL();
         }
 
-        public void LuuKhachHang(string hoTen, string email, string sdt, string diaChi)
+        public int LuuKhachHangVaLayMa(string hoTen, string email, string sdt, string diaChi)
         {
-            var kh = new KhachHang
+            return _dal.LuuKhachHangVaLayMa(new KhachHang
             {
                 HoTenKH = hoTen,
                 Email = email,
                 SoDienThoai = sdt,
                 DiaChi = diaChi
-            };
-            _dal.LuuKhachHang(kh);
+            });
         }
+
+        public void CapNhatKhachHang(int maKH, string hoTen, string email, string sdt, string diaChi)
+        {
+            _dal.CapNhatKhachHang(maKH, new KhachHang
+            {
+                HoTenKH = hoTen,
+                Email = email,
+                SoDienThoai = sdt,
+                DiaChi = diaChi
+            });
+        }
+
 
         public void ThemChiTietDonHang(Guna2DataGridView dgv, int maSach, int soLuong, decimal donGia)
         {
@@ -51,21 +62,20 @@ namespace BUS
                 Convert.ToInt32(row.Cells["Column12"].Value));
         }
 
-        public void LuuDonHang(string maNV, string maKH, decimal tongTien, List<CT_DonHang> chiTietDonHangs)
+        public void LuuDonHang(DonHang donHang, List<CT_DonHang> chiTietDonHangs)
         {
-            var donHang = new DonHang
-            {
-                IdKhachHang = int.Parse(maKH),
-                TongTienBan = tongTien,
-                NgayMuaHang = DateTime.Now
-            };
-
             _dal.LuuDonHang(donHang, chiTietDonHangs);
         }
+
 
         public List<Sach> LayDanhSachSach()
         {
             return _dal.LayDanhSachSach();
+        }
+
+        public List<Sach> TimKiemSach(string tuKhoa)
+        {
+            return _dal.LayDanhSachSach(tuKhoa);
         }
 
     }

@@ -14,7 +14,7 @@ namespace BUS
     {
         private TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();
 
-        public bool CheckLogin(string email, string password, out string role)
+        public bool CheckLogin(string email, string password, out string role, out int idTaiKhoan)
         {
             // Lấy thông tin tài khoản từ DAL
             TaiKhoan taiKhoan = taiKhoanDAL.GetTaiKhoanByEmail(email);
@@ -22,26 +22,29 @@ namespace BUS
             if (taiKhoan == null)
             {
                 role = null;
+                idTaiKhoan = 0;
                 return false; // Không tìm thấy tài khoản
             }
 
-            // Kiểm tra mật khẩu (Giả sử đã băm mật khẩu và so sánh)
+            // Kiểm tra mật khẩu
             byte[] dbHash = taiKhoan.MatKhau;
             byte[] userHash = HashPassword(password);
             if (!CompareHashes(dbHash, userHash))
             {
                 role = null;
+                idTaiKhoan = 0;
                 return false; // Mật khẩu sai
             }
 
-            // Kiểm tra vai trò
-            role = taiKhoan.VaiTro.TenVaiTro; // Giả sử thuộc tính NhomNguoiDung lưu thông tin vai trò
+            // Lấy vai trò và Id tài khoản
+            role = taiKhoan.VaiTro.TenVaiTro; // Giả sử thuộc tính VaiTro lưu thông tin vai trò
+            idTaiKhoan = taiKhoan.Id; // Lấy Id tài khoản
             return true;
-        }        
+        }
 
         public bool CheckEmailExist(string email)
         {
-            using (var context = new BookStoreDBEntities()) // Thay 'YourDbContext' bằng tên context của bạn
+            using (var context = new BookStoreDBEntities()) 
             {
                 // Kiểm tra xem email có tồn tại trong bảng TaiKhoan không
                 return context.TaiKhoans.Any(tk => tk.Email == email);
@@ -93,10 +96,11 @@ namespace BUS
             return true;
         }
 
-        public string GetTenNhanVienByEmail(string email)
+        public int GetIdNhanVienByEmail(string email)
         {
-            return taiKhoanDAL.GetTenNhanVienByEmail(email);
+            return taiKhoanDAL.GetIdNhanVienByEmail(email);
         }
+
 
     }
 }

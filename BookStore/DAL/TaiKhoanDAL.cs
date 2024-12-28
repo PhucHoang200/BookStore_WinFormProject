@@ -17,12 +17,13 @@ namespace DAL
             return db.TaiKhoans.FirstOrDefault(x => x.Email == email);
         }
 
-        public string GetTenNhanVienByEmail(string email)
+        public int GetIdNhanVienByEmail(string email)
         {
-            var taiKhoan = db.TaiKhoans.Include(tk => tk.NhanViens) // Bao gồm thông tin nhân viên
-                                .FirstOrDefault(tk => tk.Email == email);
-            return taiKhoan?.NhanViens?.FirstOrDefault()?.HoTenNV; // Trả về tên nhân viên hoặc null
+            var taiKhoan = db.TaiKhoans.Include(tk => tk.NhanViens)
+                                       .FirstOrDefault(tk => tk.Email == email);
+            return taiKhoan?.NhanViens?.FirstOrDefault()?.Id ?? 0; // Trả về Id nhân viên hoặc 0 nếu không tìm thấy
         }
+
 
     }
 }

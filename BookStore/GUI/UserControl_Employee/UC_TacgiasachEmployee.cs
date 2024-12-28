@@ -14,7 +14,7 @@ namespace GUI.UserControl_Employee
     public partial class UC_TacgiasachEmployee : UserControl
     {
         TacGiaBUS tacGiaBUS = new TacGiaBUS();
-        private string Id;
+        
         public UC_TacgiasachEmployee()
         {
             InitializeComponent();

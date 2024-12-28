@@ -17,12 +17,12 @@ namespace DTO
         public int Id { get; set; }
         public int IdDonHang { get; set; }
         public int IdSach { get; set; }
-        public int IdNhanVien { get; set; }
+        public int IdTaiKhoan { get; set; }
         public decimal DonGiaBan { get; set; }
         public int SoLuongBan { get; set; }
     
         public virtual DonHang DonHang { get; set; }
-        public virtual NhanVien NhanVien { get; set; }
         public virtual Sach Sach { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

@@ -14,15 +14,13 @@ namespace GUI
 {
     public partial class fDashboardEmployee : Form
     {
-        private EmployeeViewModel _viewModel;
+        private LoginViewModel currentUser;
 
-
-        public fDashboardEmployee(EmployeeViewModel viewModel)
+        // Constructor thêm mới
+        public fDashboardEmployee(LoginViewModel user)
         {
             InitializeComponent();
-            _viewModel = viewModel;           
-            fDashboardEmployee_Load(this, EventArgs.Empty);
-
+            currentUser = user;
         }
 
         public fDashboardEmployee()

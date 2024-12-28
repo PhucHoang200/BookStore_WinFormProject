@@ -14,7 +14,7 @@ namespace GUI.UserControl_Employee
     public partial class UC_NxbsachEmployee : UserControl
     {
         NhaXuatBanBUS nhaXuatBanBUS = new NhaXuatBanBUS();
-        private string Id;
+        
         public UC_NxbsachEmployee()
         {
             InitializeComponent();

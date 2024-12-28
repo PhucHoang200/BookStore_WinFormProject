@@ -14,19 +14,13 @@ namespace DTO
     
     public partial class NhanVien
     {
-        public NhanVien()
-        {
-            this.CT_DonHang = new HashSet<CT_DonHang>();
-        }
-    
         public int Id { get; set; }
         public string HoTenNV { get; set; }
         public string SoDienThoai { get; set; }
         public Nullable<System.DateTime> NgayBatDauNhanViec { get; set; }
         public Nullable<decimal> Luong { get; set; }
-        public int IdTaiKhoan { get; set; }
+        public Nullable<int> IdTaiKhoan { get; set; }
     
-        public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

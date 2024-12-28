@@ -14,7 +14,7 @@ namespace GUI.UserControl_Employee
     public partial class UC_TheloaisachEmployee : UserControl
     {
         TheLoaiBUS theLoaiBUS = new TheLoaiBUS();
-        private string Id;
+        
         public UC_TheloaisachEmployee()
         {
             InitializeComponent();

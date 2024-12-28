@@ -17,11 +17,13 @@ namespace DTO
         public int Id { get; set; }
         public int MaPhieuNhap { get; set; }
         public int MaSach { get; set; }
+        public int MaNCC { get; set; }
         public int SoLuongNhap { get; set; }
         public decimal DonGiaNhap { get; set; }
         public decimal DonGiaBan { get; set; }
         public Nullable<decimal> ThanhTien { get; set; }
     
+        public virtual NhaCungCap NhaCungCap { get; set; }
         public virtual PhieuNhapSach PhieuNhapSach { get; set; }
         public virtual Sach Sach { get; set; }
     }

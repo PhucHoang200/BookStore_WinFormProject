@@ -81,6 +81,7 @@
     <Compile Include="Kho.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoginViewModel.cs" />
     <Compile Include="NhaCungCap.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>

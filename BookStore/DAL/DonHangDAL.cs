@@ -17,11 +17,26 @@ namespace DAL
             _context = new BookStoreDBEntities();
         }
 
-        public void LuuKhachHang(KhachHang khachHang)
+        public int LuuKhachHangVaLayMa(KhachHang khachHang)
         {
             _context.KhachHangs.Add(khachHang);
             _context.SaveChanges();
+            return khachHang.Id; // Trả về mã khách hàng mới tạo
         }
+
+        public void CapNhatKhachHang(int maKH, KhachHang khachHangMoi)
+        {
+            var khachHang = _context.KhachHangs.FirstOrDefault(k => k.Id == maKH);
+            if (khachHang != null)
+            {
+                khachHang.HoTenKH = khachHangMoi.HoTenKH;
+                khachHang.Email = khachHangMoi.Email;
+                khachHang.SoDienThoai = khachHangMoi.SoDienThoai;
+                khachHang.DiaChi = khachHangMoi.DiaChi;
+                _context.SaveChanges();
+            }
+        }
+
 
         public int LayMaKHTheoEmail(string email)
         {
@@ -30,24 +45,19 @@ namespace DAL
 
         public void LuuDonHang(DonHang donHang, List<CT_DonHang> chiTietDonHangs)
         {
+            // Lưu đơn hàng
             _context.DonHangs.Add(donHang);
             _context.SaveChanges();
 
-            foreach (var ctdh in chiTietDonHangs)
+            // Lưu chi tiết đơn hàng
+            foreach (var ct in chiTietDonHangs)
             {
-                ctdh.IdDonHang = donHang.Id;
-                _context.CT_DonHang.Add(ctdh);
-
-                // Cập nhật tồn kho
-                var kho = _context.Khoes.FirstOrDefault(k => k.IdSach == ctdh.IdSach);
-                if (kho != null)
-                {
-                    kho.SoLuongTon -= ctdh.SoLuongBan;
-                }
+                ct.IdDonHang = donHang.Id; // Gán IdDonHang từ đơn hàng vừa lưu
+                _context.CT_DonHang.Add(ct);
             }
-
             _context.SaveChanges();
         }
+
 
         public void CapNhatSachTrongKho(int idSach, int soLuong)
         {
@@ -60,40 +70,21 @@ namespace DAL
         }
 
         // Lấy danh sách sách từ cơ sở dữ liệu
-        public List<Sach> LayDanhSachSach(string tenSach = "", int? namXuatBan = null, int? idNXB = null)
+        public List<Sach> LayDanhSachSach(string tuKhoa = null)
         {
-            var query = _context.Saches.AsQueryable();
+            var query = _context.Saches.Include(s => s.TacGias).Include(s => s.TheLoais).Include(s => s.Khoes).AsQueryable();
 
-            // Lọc theo tên sách nếu có
-            if (!string.IsNullOrEmpty(tenSach))
+            if (!string.IsNullOrWhiteSpace(tuKhoa))
             {
-                query = query.Where(s => s.TenSach.Contains(tenSach));
+                query = query.Where(s => s.TenSach.Contains(tuKhoa) ||
+                                         s.TacGias.Any(tg => tg.TenTG.Contains(tuKhoa)) ||
+                                         s.TheLoais.Any(tl => tl.TenTL.Contains(tuKhoa)) ||
+                                         s.NhaXuatBan.TenNXB.Contains(tuKhoa));
             }
 
-            // Lọc theo năm xuất bản nếu có
-            if (namXuatBan.HasValue)
-            {
-                query = query.Where(s => s.NamXuatBan == namXuatBan.Value);
-            }
-
-            // Lọc theo IdNXB (Nhà xuất bản) nếu có
-            if (idNXB.HasValue)
-            {
-                query = query.Where(s => s.IdNXB == idNXB.Value);
-            }
-
-            // Dùng Include để lấy các quan hệ liên quan đến sách
-            query = query.Include(s => s.CT_DonHang)           // Liên kết với bảng CT_DonHang
-                         .Include(s => s.CT_PhieuNhap)         // Liên kết với bảng CT_PhieuNhap
-                         .Include(s => s.Khoes)                // Liên kết với bảng Kho
-                         .Include(s => s.NhaXuatBan)           // Liên kết với bảng NhaXuatBan
-                         .Include(s => s.NhaCungCaps)          // Liên kết với bảng NhaCungCap
-                         .Include(s => s.TacGias)              // Liên kết với bảng TacGia
-                         .Include(s => s.TheLoais);            // Liên kết với bảng TheLoai
-
-            // Trả về danh sách sách sau khi đã lọc và bao gồm thông tin các quan hệ
             return query.ToList();
         }
+
 
 
     }

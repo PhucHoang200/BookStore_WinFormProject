@@ -16,6 +16,7 @@ namespace DTO
     {
         public TaiKhoan()
         {
+            this.CT_DonHang = new HashSet<CT_DonHang>();
             this.NhanViens = new HashSet<NhanVien>();
         }
     
@@ -24,8 +25,8 @@ namespace DTO
         public byte[] MatKhau { get; set; }
         public int IdVaiTro { get; set; }
     
+        public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
         public virtual ICollection<NhanVien> NhanViens { get; set; }
         public virtual VaiTro VaiTro { get; set; }
-
     }
 }

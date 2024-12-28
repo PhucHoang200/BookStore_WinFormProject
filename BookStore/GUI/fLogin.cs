@@ -19,6 +19,7 @@ namespace GUI
         private TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
         private string tempOtp; // Lưu OTP tạm thời
         private string tempEmail; // Lưu email tạm thời
+        private LoginViewModel currentUser;
         public fLogin()
         {
             InitializeComponent();
@@ -39,31 +40,29 @@ namespace GUI
             try
             {
                 string role;
-                if (taiKhoanBUS.CheckLogin(email, password, out role))
+                int idTaiKhoan;
+
+                if (taiKhoanBUS.CheckLogin(email, password, out role, out idTaiKhoan))
                 {
+                    // Lưu thông tin đăng nhập
+                    var currentUser = new LoginViewModel
+                    {
+                        IdTaiKhoan = idTaiKhoan,
+                        Email = email,
+                        Role = role
+                    };
+
                     if (role == "Admin")
                     {
                         MessageBox.Show("Đăng nhập thành công với vai trò Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Mở giao diện Admin
-                        fDashboardAdmin dashboardAdmin = new fDashboardAdmin();
+                        fDashboardAdmin dashboardAdmin = new fDashboardAdmin(currentUser);
                         dashboardAdmin.Show();
                         this.Hide();
                     }
                     else if (role == "Nhân viên")
                     {
                         MessageBox.Show("Đăng nhập thành công với vai trò Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Lấy tên nhân viên từ email đăng nhập
-                        string tenNhanVien = taiKhoanBUS.GetTenNhanVienByEmail(email);
-
-                        // Tạo ViewModel và truyền tên nhân viên vào
-                        EmployeeViewModel viewModel = new EmployeeViewModel
-                        {
-                            HoTenNV = tenNhanVien
-                        };
-
-                        // Mở giao diện Nhân viên
-                        fDashboardEmployee dashboardEmployee = new fDashboardEmployee(viewModel);
+                        fDashboardEmployee dashboardEmployee = new fDashboardEmployee(currentUser);
                         dashboardEmployee.Show();
                         this.Hide();
                     }

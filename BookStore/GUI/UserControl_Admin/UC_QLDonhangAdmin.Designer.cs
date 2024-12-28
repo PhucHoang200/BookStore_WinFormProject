@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnDonhangmoi = new Guna.UI2.WinForms.Guna2Button();
             this.btnDanhsachdonhang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDonhangmoi = new Guna.UI2.WinForms.Guna2Button();
             this.container = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,25 +45,9 @@
             this.guna2Panel1.Size = new System.Drawing.Size(904, 70);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnDonhangmoi
-            // 
-            this.btnDonhangmoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonhangmoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonhangmoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDonhangmoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDonhangmoi.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDonhangmoi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.btnDonhangmoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDonhangmoi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDonhangmoi.Location = new System.Drawing.Point(0, 0);
-            this.btnDonhangmoi.Name = "btnDonhangmoi";
-            this.btnDonhangmoi.Size = new System.Drawing.Size(190, 70);
-            this.btnDonhangmoi.TabIndex = 0;
-            this.btnDonhangmoi.Text = "Đơn hàng mới";
-            this.btnDonhangmoi.Click += new System.EventHandler(this.btnDonhangmoi_Click);
-            // 
             // btnDanhsachdonhang
             // 
+            this.btnDanhsachdonhang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDanhsachdonhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDanhsachdonhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDanhsachdonhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -78,6 +62,24 @@
             this.btnDanhsachdonhang.TabIndex = 1;
             this.btnDanhsachdonhang.Text = "Danh sách đơn hàng";
             this.btnDanhsachdonhang.Click += new System.EventHandler(this.btnDanhsachdonhang_Click);
+            // 
+            // btnDonhangmoi
+            // 
+            this.btnDonhangmoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDonhangmoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonhangmoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonhangmoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonhangmoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDonhangmoi.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnDonhangmoi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnDonhangmoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDonhangmoi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDonhangmoi.Location = new System.Drawing.Point(0, 0);
+            this.btnDonhangmoi.Name = "btnDonhangmoi";
+            this.btnDonhangmoi.Size = new System.Drawing.Size(190, 70);
+            this.btnDonhangmoi.TabIndex = 0;
+            this.btnDonhangmoi.Text = "Đơn hàng mới";
+            this.btnDonhangmoi.Click += new System.EventHandler(this.btnDonhangmoi_Click);
             // 
             // container
             // 

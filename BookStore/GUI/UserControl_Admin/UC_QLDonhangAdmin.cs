@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace GUI.UserControl_Admin
 {
     public partial class UC_QLDonhangAdmin : UserControl
     {
-        public UC_QLDonhangAdmin()
+        private LoginViewModel _currentUser;
+        public UC_QLDonhangAdmin(LoginViewModel loginViewModel)
         {
             InitializeComponent();
+            _currentUser = loginViewModel;
             btnDonhangmoi.Checked = true;
             btnDonhangmoi_Click(this, EventArgs.Empty);
         }
@@ -28,7 +31,7 @@ namespace GUI.UserControl_Admin
 
         private void btnDonhangmoi_Click(object sender, EventArgs e)
         {
-            UC_DonhangAdmin uC_DonhangAdmin = new UC_DonhangAdmin();
+            UC_DonhangAdmin uC_DonhangAdmin = new UC_DonhangAdmin(_currentUser);
             AddControlsToPanel(uC_DonhangAdmin);
         }
 

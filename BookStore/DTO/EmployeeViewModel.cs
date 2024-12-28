@@ -10,7 +10,7 @@ namespace DTO
 {
     public class EmployeeViewModel
     {
-        public string HoTenNV { get; set; }
+        public int IdNhanVien { get; set; } // Lưu Id nhân viên
     }
 
 }

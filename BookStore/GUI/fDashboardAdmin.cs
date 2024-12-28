@@ -7,12 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using GUI.UserControl_Admin;
 
 namespace GUI
 {
     public partial class fDashboardAdmin : Form
     {
+        private LoginViewModel currentUser;
+        public fDashboardAdmin(LoginViewModel user)
+        {
+            InitializeComponent();
+            currentUser = user;
+        }
         public fDashboardAdmin()
         {
             InitializeComponent();
@@ -66,7 +73,7 @@ namespace GUI
         private void btnDonhang_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDonhang);
-            UC_QLDonhangAdmin uC_QLDonhangAdmin = new UC_QLDonhangAdmin();
+            UC_QLDonhangAdmin uC_QLDonhangAdmin = new UC_QLDonhangAdmin(currentUser);
             AddControlsToPanel(uC_QLDonhangAdmin);
         }
 
