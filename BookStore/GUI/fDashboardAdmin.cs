@@ -66,8 +66,8 @@ namespace GUI
         private void btnDonhang_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDonhang);
-            UC_DonhangAdmin uC_DonhangAdmin = new UC_DonhangAdmin();
-            AddControlsToPanel(uC_DonhangAdmin);
+            UC_QLDonhangAdmin uC_QLDonhangAdmin = new UC_QLDonhangAdmin();
+            AddControlsToPanel(uC_QLDonhangAdmin);
         }
 
         private void btnKhachhang_Click(object sender, EventArgs e)

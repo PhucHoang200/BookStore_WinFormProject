@@ -74,6 +74,7 @@
     <Compile Include="DonHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeViewModel.cs" />
     <Compile Include="KhachHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>

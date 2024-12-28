@@ -92,5 +92,11 @@ namespace BUS
             }
             return true;
         }
+
+        public string GetTenNhanVienByEmail(string email)
+        {
+            return taiKhoanDAL.GetTenNhanVienByEmail(email);
+        }
+
     }
 }

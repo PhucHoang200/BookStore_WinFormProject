@@ -103,6 +103,12 @@
     <Compile Include="UserControl_Admin\UC_DonhangAdmin.Designer.cs">
       <DependentUpon>UC_DonhangAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_Admin\UC_DsDonhangAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_DsDonhangAdmin.Designer.cs">
+      <DependentUpon>UC_DsDonhangAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Admin\UC_HomeAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="UserControl_Admin\UC_Nxbsachadmin.Designer.cs">
       <DependentUpon>UC_Nxbsachadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_QLDonhangAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_QLDonhangAdmin.Designer.cs">
+      <DependentUpon>UC_QLDonhangAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Admin\UC_SachAdmin.cs">
       <SubType>UserControl</SubType>
@@ -251,6 +263,9 @@
     <EmbeddedResource Include="UserControl_Admin\UC_DonhangAdmin.resx">
       <DependentUpon>UC_DonhangAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_DsDonhangAdmin.resx">
+      <DependentUpon>UC_DsDonhangAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_HomeAdmin.resx">
       <DependentUpon>UC_HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_Nxbsachadmin.resx">
       <DependentUpon>UC_Nxbsachadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_QLDonhangAdmin.resx">
+      <DependentUpon>UC_QLDonhangAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_SachAdmin.resx">
       <DependentUpon>UC_SachAdmin.cs</DependentUpon>

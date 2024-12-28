@@ -26,5 +26,6 @@ namespace DTO
     
         public virtual ICollection<NhanVien> NhanViens { get; set; }
         public virtual VaiTro VaiTro { get; set; }
+
     }
 }

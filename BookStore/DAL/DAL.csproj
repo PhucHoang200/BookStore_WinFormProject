@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DonHangDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="NhaXuatBanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

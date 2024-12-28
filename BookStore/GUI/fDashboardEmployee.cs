@@ -7,18 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using GUI.UserControl_Employee;
 
 namespace GUI
 {
     public partial class fDashboardEmployee : Form
     {
+        private EmployeeViewModel _viewModel;
+
+
+        public fDashboardEmployee(EmployeeViewModel viewModel)
+        {
+            InitializeComponent();
+            _viewModel = viewModel;           
+            fDashboardEmployee_Load(this, EventArgs.Empty);
+
+        }
+
         public fDashboardEmployee()
         {
             InitializeComponent();
             UC_HomeEmployee uC_HomeEmployee = new UC_HomeEmployee();
             AddControlsToPanel(uC_HomeEmployee);
-        }
+        } 
 
         private void moveSidePanel(Control btn)
         {
@@ -82,6 +94,16 @@ namespace GUI
                 // Đóng form hiện tại
                 this.Close();
             }
+        }
+
+        private void fDashboardEmployee_Load(object sender, EventArgs e)
+        {
+           // lblTenNhanVien.Text = $"{_viewModel.HoTenNV}";
+        }
+
+        private void lblTenNhanVien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

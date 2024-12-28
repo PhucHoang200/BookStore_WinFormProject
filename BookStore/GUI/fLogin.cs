@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BUS;
 using System.Net;
 using System.Net.Mail;
+using DTO;
 
 namespace GUI
 {
@@ -51,8 +52,18 @@ namespace GUI
                     else if (role == "Nhân viên")
                     {
                         MessageBox.Show("Đăng nhập thành công với vai trò Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Lấy tên nhân viên từ email đăng nhập
+                        string tenNhanVien = taiKhoanBUS.GetTenNhanVienByEmail(email);
+
+                        // Tạo ViewModel và truyền tên nhân viên vào
+                        EmployeeViewModel viewModel = new EmployeeViewModel
+                        {
+                            HoTenNV = tenNhanVien
+                        };
+
                         // Mở giao diện Nhân viên
-                        fDashboardEmployee dashboardEmployee = new fDashboardEmployee();
+                        fDashboardEmployee dashboardEmployee = new fDashboardEmployee(viewModel);
                         dashboardEmployee.Show();
                         this.Hide();
                     }
