@@ -21,6 +21,7 @@ namespace BUS
 
         public int LuuKhachHangVaLayMa(string hoTen, string email, string sdt, string diaChi)
         {
+
             return _dal.LuuKhachHangVaLayMa(new KhachHang
             {
                 HoTenKH = hoTen,
@@ -28,6 +29,16 @@ namespace BUS
                 SoDienThoai = sdt,
                 DiaChi = diaChi
             });
+        }
+
+        public bool KiemTraEmailTrung(string email)
+        {
+            return _dal.KiemTraEmailTrung(email);
+        }
+
+        public bool KiemTraSoDienThoaiTrung(string sdt)
+        {
+            return _dal.KiemTraSoDienThoaiTrung(sdt);
         }
 
         public void CapNhatKhachHang(int maKH, string hoTen, string email, string sdt, string diaChi)
@@ -52,14 +63,14 @@ namespace BUS
                 }
             }
 
-            dgv.Rows.Add(maSach, "Tên sách", donGia, soLuong);
+            dgv.Rows.Add(maSach, donGia, soLuong);
         }
 
         public decimal TinhTongTien(Guna2DataGridView dgv)
         {
             return dgv.Rows.Cast<DataGridViewRow>().Sum(row =>
-                Convert.ToDecimal(row.Cells["Column11"].Value) *
-                Convert.ToInt32(row.Cells["Column12"].Value));
+                Convert.ToDecimal(row.Cells["Column10"].Value) *
+                Convert.ToInt32(row.Cells["Column11"].Value));
         }
 
         public void LuuDonHang(DonHang donHang, List<CT_DonHang> chiTietDonHangs)

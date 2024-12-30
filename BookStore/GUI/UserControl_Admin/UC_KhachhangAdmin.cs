@@ -49,12 +49,13 @@ namespace GUI.UserControl_Admin
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = datagridviewKhachhang.Rows[e.RowIndex];
-                Id = row.Cells["Id"].Value.ToString();
-                txtHotenKH.Text = row.Cells["HoTenKH"].Value.ToString();
-                txtEmail.Text = row.Cells["Email"].Value.ToString();
-                txtSodienthoai.Text = row.Cells["SoDienThoai"].Value.ToString();
-                txtDiachi.Text = row.Cells["DiaChi"].Value.ToString();
 
+                // Lấy giá trị từ các ô, kiểm tra null trước khi gán
+                Id = row.Cells["Id"].Value?.ToString() ?? string.Empty;
+                txtHotenKH.Text = row.Cells["HoTenKH"].Value?.ToString() ?? string.Empty;
+                txtEmail.Text = row.Cells["Email"].Value?.ToString() ?? string.Empty;
+                txtSodienthoai.Text = row.Cells["SoDienThoai"].Value?.ToString() ?? string.Empty;
+                txtDiachi.Text = row.Cells["DiaChi"].Value?.ToString() ?? string.Empty;
             }
         }
 

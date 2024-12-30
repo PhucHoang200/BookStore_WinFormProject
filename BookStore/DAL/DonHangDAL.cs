@@ -19,9 +19,20 @@ namespace DAL
 
         public int LuuKhachHangVaLayMa(KhachHang khachHang)
         {
+           
             _context.KhachHangs.Add(khachHang);
             _context.SaveChanges();
             return khachHang.Id; // Trả về mã khách hàng mới tạo
+        }
+
+        public bool KiemTraEmailTrung(string email)
+        {
+            return _context.KhachHangs.Any(kh => kh.Email == email);
+        }
+
+        public bool KiemTraSoDienThoaiTrung(string sdt)
+        {
+            return _context.KhachHangs.Any(kh => kh.SoDienThoai == sdt);
         }
 
         public void CapNhatKhachHang(int maKH, KhachHang khachHangMoi)

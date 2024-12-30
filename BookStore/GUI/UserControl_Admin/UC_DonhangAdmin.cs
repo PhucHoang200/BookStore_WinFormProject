@@ -15,7 +15,7 @@ namespace GUI.UserControl_Admin
 {
     public partial class UC_DonhangAdmin : UserControl
     {
-        
+
         private readonly DonHangBUS _bus;
         private LoginViewModel currentUser;
 
@@ -28,17 +28,12 @@ namespace GUI.UserControl_Admin
             // Gán IdTaiKhoan vào txtMaTK khi UC_DonhangAdmin được load
             txtMaTK.Text = currentUser.IdTaiKhoan.ToString();
         }
-        //public UC_DonhangAdmin()
-        //{
-        //    InitializeComponent();
 
-        //}
-
-        private void dgvDsSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDsSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Kiểm tra chỉ số hàng hợp lệ
             {
-                txtMasach.Text = dgvDsSach.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
+                txtMasach.Text = dgvDsSach.CurrentRow.Cells["Column1"].Value.ToString();
             }
         }
 
@@ -52,8 +47,49 @@ namespace GUI.UserControl_Admin
 
         private void btnCapnhatKH_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtHotenKH.Text))
+            {
+                MessageBox.Show("Họ tên khách hàng là bắt buộc.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                if (!IsValidEmail(txtEmail.Text))
+                {
+                    MessageBox.Show("Email không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (_bus.KiemTraEmailTrung(txtEmail.Text))
+                {
+                    MessageBox.Show("Email đã tồn tại. Vui lòng nhập email khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtSĐT.Text))
+            {
+                if (!IsValidPhoneNumber(txtSĐT.Text))
+                {
+                    //MessageBox.Show("Số điện thoại không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (_bus.KiemTraSoDienThoaiTrung(txtSĐT.Text))
+                {
+                    MessageBox.Show("Số điện thoại đã tồn tại. Vui lòng nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            // Thực hiện cập nhật
             try
             {
+                var email = !string.IsNullOrWhiteSpace(txtEmail.Text) ? txtEmail.Text : null;
+                var sdt = !string.IsNullOrWhiteSpace(txtSĐT.Text) ? txtSĐT.Text : null;
+                var diaChi = !string.IsNullOrWhiteSpace(txtDiachi.Text) ? txtDiachi.Text : null;
+
                 _bus.CapNhatKhachHang(int.Parse(txtMaKH.Text), txtHotenKH.Text, txtEmail.Text, txtSĐT.Text, txtDiachi.Text);
                 MessageBox.Show("Cập nhật khách hàng thành công.");
             }
@@ -65,9 +101,49 @@ namespace GUI.UserControl_Admin
 
         private void btnLuuKH_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtHotenKH.Text))
+            {
+                MessageBox.Show("Họ tên khách hàng là bắt buộc.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                if (!IsValidEmail(txtEmail.Text))
+                {
+                    MessageBox.Show("Email không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (_bus.KiemTraEmailTrung(txtEmail.Text))
+                {
+                    MessageBox.Show("Email đã tồn tại. Vui lòng nhập email khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtSĐT.Text))
+            {
+                if (!IsValidPhoneNumber(txtSĐT.Text))
+                {
+                    //MessageBox.Show("Số điện thoại không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (_bus.KiemTraSoDienThoaiTrung(txtSĐT.Text))
+                {
+                    MessageBox.Show("Số điện thoại đã tồn tại. Vui lòng nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             try
             {
-                var maKH = _bus.LuuKhachHangVaLayMa(txtHotenKH.Text, txtEmail.Text, txtSĐT.Text, txtDiachi.Text);
+                var email = !string.IsNullOrWhiteSpace(txtEmail.Text) ? txtEmail.Text : null;
+                var sdt = !string.IsNullOrWhiteSpace(txtSĐT.Text) ? txtSĐT.Text : null;
+                var diaChi = !string.IsNullOrWhiteSpace(txtDiachi.Text) ? txtDiachi.Text : null;
+
+                var maKH = _bus.LuuKhachHangVaLayMa(txtHotenKH.Text, email, sdt, diaChi);
                 txtMaKH.Text = maKH.ToString();
                 MessageBox.Show("Lưu khách hàng thành công.");
             }
@@ -75,6 +151,32 @@ namespace GUI.UserControl_Admin
             {
                 MessageBox.Show($"Lỗi: {ex.Message}");
             }
+        }
+
+        // Hàm kiểm tra định dạng email
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var mailAddress = new System.Net.Mail.MailAddress(email);
+                return mailAddress.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // Hàm kiểm tra định dạng số điện thoại
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            // Kiểm tra nếu không phải chuỗi 10 ký tự số hoặc không bắt đầu bằng số 0
+            if (!System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, @"^0\d{9}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! Số điện thoại phải bao gồm 10 chữ số và bắt đầu bằng số 0.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         private void btnThemDonHang_Click(object sender, EventArgs e)
@@ -90,8 +192,9 @@ namespace GUI.UserControl_Admin
                 int maSach = int.Parse(txtMasach.Text);
                 int soLuong = int.Parse(txtSoluong.Text);
 
-                // Tìm giá sách từ dgvDsSach
+                // Tìm thông tin sách từ dgvDsSach
                 decimal donGia = 0;
+                int soLuongTon = 0;
                 var rowFound = dgvDsSach.Rows
                     .Cast<DataGridViewRow>()
                     .FirstOrDefault(r => r.Cells["Column1"].Value != null && Convert.ToInt32(r.Cells["Column1"].Value) == maSach);
@@ -99,11 +202,18 @@ namespace GUI.UserControl_Admin
                 if (rowFound != null)
                 {
                     donGia = Convert.ToDecimal(rowFound.Cells["Column8"].Value);
+                    soLuongTon = Convert.ToInt32(rowFound.Cells["Column7"].Value);
                 }
 
                 if (donGia == 0)
                 {
                     MessageBox.Show("Không tìm thấy giá sách cho mã sách đã chọn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (soLuong > soLuongTon)
+                {
+                    MessageBox.Show($"Số lượng nhập ({soLuong}) vượt quá số lượng tồn ({soLuongTon}).", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -131,11 +241,38 @@ namespace GUI.UserControl_Admin
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtMasach.Text) || string.IsNullOrWhiteSpace(txtSoluong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập mã sách và số lượng.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int maSach = int.Parse(txtMasach.Text);
+                int soLuongMoi = int.Parse(txtSoluong.Text);
+
+                // Tìm thông tin sách từ dgvDsSach
+                int soLuongTon = 0;
+                var rowFound = dgvDsSach.Rows
+                    .Cast<DataGridViewRow>()
+                    .FirstOrDefault(r => r.Cells["Column1"].Value != null && Convert.ToInt32(r.Cells["Column1"].Value) == maSach);
+
+                if (rowFound != null)
+                {
+                    soLuongTon = Convert.ToInt32(rowFound.Cells["Column7"].Value);
+                }
+
+                if (soLuongMoi > soLuongTon)
+                {
+                    MessageBox.Show($"Số lượng mới ({soLuongMoi}) vượt quá số lượng tồn ({soLuongTon}).", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Cập nhật số lượng trong DataGridView chi tiết đơn hàng
                 foreach (DataGridViewRow row in dgvChitietDonhang.Rows)
                 {
-                    if (Convert.ToInt32(row.Cells["Column9"].Value) == int.Parse(txtMasach.Text))
+                    if (Convert.ToInt32(row.Cells["Column9"].Value) == maSach)
                     {
-                        row.Cells["Column12"].Value = int.Parse(txtSoluong.Text);
+                        row.Cells["Column11"].Value = soLuongMoi;
                     }
                 }
 
@@ -143,22 +280,17 @@ namespace GUI.UserControl_Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}");
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void dgvChitietDonhang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvChitietDonhang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Kiểm tra chỉ số hàng hợp lệ
+            if (e.RowIndex >= 0)
             {
-                txtMasach.Text = dgvChitietDonhang.Rows[e.RowIndex].Cells["Column9"].Value.ToString();
-                txtSoluong.Text = dgvChitietDonhang.Rows[e.RowIndex].Cells["Column12"].Value.ToString();
+                txtMasach.Text = dgvChitietDonhang.CurrentRow.Cells["Column9"].Value.ToString();
+                txtSoluong.Text = dgvChitietDonhang.CurrentRow.Cells["Column11"].Value.ToString();
             }
-        }
-
-        private void txtTongtienDonhang_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnXoaDonhang_Click(object sender, EventArgs e)
@@ -176,16 +308,22 @@ namespace GUI.UserControl_Admin
 
         private void btnLuuDonhang_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtMaKH.Text))
+            {
+                MessageBox.Show("Vui lòng lưu thông tin khách hàng trước khi lưu đơn hàng.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra nếu danh sách chi tiết đơn hàng rỗng
+            if (dgvChitietDonhang.Rows.Count == 0)
+            {
+                MessageBox.Show("Chi tiết đơn hàng trống. Vui lòng thêm sản phẩm trước khi lưu.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                // Kiểm tra nếu dgvChitietDonhang không có dữ liệu
-                if (dgvChitietDonhang.Rows.Count == 0)
-                {
-                    MessageBox.Show("Chi tiết đơn hàng trống. Vui lòng thêm sản phẩm trước khi lưu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                // Tạo đối tượng DonHang
+                // Thực hiện lưu đơn hàng
                 var donHang = new DonHang
                 {
                     IdKhachHang = int.Parse(txtMaKH.Text),
@@ -193,26 +331,20 @@ namespace GUI.UserControl_Admin
                     NgayMuaHang = DateTime.Now
                 };
 
-                // Tạo danh sách chi tiết đơn hàng
                 var chiTietDonHangs = new List<CT_DonHang>();
                 foreach (DataGridViewRow row in dgvChitietDonhang.Rows)
                 {
                     chiTietDonHangs.Add(new CT_DonHang
                     {
                         IdSach = Convert.ToInt32(row.Cells["Column9"].Value),
-                        SoLuongBan = Convert.ToInt32(row.Cells["Column12"].Value),
-                        DonGiaBan = Convert.ToDecimal(row.Cells["Column11"].Value),
+                        SoLuongBan = Convert.ToInt32(row.Cells["Column11"].Value),
+                        DonGiaBan = Convert.ToDecimal(row.Cells["Column10"].Value),
                         IdTaiKhoan = int.Parse(txtMaTK.Text)
                     });
                 }
 
-                // Lưu dữ liệu vào cơ sở dữ liệu
                 _bus.LuuDonHang(donHang, chiTietDonHangs);
-
-                // Thông báo thành công
                 MessageBox.Show("Lưu đơn hàng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Xóa dữ liệu sau khi lưu
                 ClearForm();
             }
             catch (Exception ex)
@@ -229,41 +361,6 @@ namespace GUI.UserControl_Admin
             txtMasach.Clear();
             txtSoluong.Clear();
             dgvChitietDonhang.Rows.Clear();
-        }
-
-        private void txtHotenKH_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSĐT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDiachi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMasach_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSoluong_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTimkiemSach_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTimkiemSach_Click(object sender, EventArgs e)
@@ -309,17 +406,7 @@ namespace GUI.UserControl_Admin
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void txtMaKH_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaNV_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void UC_DonhangAdmin_Load(object sender, EventArgs e)
         {
             LoadSachData();
@@ -387,8 +474,9 @@ namespace GUI.UserControl_Admin
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            var danhSachSach = _bus.LayDanhSachSach();
             LoadSachData();
+            SetupDataGridView();
         }
+
     }
 }

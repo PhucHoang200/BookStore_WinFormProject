@@ -47,6 +47,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimkiemSach = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemSach = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCapnhatSach = new Guna.UI2.WinForms.Guna2Button();
@@ -84,8 +85,6 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -106,7 +105,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(650, 747);
+            this.guna2Panel1.Size = new System.Drawing.Size(814, 747);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2GroupBox2
@@ -117,9 +116,9 @@
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 195);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 168);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(650, 552);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(814, 579);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Thông tin sách";
             // 
@@ -127,9 +126,9 @@
             // 
             this.guna2CustomGradientPanel2.Controls.Add(this.dgvDsSach);
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 171);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 270);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(650, 381);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(814, 309);
             this.guna2CustomGradientPanel2.TabIndex = 9;
             // 
             // dgvDsSach
@@ -166,13 +165,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDsSach.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDsSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDsSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsSach.Location = new System.Drawing.Point(0, 0);
             this.dgvDsSach.Name = "dgvDsSach";
             this.dgvDsSach.ReadOnly = true;
             this.dgvDsSach.RowHeadersVisible = false;
-            this.dgvDsSach.Size = new System.Drawing.Size(650, 381);
+            this.dgvDsSach.Size = new System.Drawing.Size(814, 381);
             this.dgvDsSach.TabIndex = 6;
             this.dgvDsSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDsSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -195,16 +193,18 @@
             this.dgvDsSach.ThemeStyle.RowsStyle.Height = 22;
             this.dgvDsSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvDsSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsSach_CellContentClick);
+            this.dgvDsSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsSach_CellClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã sách";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 120F;
             this.Column2.HeaderText = "Tên sách";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -229,21 +229,25 @@
             // 
             // Column6
             // 
+            this.Column6.FillWeight = 90F;
             this.Column6.HeaderText = "Năm XB";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
+            this.Column7.FillWeight = 90F;
             this.Column7.HeaderText = "SL Tồn";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
+            this.Column8.FillWeight = 90F;
             this.Column8.HeaderText = "Giá";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -260,8 +264,24 @@
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 40);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(650, 131);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(814, 230);
             this.guna2CustomGradientPanel1.TabIndex = 8;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BorderRadius = 8;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Location = new System.Drawing.Point(523, 86);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(117, 30);
+            this.btnRefesh.TabIndex = 15;
+            this.btnRefesh.Text = "Refesh";
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimkiemSach
             // 
@@ -300,7 +320,6 @@
             this.txtTimkiemSach.SelectedText = "";
             this.txtTimkiemSach.Size = new System.Drawing.Size(235, 36);
             this.txtTimkiemSach.TabIndex = 13;
-            this.txtTimkiemSach.TextChanged += new System.EventHandler(this.txtTimkiemSach_TextChanged);
             // 
             // btnCapnhatSach
             // 
@@ -390,12 +409,11 @@
             this.txtSoluong.SelectedText = "";
             this.txtSoluong.Size = new System.Drawing.Size(235, 30);
             this.txtSoluong.TabIndex = 4;
-            this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
             // 
             // txtMasach
             // 
             this.txtMasach.BorderRadius = 8;
-            this.txtMasach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMasach.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMasach.DefaultText = "";
             this.txtMasach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMasach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -414,7 +432,6 @@
             this.txtMasach.SelectedText = "";
             this.txtMasach.Size = new System.Drawing.Size(235, 30);
             this.txtMasach.TabIndex = 3;
-            this.txtMasach.TextChanged += new System.EventHandler(this.txtMasach_TextChanged);
             // 
             // guna2GroupBox1
             // 
@@ -437,7 +454,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(650, 195);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(814, 168);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Thông tin khách hàng";
             // 
@@ -450,7 +467,7 @@
             this.btnCapnhatKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCapnhatKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapnhatKH.ForeColor = System.Drawing.Color.White;
-            this.btnCapnhatKH.Location = new System.Drawing.Point(357, 82);
+            this.btnCapnhatKH.Location = new System.Drawing.Point(141, 129);
             this.btnCapnhatKH.Name = "btnCapnhatKH";
             this.btnCapnhatKH.Size = new System.Drawing.Size(117, 30);
             this.btnCapnhatKH.TabIndex = 11;
@@ -466,7 +483,7 @@
             this.btnHuyKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHuyKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnHuyKH.ForeColor = System.Drawing.Color.White;
-            this.btnHuyKH.Location = new System.Drawing.Point(357, 46);
+            this.btnHuyKH.Location = new System.Drawing.Point(7, 129);
             this.btnHuyKH.Name = "btnHuyKH";
             this.btnHuyKH.Size = new System.Drawing.Size(100, 30);
             this.btnHuyKH.TabIndex = 10;
@@ -482,7 +499,7 @@
             this.btnLuuKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLuuKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLuuKH.ForeColor = System.Drawing.Color.White;
-            this.btnLuuKH.Location = new System.Drawing.Point(357, 118);
+            this.btnLuuKH.Location = new System.Drawing.Point(291, 129);
             this.btnLuuKH.Name = "btnLuuKH";
             this.btnLuuKH.Size = new System.Drawing.Size(110, 30);
             this.btnLuuKH.TabIndex = 9;
@@ -502,7 +519,7 @@
             this.txtDiachi.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtDiachi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiachi.Location = new System.Drawing.Point(105, 151);
+            this.txtDiachi.Location = new System.Drawing.Point(464, 81);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
@@ -510,7 +527,6 @@
             this.txtDiachi.SelectedText = "";
             this.txtDiachi.Size = new System.Drawing.Size(235, 30);
             this.txtDiachi.TabIndex = 8;
-            this.txtDiachi.TextChanged += new System.EventHandler(this.txtDiachi_TextChanged);
             // 
             // txtSĐT
             // 
@@ -525,7 +541,7 @@
             this.txtSĐT.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtSĐT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSĐT.Location = new System.Drawing.Point(105, 116);
+            this.txtSĐT.Location = new System.Drawing.Point(464, 46);
             this.txtSĐT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.PasswordChar = '\0';
@@ -533,7 +549,6 @@
             this.txtSĐT.SelectedText = "";
             this.txtSĐT.Size = new System.Drawing.Size(235, 30);
             this.txtSĐT.TabIndex = 7;
-            this.txtSĐT.TextChanged += new System.EventHandler(this.txtSĐT_TextChanged);
             // 
             // txtEmail
             // 
@@ -556,7 +571,6 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(235, 30);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtHotenKH
             // 
@@ -579,13 +593,12 @@
             this.txtHotenKH.SelectedText = "";
             this.txtHotenKH.Size = new System.Drawing.Size(235, 30);
             this.txtHotenKH.TabIndex = 5;
-            this.txtHotenKH.TextChanged += new System.EventHandler(this.txtHotenKH_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 125);
+            this.label3.Location = new System.Drawing.Point(377, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 21);
             this.label3.TabIndex = 4;
@@ -595,7 +608,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 160);
+            this.label4.Location = new System.Drawing.Point(377, 90);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(69, 21);
@@ -626,9 +639,9 @@
             // 
             this.guna2Panel2.Controls.Add(this.guna2GroupBox3);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(650, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(814, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(535, 747);
+            this.guna2Panel2.Size = new System.Drawing.Size(371, 747);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2GroupBox3
@@ -641,7 +654,7 @@
             this.guna2GroupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2GroupBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(535, 747);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(371, 747);
             this.guna2GroupBox3.TabIndex = 2;
             this.guna2GroupBox3.Text = "Thông tin chi tiết đơn hàng";
             // 
@@ -658,7 +671,7 @@
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 478);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(535, 269);
+            this.guna2Panel4.Size = new System.Drawing.Size(371, 269);
             this.guna2Panel4.TabIndex = 1;
             // 
             // label9
@@ -673,7 +686,7 @@
             // txtMaTK
             // 
             this.txtMaTK.BorderRadius = 8;
-            this.txtMaTK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaTK.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMaTK.DefaultText = "";
             this.txtMaTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMaTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -692,7 +705,6 @@
             this.txtMaTK.SelectedText = "";
             this.txtMaTK.Size = new System.Drawing.Size(181, 36);
             this.txtMaTK.TabIndex = 6;
-            this.txtMaTK.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
             // 
             // label8
             // 
@@ -706,7 +718,7 @@
             // txtMaKH
             // 
             this.txtMaKH.BorderRadius = 8;
-            this.txtMaKH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaKH.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMaKH.DefaultText = "";
             this.txtMaKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMaKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -725,7 +737,6 @@
             this.txtMaKH.SelectedText = "";
             this.txtMaKH.Size = new System.Drawing.Size(181, 36);
             this.txtMaKH.TabIndex = 4;
-            this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
             // 
             // label7
             // 
@@ -745,7 +756,7 @@
             this.btnLuuDonhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLuuDonhang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLuuDonhang.ForeColor = System.Drawing.Color.White;
-            this.btnLuuDonhang.Location = new System.Drawing.Point(338, 208);
+            this.btnLuuDonhang.Location = new System.Drawing.Point(157, 208);
             this.btnLuuDonhang.Name = "btnLuuDonhang";
             this.btnLuuDonhang.Size = new System.Drawing.Size(180, 45);
             this.btnLuuDonhang.TabIndex = 2;
@@ -761,7 +772,7 @@
             this.btnXoaDonhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoaDonhang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnXoaDonhang.ForeColor = System.Drawing.Color.White;
-            this.btnXoaDonhang.Location = new System.Drawing.Point(216, 208);
+            this.btnXoaDonhang.Location = new System.Drawing.Point(22, 208);
             this.btnXoaDonhang.Name = "btnXoaDonhang";
             this.btnXoaDonhang.Size = new System.Drawing.Size(100, 45);
             this.btnXoaDonhang.TabIndex = 1;
@@ -771,7 +782,7 @@
             // txtTongtienDonhang
             // 
             this.txtTongtienDonhang.BorderRadius = 8;
-            this.txtTongtienDonhang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTongtienDonhang.Cursor = System.Windows.Forms.Cursors.No;
             this.txtTongtienDonhang.DefaultText = "";
             this.txtTongtienDonhang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTongtienDonhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -790,7 +801,6 @@
             this.txtTongtienDonhang.SelectedText = "";
             this.txtTongtienDonhang.Size = new System.Drawing.Size(181, 38);
             this.txtTongtienDonhang.TabIndex = 0;
-            this.txtTongtienDonhang.TextChanged += new System.EventHandler(this.txtTongtienDonhang_TextChanged);
             // 
             // guna2Panel3
             // 
@@ -798,7 +808,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 40);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(535, 707);
+            this.guna2Panel3.Size = new System.Drawing.Size(371, 707);
             this.guna2Panel3.TabIndex = 0;
             // 
             // dgvChitietDonhang
@@ -821,8 +831,7 @@
             this.dgvChitietDonhang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
             this.Column10,
-            this.Column11,
-            this.Column12});
+            this.Column11});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -837,7 +846,7 @@
             this.dgvChitietDonhang.Name = "dgvChitietDonhang";
             this.dgvChitietDonhang.ReadOnly = true;
             this.dgvChitietDonhang.RowHeadersVisible = false;
-            this.dgvChitietDonhang.Size = new System.Drawing.Size(535, 707);
+            this.dgvChitietDonhang.Size = new System.Drawing.Size(371, 707);
             this.dgvChitietDonhang.TabIndex = 7;
             this.dgvChitietDonhang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChitietDonhang.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -860,47 +869,28 @@
             this.dgvChitietDonhang.ThemeStyle.RowsStyle.Height = 22;
             this.dgvChitietDonhang.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvChitietDonhang.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvChitietDonhang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitietDonhang_CellContentClick);
+            this.dgvChitietDonhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitietDonhang_CellClick);
             // 
             // Column9
             // 
+            this.Column9.FillWeight = 90F;
             this.Column9.HeaderText = "Mã sách";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "Tên sách";
+            this.Column10.FillWeight = 140F;
+            this.Column10.HeaderText = "Giá";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
             // Column11
             // 
-            this.Column11.HeaderText = "Giá";
+            this.Column11.FillWeight = 80F;
+            this.Column11.HeaderText = "SL";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Số lượng";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BorderRadius = 8;
-            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(523, 86);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(117, 30);
-            this.btnRefesh.TabIndex = 15;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // UC_DonhangAdmin
             // 
@@ -953,14 +943,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThemDonHang;
         private Guna.UI2.WinForms.Guna2TextBox txtSoluong;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDsSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Guna.UI2.WinForms.Guna2Button btnHuyDonHang;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -978,11 +960,18 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox txtMaKH;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimkiemSach;
+        private Guna.UI2.WinForms.Guna2Button btnRefesh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private Guna.UI2.WinForms.Guna2TextBox txtTimkiemSach;
-        private Guna.UI2.WinForms.Guna2Button btnRefesh;
     }
 }
