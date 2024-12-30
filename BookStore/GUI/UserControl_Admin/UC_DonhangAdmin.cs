@@ -235,6 +235,7 @@ namespace GUI.UserControl_Admin
         {
             txtMasach.Clear();
             txtSoluong.Clear();
+            txtTimkiemSach.Clear();
         }
 
         private void btnCapnhatSach_Click(object sender, EventArgs e)
@@ -345,6 +346,8 @@ namespace GUI.UserControl_Admin
 
                 _bus.LuuDonHang(donHang, chiTietDonHangs);
                 MessageBox.Show("Lưu đơn hàng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadSachData();
                 ClearForm();
             }
             catch (Exception ex)
@@ -355,6 +358,7 @@ namespace GUI.UserControl_Admin
 
         private void ClearForm()
         {
+            txtHotenKH.Clear();
             txtMaKH.Clear();
             txtMaTK.Clear();
             txtTongtienDonhang.Clear();
@@ -375,7 +379,7 @@ namespace GUI.UserControl_Admin
                     return;
                 }
 
-                // Gọi phương thức tìm kiếm từ BUS
+                // Gọi phương thức tìm kiếm từ BUS với từ khóa
                 var danhSachSach = _bus.TimKiemSach(tuKhoa);
 
                 if (danhSachSach == null || !danhSachSach.Any())
@@ -390,7 +394,7 @@ namespace GUI.UserControl_Admin
 
                 foreach (var sach in danhSachSach)
                 {
-                    // Lấy thông tin chi tiết của từng sách
+                    // Lấy thông tin chi tiết của từng sách từ CSDL
                     var tenTacGia = sach.TacGias.Any() ? sach.TacGias.First().TenTG : "Không có tác giả";
                     var tenTheLoai = sach.TheLoais.Any() ? sach.TheLoais.First().TenTL : "Không có thể loại";
                     var tenNXB = sach.NhaXuatBan != null ? sach.NhaXuatBan.TenNXB : "Không có nhà xuất bản";
@@ -422,6 +426,8 @@ namespace GUI.UserControl_Admin
 
                 // Đưa dữ liệu vào DataGridView
                 dgvDsSach.Rows.Clear();  // Xóa tất cả các hàng cũ trước khi thêm mới
+
+                dgvDsSach.Refresh();
 
                 foreach (var sach in danhSachSach)
                 {
@@ -471,11 +477,10 @@ namespace GUI.UserControl_Admin
             dgvDsSach.Columns["Column7"].DataPropertyName = "SoLuongTon"; // SL tồn
             dgvDsSach.Columns["Column8"].DataPropertyName = "GiaBan"; // Giá
         }
-
+     
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             LoadSachData();
-            SetupDataGridView();
         }
 
     }

@@ -76,6 +76,12 @@ namespace BUS
         public void LuuDonHang(DonHang donHang, List<CT_DonHang> chiTietDonHangs)
         {
             _dal.LuuDonHang(donHang, chiTietDonHangs);
+
+            // Cập nhật số lượng tồn trong kho cho mỗi sách trong chi tiết đơn hàng
+            foreach (var chiTiet in chiTietDonHangs)
+            {
+                _dal.CapNhatSachTrongKho(chiTiet.IdSach, -chiTiet.SoLuongBan); // Giảm số lượng tồn khi bán
+            }
         }
 
 
@@ -84,10 +90,11 @@ namespace BUS
             return _dal.LayDanhSachSach();
         }
 
-        public List<Sach> TimKiemSach(string tuKhoa)
+        public List<Sach> TimKiemSach(string tuKhoa, int? namXuatBan = null, int? soLuongTon = null)
         {
-            return _dal.LayDanhSachSach(tuKhoa);
+            return _dal.LayDanhSachSach(tuKhoa, namXuatBan, soLuongTon);
         }
+
 
     }
 }

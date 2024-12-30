@@ -105,7 +105,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(814, 747);
+            this.guna2Panel1.Size = new System.Drawing.Size(814, 677);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2GroupBox2
@@ -118,7 +118,7 @@
             this.guna2GroupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2GroupBox2.Location = new System.Drawing.Point(0, 168);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(814, 579);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(814, 509);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Thông tin sách";
             // 
@@ -126,9 +126,9 @@
             // 
             this.guna2CustomGradientPanel2.Controls.Add(this.dgvDsSach);
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 270);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 171);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(814, 309);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(814, 338);
             this.guna2CustomGradientPanel2.TabIndex = 9;
             // 
             // dgvDsSach
@@ -165,12 +165,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDsSach.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDsSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDsSach.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDsSach.Location = new System.Drawing.Point(0, 0);
             this.dgvDsSach.Name = "dgvDsSach";
             this.dgvDsSach.ReadOnly = true;
             this.dgvDsSach.RowHeadersVisible = false;
-            this.dgvDsSach.Size = new System.Drawing.Size(814, 381);
+            this.dgvDsSach.Size = new System.Drawing.Size(814, 338);
             this.dgvDsSach.TabIndex = 6;
             this.dgvDsSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDsSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -264,7 +265,7 @@
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 40);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(814, 230);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(814, 131);
             this.guna2CustomGradientPanel1.TabIndex = 8;
             // 
             // btnRefesh
@@ -641,7 +642,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(814, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(371, 747);
+            this.guna2Panel2.Size = new System.Drawing.Size(371, 677);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2GroupBox3
@@ -654,7 +655,7 @@
             this.guna2GroupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2GroupBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(371, 747);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(371, 677);
             this.guna2GroupBox3.TabIndex = 2;
             this.guna2GroupBox3.Text = "Thông tin chi tiết đơn hàng";
             // 
@@ -669,7 +670,7 @@
             this.guna2Panel4.Controls.Add(this.btnXoaDonhang);
             this.guna2Panel4.Controls.Add(this.txtTongtienDonhang);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 478);
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 408);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(371, 269);
             this.guna2Panel4.TabIndex = 1;
@@ -808,7 +809,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 40);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(371, 707);
+            this.guna2Panel3.Size = new System.Drawing.Size(371, 637);
             this.guna2Panel3.TabIndex = 0;
             // 
             // dgvChitietDonhang
@@ -846,7 +847,7 @@
             this.dgvChitietDonhang.Name = "dgvChitietDonhang";
             this.dgvChitietDonhang.ReadOnly = true;
             this.dgvChitietDonhang.RowHeadersVisible = false;
-            this.dgvChitietDonhang.Size = new System.Drawing.Size(371, 707);
+            this.dgvChitietDonhang.Size = new System.Drawing.Size(371, 637);
             this.dgvChitietDonhang.TabIndex = 7;
             this.dgvChitietDonhang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChitietDonhang.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -900,7 +901,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_DonhangAdmin";
-            this.Size = new System.Drawing.Size(1185, 747);
+            this.Size = new System.Drawing.Size(1185, 677);
             this.Load += new System.EventHandler(this.UC_DonhangAdmin_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);

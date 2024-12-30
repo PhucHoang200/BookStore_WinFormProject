@@ -81,17 +81,51 @@ namespace DAL
         }
 
         // Lấy danh sách sách từ cơ sở dữ liệu
-        public List<Sach> LayDanhSachSach(string tuKhoa = null)
+        public List<Sach> LayDanhSachSach(string tuKhoa = null, int? namXuatBan = null, int? soLuongTon = null)
         {
-            var query = _context.Saches.Include(s => s.TacGias).Include(s => s.TheLoais).Include(s => s.Khoes).AsQueryable();
+            var query = _context.Saches
+                .Include(s => s.TacGias)
+                .Include(s => s.TheLoais)
+                .Include(s => s.NhaXuatBan)
+                .Include(s => s.Khoes)
+                .AsQueryable();
 
+            // Lọc theo từ khóa
             if (!string.IsNullOrWhiteSpace(tuKhoa))
             {
-                query = query.Where(s => s.TenSach.Contains(tuKhoa) ||
-                                         s.TacGias.Any(tg => tg.TenTG.Contains(tuKhoa)) ||
-                                         s.TheLoais.Any(tl => tl.TenTL.Contains(tuKhoa)) ||
-                                         s.NhaXuatBan.TenNXB.Contains(tuKhoa));
+                query = query.Where(s =>
+                    s.TenSach.Contains(tuKhoa) ||
+                    s.TacGias.Any(tg => tg.TenTG.Contains(tuKhoa)) ||
+                    s.TheLoais.Any(tl => tl.TenTL.Contains(tuKhoa)) ||
+                    s.NhaXuatBan.TenNXB.Contains(tuKhoa) ||
+                s.NamXuatBan.ToString().Contains(tuKhoa) || // Lọc theo năm xuất bản
+           s.Khoes.Any(k => k.SoLuongTon.ToString().Contains(tuKhoa))
+           );// Lọc theo số lượng tồn
             }
+
+            // Lọc theo năm xuất bản
+            if (namXuatBan.HasValue)
+            {
+                query = query.Where(s => s.NamXuatBan == namXuatBan.Value);
+            }
+
+            // Lọc theo số lượng tồn
+            if (soLuongTon.HasValue)
+            {
+                query = query.Where(s => s.Khoes.Any(k => k.SoLuongTon >= soLuongTon.Value));
+            }
+
+            return query.ToList();
+        }
+
+        public List<Sach> LayDanhSachSach()
+        {
+            var query = _context.Saches
+                .Include(s => s.TacGias)
+                .Include(s => s.TheLoais)
+                .Include(s => s.NhaXuatBan)
+                .Include(s => s.Khoes)
+                .AsQueryable();
 
             return query.ToList();
         }
