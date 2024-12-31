@@ -130,7 +130,78 @@ namespace DAL
             return query.ToList();
         }
 
+        public List<DonHangVM> LayDanhSachDonHang()
+        {
+            var query = _context.DonHangs
+                .Join(
+                    _context.KhachHangs,
+                    dh => dh.IdKhachHang,
+                    kh => kh.Id,
+                    (dh, kh) => new DonHangVM
+                    {
+                        Id = dh.Id,
+                        NgayMuaHang = dh.NgayMuaHang,
+                        HoTenKH = kh.HoTenKH,
+                        TongTienBan = dh.TongTienBan
+                    })
+                .ToList();
+
+            return query;
+        }
+
+        public bool XoaDonHang(int idDonHang)
+        {
+            try
+            {
+                // Tìm đơn hàng trong cơ sở dữ liệu
+                var donHang = _context.DonHangs.FirstOrDefault(dh => dh.Id == idDonHang);
+
+                if (donHang != null)
+                {
+                    _context.DonHangs.Remove(donHang); // Xóa đơn hàng
+                    _context.SaveChanges();           // Lưu thay đổi vào cơ sở dữ liệu
+                    return true;
+                }
+                return false; // Không tìm thấy đơn hàng
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi nếu cần thiết
+                Console.WriteLine("Lỗi khi xóa đơn hàng: " + ex.Message);
+                return false;
+            }
+        }
+
+        public DonHangVM LayThongTinDonHang(int idDonHang)
+        {
+            return _context.DonHangs
+                .Where(dh => dh.Id == idDonHang)
+                .Select(dh => new DonHangVM
+                {
+                    Id = dh.Id,
+                    NgayMuaHang = dh.NgayMuaHang,
+                    HoTenKH = dh.KhachHang.HoTenKH,
+                    Email = dh.KhachHang.Email,
+                    DiaChi = dh.KhachHang.DiaChi,
+                    SoDienThoai = dh.KhachHang.SoDienThoai,
+                    TongTienBan = dh.TongTienBan
+                })
+                .FirstOrDefault();
+        }
 
 
+        public List<SanPhamDonHangVM> LayDanhSachSanPhamTrongDonHang(int idDonHang)
+        {
+            return _context.CT_DonHang
+          .Where(ct => ct.IdDonHang == idDonHang)
+          .Select(ct => new SanPhamDonHangVM
+          {
+              TenSach = ct.Sach.TenSach,
+              SoLuongBan = ct.SoLuongBan,
+              DonGiaBan = ct.DonGiaBan,
+              ThanhTien = ct.SoLuongBan * ct.DonGiaBan
+          })
+          .ToList();
+        }
     }
 }

@@ -95,6 +95,26 @@ namespace BUS
             return _dal.LayDanhSachSach(tuKhoa, namXuatBan, soLuongTon);
         }
 
+        public List<DonHangVM> LayDanhSachDonHang()
+        {
+            return _dal.LayDanhSachDonHang();
+        }
+
+        public bool XoaDonHang(int idDonHang)
+        {
+            return _dal.XoaDonHang(idDonHang);
+        }
+
+        public DonHangVM LayThongTinDonHang(int idDonHang)
+        {
+            return _dal.LayThongTinDonHang(idDonHang);
+        }
+
+        public List<SanPhamDonHangVM> LayDanhSachSanPhamTrongDonHang(int idDonHang)
+        {
+            return _dal.LayDanhSachSanPhamTrongDonHang(idDonHang);
+        }
+
 
     }
 }

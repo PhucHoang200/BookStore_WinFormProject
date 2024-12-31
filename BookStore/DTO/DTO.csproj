@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Spire.Doc, Version=12.12.12.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.12.12.12\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=10.12.4.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.10.12.4\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -74,6 +80,7 @@
     <Compile Include="DonHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DonHangVM.cs" />
     <Compile Include="EmployeeViewModel.cs" />
     <Compile Include="KhachHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
@@ -98,6 +105,7 @@
     <Compile Include="Sach.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="SanPhamDonHangVM.cs" />
     <Compile Include="TacGia.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
