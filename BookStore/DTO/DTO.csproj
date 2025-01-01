@@ -95,6 +95,7 @@
     <Compile Include="NhanVien.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="NhapSachMoiVM.cs" />
     <Compile Include="NhaXuatBan.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>

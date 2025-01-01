@@ -57,7 +57,7 @@ namespace GUI.UserControl_Admin
             string thongbao = tacGiaBUS.AddTacGia(tenTacGia);
 
             MessageBox.Show(thongbao);
-            if (thongbao == "Thêm thể loại thành công!")
+            if (thongbao == "Thêm tác giả thành công!")
             {
                 // Cập nhật lại danh sách hiển thị
                 hienThiDSTacGia();

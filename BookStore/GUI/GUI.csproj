@@ -140,11 +140,23 @@
     <Compile Include="UserControl_Admin\UC_KhoAdmin.Designer.cs">
       <DependentUpon>UC_KhoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_Admin\UC_NhacungcapAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_NhacungcapAdmin.Designer.cs">
+      <DependentUpon>UC_NhacungcapAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Admin\UC_NhanvienAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl_Admin\UC_NhanvienAdmin.Designer.cs">
       <DependentUpon>UC_NhanvienAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_NhapSachMoiAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_NhapSachMoiAdmin.Designer.cs">
+      <DependentUpon>UC_NhapSachMoiAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Admin\UC_Nxbsachadmin.cs">
       <SubType>UserControl</SubType>
@@ -291,8 +303,14 @@
     <EmbeddedResource Include="UserControl_Admin\UC_KhoAdmin.resx">
       <DependentUpon>UC_KhoAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_NhacungcapAdmin.resx">
+      <DependentUpon>UC_NhacungcapAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_NhanvienAdmin.resx">
       <DependentUpon>UC_NhanvienAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_NhapSachMoiAdmin.resx">
+      <DependentUpon>UC_NhapSachMoiAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_Nxbsachadmin.resx">
       <DependentUpon>UC_Nxbsachadmin.cs</DependentUpon>
