@@ -105,12 +105,12 @@ namespace GUI
             try
             {
                 // Xuất hóa đơn dưới dạng Word
-                InvoiceExporter.ExportToWord(dgvDsSanPham, lblMaDH, lblNgayMuaHang, lblHoTenKH, lblEmail, lblDiaChi, lblSĐT, lblTongTien);
+                InvoiceExporter.ExportToWordAndPdf(dgvDsSanPham, lblMaDH, lblNgayMuaHang, lblHoTenKH, lblEmail, lblDiaChi, lblSĐT, lblTongTien);
 
                 // Xuất hóa đơn dưới dạng PDF
-                InvoiceExporter.ExportToPdf(dgvDsSanPham, lblMaDH, lblNgayMuaHang, lblHoTenKH, lblEmail, lblDiaChi, lblSĐT, lblTongTien);
+                //InvoiceExporter.ExportToPdf(dgvDsSanPham, lblMaDH, lblNgayMuaHang, lblHoTenKH, lblEmail, lblDiaChi, lblSĐT, lblTongTien);
 
-                MessageBox.Show("Hóa đơn đã được xuất thành công cả Word và PDF.");
+                MessageBox.Show("Hóa đơn đã được xuất thành công.");
             }
             catch (Exception ex)
             {
