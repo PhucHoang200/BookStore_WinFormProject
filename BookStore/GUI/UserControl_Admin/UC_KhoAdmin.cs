@@ -40,7 +40,8 @@ namespace GUI.UserControl_Admin
 
         private void btnNhapSachDaCo_Click(object sender, EventArgs e)
         {
-
+            UC_NhapSachDaCo uC_NhapSachDaCo = new UC_NhapSachDaCo();
+            AddControlsToPanel(uC_NhapSachDaCo);
         }
 
         private void btnDSPhieuNhap_Click(object sender, EventArgs e)

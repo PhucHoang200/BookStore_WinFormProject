@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_ThongkeAdmin";
-            this.Size = new System.Drawing.Size(314, 339);
+            this.Size = new System.Drawing.Size(548, 475);
             this.ResumeLayout(false);
 
         }

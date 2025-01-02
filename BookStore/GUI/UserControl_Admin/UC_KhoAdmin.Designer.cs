@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnNhaCungCap = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNhapSachMoi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNhapSachDaCo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDSPhieuNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnChiTietSach = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDSPhieuNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNhapSachDaCo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNhapSachMoi = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNhaCungCap = new Guna.UI2.WinForms.Guna2Button();
             this.container = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,65 +51,25 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1185, 70);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnNhaCungCap
+            // btnChiTietSach
             // 
-            this.btnNhaCungCap.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnNhaCungCap.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhaCungCap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhaCungCap.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.btnNhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnNhaCungCap.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 0);
-            this.btnNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(180, 70);
-            this.btnNhaCungCap.TabIndex = 1;
-            this.btnNhaCungCap.Text = "Nhà cung cấp";
-            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
-            // 
-            // btnNhapSachMoi
-            // 
-            this.btnNhapSachMoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnNhapSachMoi.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhapSachMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapSachMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapSachMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhapSachMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhapSachMoi.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhapSachMoi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.btnNhapSachMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnNhapSachMoi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNhapSachMoi.Location = new System.Drawing.Point(180, 0);
-            this.btnNhapSachMoi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNhapSachMoi.Name = "btnNhapSachMoi";
-            this.btnNhapSachMoi.Size = new System.Drawing.Size(190, 70);
-            this.btnNhapSachMoi.TabIndex = 2;
-            this.btnNhapSachMoi.Text = "Nhập sách mới";
-            this.btnNhapSachMoi.Click += new System.EventHandler(this.btnNhapSachMoi_Click);
-            // 
-            // btnNhapSachDaCo
-            // 
-            this.btnNhapSachDaCo.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnNhapSachDaCo.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhapSachDaCo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapSachDaCo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhapSachDaCo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhapSachDaCo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhapSachDaCo.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNhapSachDaCo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.btnNhapSachDaCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnNhapSachDaCo.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnNhapSachDaCo.Location = new System.Drawing.Point(370, 0);
-            this.btnNhapSachDaCo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNhapSachDaCo.Name = "btnNhapSachDaCo";
-            this.btnNhapSachDaCo.Size = new System.Drawing.Size(200, 70);
-            this.btnNhapSachDaCo.TabIndex = 3;
-            this.btnNhapSachDaCo.Text = "Nhập sách đã có";
-            this.btnNhapSachDaCo.Click += new System.EventHandler(this.btnNhapSachDaCo_Click);
+            this.btnChiTietSach.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnChiTietSach.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnChiTietSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTietSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTietSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChiTietSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChiTietSach.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnChiTietSach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnChiTietSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnChiTietSach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnChiTietSach.Location = new System.Drawing.Point(830, 0);
+            this.btnChiTietSach.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChiTietSach.Name = "btnChiTietSach";
+            this.btnChiTietSach.Size = new System.Drawing.Size(170, 70);
+            this.btnChiTietSach.TabIndex = 5;
+            this.btnChiTietSach.Text = "Chi tiết sách";
+            this.btnChiTietSach.Click += new System.EventHandler(this.btnChiTietSach_Click);
             // 
             // btnDSPhieuNhap
             // 
@@ -131,25 +91,65 @@
             this.btnDSPhieuNhap.Text = "Danh sách phiếu nhập";
             this.btnDSPhieuNhap.Click += new System.EventHandler(this.btnDSPhieuNhap_Click);
             // 
-            // btnChiTietSach
+            // btnNhapSachDaCo
             // 
-            this.btnChiTietSach.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnChiTietSach.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
-            this.btnChiTietSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChiTietSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChiTietSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChiTietSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChiTietSach.FillColor = System.Drawing.SystemColors.HighlightText;
-            this.btnChiTietSach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.btnChiTietSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnChiTietSach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChiTietSach.Location = new System.Drawing.Point(830, 0);
-            this.btnChiTietSach.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChiTietSach.Name = "btnChiTietSach";
-            this.btnChiTietSach.Size = new System.Drawing.Size(170, 70);
-            this.btnChiTietSach.TabIndex = 5;
-            this.btnChiTietSach.Text = "Chi tiết sách";
-            this.btnChiTietSach.Click += new System.EventHandler(this.btnChiTietSach_Click);
+            this.btnNhapSachDaCo.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnNhapSachDaCo.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhapSachDaCo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhapSachDaCo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhapSachDaCo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhapSachDaCo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhapSachDaCo.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhapSachDaCo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnNhapSachDaCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnNhapSachDaCo.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhapSachDaCo.Location = new System.Drawing.Point(370, 0);
+            this.btnNhapSachDaCo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhapSachDaCo.Name = "btnNhapSachDaCo";
+            this.btnNhapSachDaCo.Size = new System.Drawing.Size(200, 70);
+            this.btnNhapSachDaCo.TabIndex = 3;
+            this.btnNhapSachDaCo.Text = "Nhập sách đã có";
+            this.btnNhapSachDaCo.Click += new System.EventHandler(this.btnNhapSachDaCo_Click);
+            // 
+            // btnNhapSachMoi
+            // 
+            this.btnNhapSachMoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnNhapSachMoi.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhapSachMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhapSachMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhapSachMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhapSachMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhapSachMoi.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhapSachMoi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnNhapSachMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnNhapSachMoi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhapSachMoi.Location = new System.Drawing.Point(180, 0);
+            this.btnNhapSachMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhapSachMoi.Name = "btnNhapSachMoi";
+            this.btnNhapSachMoi.Size = new System.Drawing.Size(190, 70);
+            this.btnNhapSachMoi.TabIndex = 2;
+            this.btnNhapSachMoi.Text = "Nhập sách mới";
+            this.btnNhapSachMoi.Click += new System.EventHandler(this.btnNhapSachMoi_Click);
+            // 
+            // btnNhaCungCap
+            // 
+            this.btnNhaCungCap.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnNhaCungCap.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhaCungCap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhaCungCap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhaCungCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhaCungCap.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnNhaCungCap.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnNhaCungCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnNhaCungCap.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 0);
+            this.btnNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNhaCungCap.Name = "btnNhaCungCap";
+            this.btnNhaCungCap.Size = new System.Drawing.Size(180, 70);
+            this.btnNhaCungCap.TabIndex = 1;
+            this.btnNhaCungCap.Text = "Nhà cung cấp";
+            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
             // 
             // container
             // 

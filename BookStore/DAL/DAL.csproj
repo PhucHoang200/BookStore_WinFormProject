@@ -65,6 +65,7 @@
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="NhapSachDaCoDAL.cs" />
     <Compile Include="NhapSachMoiDAL.cs" />
     <Compile Include="NhaXuatBanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

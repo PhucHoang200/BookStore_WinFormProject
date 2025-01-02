@@ -70,6 +70,7 @@
     <Compile Include="KhachHangBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
+    <Compile Include="NhapSachDaCoBUS.cs" />
     <Compile Include="NhapSachMoiBUS.cs" />
     <Compile Include="NhaXuatBanBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

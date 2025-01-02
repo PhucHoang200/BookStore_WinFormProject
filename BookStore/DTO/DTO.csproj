@@ -107,6 +107,7 @@
     <Compile Include="Sach.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="SachViewModel.cs" />
     <Compile Include="SanPhamDonHangVM.cs" />
     <Compile Include="TacGia.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
