@@ -19,8 +19,23 @@ namespace DAL
         // Kiểm tra tác giả có tồn tại trong cơ sở dữ liệu không
         public bool KiemTraTacGiaTonTai(string tacGia)
         {
-            return _context.TacGias.Any(x => x.TenTG == tacGia);
+            // Kiểm tra nếu tên tác giả rỗng hoặc null
+            if (string.IsNullOrEmpty(tacGia))
+            {
+                return false; // Trả về false nếu tên tác giả không hợp lệ
+            }
+
+            // Kiểm tra xem _context có được khởi tạo chưa
+            if (_context == null)
+            {
+                throw new InvalidOperationException("Database context is not initialized.");
+            }
+
+            // Tìm kiếm tác giả theo tên, so sánh không phân biệt chữ hoa chữ thường
+            return _context.TacGias.Any(x => x.TenTG.Equals(tacGia, StringComparison.OrdinalIgnoreCase));
         }
+
+
 
         // Lưu tác giả vào cơ sở dữ liệu
         public int LuuTacGia(string tacGia)
@@ -82,44 +97,6 @@ namespace DAL
             return newNCC.Id;
         }
 
-        // Lưu phiếu nhập sách vào cơ sở dữ liệu
-        public void LuuPhieuNhapSach(List<ChiTietPhieuNhap> chiTietPhieuNhapList)
-        {
-            if (chiTietPhieuNhapList == null || !chiTietPhieuNhapList.Any())
-            {
-                throw new ArgumentException("Danh sách chi tiết phiếu nhập không được để trống!");
-            }
-
-            try
-            {
-                foreach (var chiTiet in chiTietPhieuNhapList)
-                {
-                    var ctPhieuNhap = new ChiTietPhieuNhap
-                    {
-                        TenSach = chiTiet.TenSach,
-                        TacGia = chiTiet.TacGia,
-                        TheLoai = chiTiet.TheLoai,
-                        NhaXB = chiTiet.NhaXB,
-                        NamXuatBan = chiTiet.NamXuatBan,
-                        SoLuongNhap = chiTiet.SoLuongNhap,
-                        GiaNhap = chiTiet.GiaNhap,
-                        GiaBan = chiTiet.GiaBan,
-                        NhaCungCap = chiTiet.NhaCungCap,
-                        ThanhTien = chiTiet.ThanhTien
-                    };
-
-                    //_context.CT_PhieuNhap.Add(ctPhieuNhap);  // Thêm đối tượng CT_PhieuNhap vào bảng
-                }
-
-                _context.SaveChanges();  // Lưu tất cả các thay đổi
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lưu phiếu nhập vào cơ sở dữ liệu: " + ex.Message);
-            }
-        }
-
-
 
         // Thêm chi tiết phiếu nhập
         public void ThemChiTietPhieuNhap(CT_PhieuNhap chiTiet)
@@ -127,7 +104,6 @@ namespace DAL
             _context.CT_PhieuNhap.Add(chiTiet);
             _context.SaveChanges();
         }
-
 
     }
 }

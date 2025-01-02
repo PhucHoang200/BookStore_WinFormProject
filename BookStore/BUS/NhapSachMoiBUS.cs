@@ -10,75 +10,66 @@ namespace BUS
 {
     public class NhapSachMoiBUS
     {
-        private readonly NhapSachMoiDAL nhapSachMoiDAL = new NhapSachMoiDAL();
-        
+        private readonly NhapSachMoiDAL _dal;
+
+        public NhapSachMoiBUS()
+        {
+            _dal = new NhapSachMoiDAL();
+        }
 
         // Kiểm tra tác giả tồn tại hay không
         public bool KiemTraTacGiaTonTai(string tacGia)
         {
-            return nhapSachMoiDAL.KiemTraTacGiaTonTai(tacGia);
+            return _dal.KiemTraTacGiaTonTai(tacGia);
         }
 
         // Lưu tác giả và trả về Id
         public int LuuTacGia(string tacGia)
         {
-            return nhapSachMoiDAL.LuuTacGia(tacGia);
+            return _dal.LuuTacGia(tacGia);
         }
 
         // Lấy Id tác giả
         public int LayIdTacGia(string tacGia)
         {
-            return nhapSachMoiDAL.LayIdTacGia(tacGia);
+            return _dal.LayIdTacGia(tacGia);
         }
-
-        // Lưu phiếu nhập
-        public void LuuPhieuNhapSach(List<ChiTietPhieuNhap> chiTietPhieuNhapList)
-        {
-            if (chiTietPhieuNhapList == null || !chiTietPhieuNhapList.Any())
-            {
-                throw new ArgumentException("Danh sách chi tiết phiếu nhập không được để trống!");
-            }
-
-            // Gọi phương thức DAL để lưu dữ liệu
-            nhapSachMoiDAL.LuuPhieuNhapSach(chiTietPhieuNhapList);
-        }
-
 
         // Thêm chi tiết phiếu nhập
         public void ThemChiTietPhieuNhap(CT_PhieuNhap chiTiet)
         {
-            nhapSachMoiDAL.ThemChiTietPhieuNhap(chiTiet);
+            _dal.ThemChiTietPhieuNhap(chiTiet);
         }
 
         public bool KiemTraTheLoaiTonTai(string theLoai)
         {
-            return nhapSachMoiDAL.KiemTraTheLoaiTonTai(theLoai);
+            return _dal.KiemTraTheLoaiTonTai(theLoai);
         }
 
         public int LuuTheLoai(string theLoai)
         {
-            return nhapSachMoiDAL.LuuTheLoai(theLoai);
+            return _dal.LuuTheLoai(theLoai);
         }
 
         // Kiểm tra nhà xuất bản tồn tại
         public bool KiemTraNhaXBTonTai(string nhaXB)
         {
-            return nhapSachMoiDAL.KiemTraNhaXBTonTai(nhaXB);
+            return _dal.KiemTraNhaXBTonTai(nhaXB);
         }
 
         public int LuuNhaXB(string nhaXB)
         {
-            return nhapSachMoiDAL.LuuNhaXB(nhaXB);
+            return _dal.LuuNhaXB(nhaXB);
         }
 
         public bool KiemTraNCCTonTai(string nhaCungCap)
         {
-            return nhapSachMoiDAL.KiemTraNCCTonTai(nhaCungCap);
+            return _dal.KiemTraNCCTonTai(nhaCungCap);
         }
 
         public int LuuNCC(string nhaCungCap)
         {
-            return nhapSachMoiDAL.LuuNCC(nhaCungCap);   
+            return _dal.LuuNCC(nhaCungCap);
         }
     }
 }
