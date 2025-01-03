@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,28 @@ namespace GUI
         public fDashboardAdmin()
         {
             InitializeComponent();
+            
+        }
+
+
+        private void fDashboardAdmin_Load(object sender, EventArgs e)
+        {
+            // Khởi tạo Timer
+            Timer timer = new Timer();
+            timer.Interval = 1000; // Cập nhật mỗi 1 giây
+            timer.Tick += Timer_Tick;
+            timer.Start();
+            label1.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy hh:mm:ss tt");
+            AddHomeAdminControl();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Cập nhật ngày giờ hiện tại vào Label
+            label1.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy hh:mm:ss tt");
+        }
+
+        private void AddHomeAdminControl()
+        {
             UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin();
             AddControlsToPanel(uC_HomeAdmin);
         }
@@ -112,5 +135,9 @@ namespace GUI
             AddControlsToPanel(uC_ThongkeAdmin);
         }
 
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

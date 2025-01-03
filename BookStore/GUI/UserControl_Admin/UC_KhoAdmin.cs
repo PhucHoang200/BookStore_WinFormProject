@@ -46,12 +46,14 @@ namespace GUI.UserControl_Admin
 
         private void btnDSPhieuNhap_Click(object sender, EventArgs e)
         {
-
+            UC_DsPhieunhapAdmin uC_DsPhieunhapAdmin = new UC_DsPhieunhapAdmin();
+            AddControlsToPanel(uC_DsPhieunhapAdmin);
         }
 
         private void btnChiTietSach_Click(object sender, EventArgs e)
         {
-
+            UC_ChiTietSachTrongKho uC_ChiTietSachTrongKho = new UC_ChiTietSachTrongKho();
+            AddControlsToPanel(uC_ChiTietSachTrongKho);
         }
     }
 }

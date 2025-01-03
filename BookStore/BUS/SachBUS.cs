@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -25,5 +26,16 @@ namespace BUS
             }
             return sachDAL.FindSachByName(name);
         }
+
+        public List<CTSachVM> GetChiTietSachTrongKho()
+        {
+            return sachDAL.GetChiTietSachTrongKho();
+        }
+
+        public SachChiTietDTO GetSachDetailsById(int maSach)
+        {
+            return sachDAL.GetSachDetailsById(maSach);
+        }
+
     }
 }

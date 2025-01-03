@@ -96,7 +96,19 @@ namespace GUI
 
         private void fDashboardEmployee_Load(object sender, EventArgs e)
         {
-           // lblTenNhanVien.Text = $"{_viewModel.HoTenNV}";
+            // lblTenNhanVien.Text = $"{_viewModel.HoTenNV}";
+            // Khởi tạo Timer
+            Timer timer = new Timer();
+            timer.Interval = 1000; // Cập nhật mỗi 1 giây
+            timer.Tick += Timer_Tick;
+            timer.Start();
+            label1.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy hh:mm:ss tt");
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Cập nhật ngày giờ hiện tại vào Label
+            label1.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy hh:mm:ss tt");
         }
 
         private void lblTenNhanVien_Click(object sender, EventArgs e)

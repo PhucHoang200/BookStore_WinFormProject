@@ -83,6 +83,18 @@
     <Compile Include="fCT_DonHang.Designer.cs">
       <DependentUpon>fCT_DonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCT_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCT_PhieuNhap.Designer.cs">
+      <DependentUpon>fCT_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCT_Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCT_Sach.Designer.cs">
+      <DependentUpon>fCT_Sach.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDashboardAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,7 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImportExporter.cs" />
     <Compile Include="InvoiceExporter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +122,12 @@
     </Compile>
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_ChiTietSachTrongKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_ChiTietSachTrongKho.Designer.cs">
+      <DependentUpon>UC_ChiTietSachTrongKho.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Admin\UC_DonhangAdmin.cs">
       <SubType>UserControl</SubType>
@@ -121,6 +140,12 @@
     </Compile>
     <Compile Include="UserControl_Admin\UC_DsDonhangAdmin.Designer.cs">
       <DependentUpon>UC_DsDonhangAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_DsPhieunhapAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_DsPhieunhapAdmin.Designer.cs">
+      <DependentUpon>UC_DsPhieunhapAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Admin\UC_HomeAdmin.cs">
       <SubType>UserControl</SubType>
@@ -272,6 +297,12 @@
     <EmbeddedResource Include="fCT_DonHang.resx">
       <DependentUpon>fCT_DonHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fCT_PhieuNhap.resx">
+      <DependentUpon>fCT_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCT_Sach.resx">
+      <DependentUpon>fCT_Sach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDashboardAdmin.resx">
       <DependentUpon>fDashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,11 +325,17 @@
     <EmbeddedResource Include="ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_ChiTietSachTrongKho.resx">
+      <DependentUpon>UC_ChiTietSachTrongKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_DonhangAdmin.resx">
       <DependentUpon>UC_DonhangAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_DsDonhangAdmin.resx">
       <DependentUpon>UC_DsDonhangAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_DsPhieunhapAdmin.resx">
+      <DependentUpon>UC_DsPhieunhapAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_HomeAdmin.resx">
       <DependentUpon>UC_HomeAdmin.cs</DependentUpon>
@@ -395,6 +432,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\pexels-eberhard-grossgasteiger-1624496.jpg" />
+    <None Include="Resources\revenue.png" />
+    <None Include="Resources\description.png" />
+    <None Include="Resources\warehouse_3045703.png" />
+    <None Include="Resources\account-login_17515464.png" />
+    <None Include="Resources\employee_912267.png" />
+    <None Include="Resources\service.png" />
+    <None Include="Resources\client1.png" />
+    <None Include="Resources\order-processing.png" />
+    <None Include="Resources\search-interface-symbol1.png" />
+    <None Include="Resources\order1.png" />
+    <None Include="Resources\stack-of-books.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\client.png" />
+    <None Include="Resources\book-shop.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\home1.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\refresh-page-option.png" />
+    <None Include="Resources\search-interface-symbol.png" />
     <None Include="Resources\books.png" />
   </ItemGroup>
   <ItemGroup />

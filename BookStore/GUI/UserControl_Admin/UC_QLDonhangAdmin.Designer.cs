@@ -42,7 +42,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1185, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 60);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnDanhsachdonhang
@@ -58,7 +58,7 @@
             this.btnDanhsachdonhang.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnDanhsachdonhang.Location = new System.Drawing.Point(190, 0);
             this.btnDanhsachdonhang.Name = "btnDanhsachdonhang";
-            this.btnDanhsachdonhang.Size = new System.Drawing.Size(245, 70);
+            this.btnDanhsachdonhang.Size = new System.Drawing.Size(245, 60);
             this.btnDanhsachdonhang.TabIndex = 1;
             this.btnDanhsachdonhang.Text = "Danh sách đơn hàng";
             this.btnDanhsachdonhang.Click += new System.EventHandler(this.btnDanhsachdonhang_Click);
@@ -76,7 +76,7 @@
             this.btnDonhangmoi.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnDonhangmoi.Location = new System.Drawing.Point(0, 0);
             this.btnDonhangmoi.Name = "btnDonhangmoi";
-            this.btnDonhangmoi.Size = new System.Drawing.Size(190, 70);
+            this.btnDonhangmoi.Size = new System.Drawing.Size(190, 60);
             this.btnDonhangmoi.TabIndex = 0;
             this.btnDonhangmoi.Text = "Đơn hàng mới";
             this.btnDonhangmoi.Click += new System.EventHandler(this.btnDonhangmoi_Click);
@@ -84,9 +84,9 @@
             // container
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 70);
+            this.container.Location = new System.Drawing.Point(0, 60);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1185, 677);
+            this.container.Size = new System.Drawing.Size(1185, 680);
             this.container.TabIndex = 1;
             this.container.Text = "guna2ContainerControl1";
             // 
@@ -98,7 +98,7 @@
             this.Controls.Add(this.container);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_QLDonhangAdmin";
-            this.Size = new System.Drawing.Size(1185, 747);
+            this.Size = new System.Drawing.Size(1185, 740);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

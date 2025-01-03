@@ -50,7 +50,7 @@
             this.btnLoaisach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnLoaisach.Location = new System.Drawing.Point(0, 0);
             this.btnLoaisach.Name = "btnLoaisach";
-            this.btnLoaisach.Size = new System.Drawing.Size(170, 70);
+            this.btnLoaisach.Size = new System.Drawing.Size(170, 60);
             this.btnLoaisach.TabIndex = 0;
             this.btnLoaisach.Text = "Loại sách";
             this.btnLoaisach.Click += new System.EventHandler(this.btnLoaisach_Click);
@@ -64,7 +64,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(904, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 60);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnSach
@@ -80,7 +80,7 @@
             this.btnSach.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnSach.Location = new System.Drawing.Point(510, 0);
             this.btnSach.Name = "btnSach";
-            this.btnSach.Size = new System.Drawing.Size(170, 70);
+            this.btnSach.Size = new System.Drawing.Size(170, 60);
             this.btnSach.TabIndex = 3;
             this.btnSach.Text = "Sách";
             this.btnSach.Click += new System.EventHandler(this.btnSach_Click);
@@ -98,7 +98,7 @@
             this.btnNhaxuatban.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnNhaxuatban.Location = new System.Drawing.Point(340, 0);
             this.btnNhaxuatban.Name = "btnNhaxuatban";
-            this.btnNhaxuatban.Size = new System.Drawing.Size(170, 70);
+            this.btnNhaxuatban.Size = new System.Drawing.Size(170, 60);
             this.btnNhaxuatban.TabIndex = 2;
             this.btnNhaxuatban.Text = "Nhã xuất bản";
             this.btnNhaxuatban.Click += new System.EventHandler(this.btnNhaxuatban_Click);
@@ -116,7 +116,7 @@
             this.btnTacgia.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnTacgia.Location = new System.Drawing.Point(170, 0);
             this.btnTacgia.Name = "btnTacgia";
-            this.btnTacgia.Size = new System.Drawing.Size(170, 70);
+            this.btnTacgia.Size = new System.Drawing.Size(170, 60);
             this.btnTacgia.TabIndex = 1;
             this.btnTacgia.Text = "Tác giả";
             this.btnTacgia.Click += new System.EventHandler(this.btnTacgia_Click);
@@ -124,9 +124,9 @@
             // container
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 70);
+            this.container.Location = new System.Drawing.Point(0, 60);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(904, 446);
+            this.container.Size = new System.Drawing.Size(1185, 680);
             this.container.TabIndex = 1;
             this.container.Text = "guna2ContainerControl1";
             // 
@@ -138,7 +138,7 @@
             this.Controls.Add(this.container);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_SachEmployee";
-            this.Size = new System.Drawing.Size(904, 516);
+            this.Size = new System.Drawing.Size(1185, 740);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

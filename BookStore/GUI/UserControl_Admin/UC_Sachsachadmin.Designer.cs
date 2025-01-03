@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnTimkiemsach = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemsach = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.datagridviewSach = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnTimkiemsach = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewSach)).BeginInit();
@@ -50,40 +50,8 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(816, 76);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 76);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // btnTimkiemsach
-            // 
-            this.btnTimkiemsach.BorderRadius = 8;
-            this.btnTimkiemsach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemsach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemsach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimkiemsach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimkiemsach.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnTimkiemsach.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemsach.Location = new System.Drawing.Point(245, 22);
-            this.btnTimkiemsach.Name = "btnTimkiemsach";
-            this.btnTimkiemsach.Size = new System.Drawing.Size(151, 36);
-            this.btnTimkiemsach.TabIndex = 5;
-            this.btnTimkiemsach.Text = "Tìm kiếm";
-            this.btnTimkiemsach.Click += new System.EventHandler(this.btnTimkiemsach_Click);
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BorderRadius = 8;
-            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(430, 22);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(142, 36);
-            this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Làm mới";
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // txtTimkiemsach
             // 
@@ -104,7 +72,7 @@
             this.txtTimkiemsach.PasswordChar = '\0';
             this.txtTimkiemsach.PlaceholderText = "Nhập thông tin tìm kiếm";
             this.txtTimkiemsach.SelectedText = "";
-            this.txtTimkiemsach.Size = new System.Drawing.Size(206, 36);
+            this.txtTimkiemsach.Size = new System.Drawing.Size(309, 36);
             this.txtTimkiemsach.TabIndex = 0;
             // 
             // guna2Panel2
@@ -113,7 +81,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 76);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(816, 401);
+            this.guna2Panel2.Size = new System.Drawing.Size(1185, 604);
             this.guna2Panel2.TabIndex = 1;
             // 
             // datagridviewSach
@@ -149,7 +117,7 @@
             this.datagridviewSach.RowHeadersVisible = false;
             this.datagridviewSach.RowHeadersWidth = 51;
             this.datagridviewSach.RowTemplate.Height = 30;
-            this.datagridviewSach.Size = new System.Drawing.Size(816, 401);
+            this.datagridviewSach.Size = new System.Drawing.Size(1185, 604);
             this.datagridviewSach.TabIndex = 0;
             this.datagridviewSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -173,6 +141,45 @@
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewSach.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // btnTimkiemsach
+            // 
+            this.btnTimkiemsach.BorderRadius = 8;
+            this.btnTimkiemsach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemsach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemsach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimkiemsach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemsach.FillColor = System.Drawing.Color.Empty;
+            this.btnTimkiemsach.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnTimkiemsach.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnTimkiemsach.HoverState.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnTimkiemsach.Image = global::GUI.Properties.Resources.search_interface_symbol;
+            this.btnTimkiemsach.Location = new System.Drawing.Point(300, 24);
+            this.btnTimkiemsach.Name = "btnTimkiemsach";
+            this.btnTimkiemsach.Size = new System.Drawing.Size(30, 28);
+            this.btnTimkiemsach.TabIndex = 5;
+            this.btnTimkiemsach.Click += new System.EventHandler(this.btnTimkiemsach_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BorderRadius = 8;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRefesh.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.HoverState.BorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.HoverState.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.HoverState.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.HoverState.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option;
+            this.btnRefesh.Location = new System.Drawing.Point(350, 28);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(24, 24);
+            this.btnRefesh.TabIndex = 4;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
             // UC_Sachsachadmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,7 +188,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_Sachsachadmin";
-            this.Size = new System.Drawing.Size(816, 477);
+            this.Size = new System.Drawing.Size(1185, 680);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewSach)).EndInit();

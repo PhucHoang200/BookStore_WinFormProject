@@ -68,6 +68,7 @@
     <Compile Include="NhapSachDaCoDAL.cs" />
     <Compile Include="NhapSachMoiDAL.cs" />
     <Compile Include="NhaXuatBanDAL.cs" />
+    <Compile Include="PhieuNhapSachDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDAL.cs" />
     <Compile Include="TacGiaDAL.cs" />

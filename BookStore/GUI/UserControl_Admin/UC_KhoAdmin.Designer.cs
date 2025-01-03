@@ -48,7 +48,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1185, 70);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 60);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnChiTietSach
@@ -66,7 +66,7 @@
             this.btnChiTietSach.Location = new System.Drawing.Point(830, 0);
             this.btnChiTietSach.Margin = new System.Windows.Forms.Padding(2);
             this.btnChiTietSach.Name = "btnChiTietSach";
-            this.btnChiTietSach.Size = new System.Drawing.Size(170, 70);
+            this.btnChiTietSach.Size = new System.Drawing.Size(170, 60);
             this.btnChiTietSach.TabIndex = 5;
             this.btnChiTietSach.Text = "Chi tiết sách";
             this.btnChiTietSach.Click += new System.EventHandler(this.btnChiTietSach_Click);
@@ -86,7 +86,7 @@
             this.btnDSPhieuNhap.Location = new System.Drawing.Point(570, 0);
             this.btnDSPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDSPhieuNhap.Name = "btnDSPhieuNhap";
-            this.btnDSPhieuNhap.Size = new System.Drawing.Size(260, 70);
+            this.btnDSPhieuNhap.Size = new System.Drawing.Size(260, 60);
             this.btnDSPhieuNhap.TabIndex = 4;
             this.btnDSPhieuNhap.Text = "Danh sách phiếu nhập";
             this.btnDSPhieuNhap.Click += new System.EventHandler(this.btnDSPhieuNhap_Click);
@@ -106,7 +106,7 @@
             this.btnNhapSachDaCo.Location = new System.Drawing.Point(370, 0);
             this.btnNhapSachDaCo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapSachDaCo.Name = "btnNhapSachDaCo";
-            this.btnNhapSachDaCo.Size = new System.Drawing.Size(200, 70);
+            this.btnNhapSachDaCo.Size = new System.Drawing.Size(200, 60);
             this.btnNhapSachDaCo.TabIndex = 3;
             this.btnNhapSachDaCo.Text = "Nhập sách đã có";
             this.btnNhapSachDaCo.Click += new System.EventHandler(this.btnNhapSachDaCo_Click);
@@ -126,7 +126,7 @@
             this.btnNhapSachMoi.Location = new System.Drawing.Point(180, 0);
             this.btnNhapSachMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhapSachMoi.Name = "btnNhapSachMoi";
-            this.btnNhapSachMoi.Size = new System.Drawing.Size(190, 70);
+            this.btnNhapSachMoi.Size = new System.Drawing.Size(190, 60);
             this.btnNhapSachMoi.TabIndex = 2;
             this.btnNhapSachMoi.Text = "Nhập sách mới";
             this.btnNhapSachMoi.Click += new System.EventHandler(this.btnNhapSachMoi_Click);
@@ -146,7 +146,7 @@
             this.btnNhaCungCap.Location = new System.Drawing.Point(0, 0);
             this.btnNhaCungCap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(180, 70);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(180, 60);
             this.btnNhaCungCap.TabIndex = 1;
             this.btnNhaCungCap.Text = "Nhà cung cấp";
             this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
@@ -154,9 +154,9 @@
             // container
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 70);
+            this.container.Location = new System.Drawing.Point(0, 60);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1185, 677);
+            this.container.Size = new System.Drawing.Size(1185, 680);
             this.container.TabIndex = 2;
             this.container.Text = "guna2ContainerControl1";
             // 
@@ -168,7 +168,7 @@
             this.Controls.Add(this.container);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_KhoAdmin";
-            this.Size = new System.Drawing.Size(1185, 747);
+            this.Size = new System.Drawing.Size(1185, 740);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

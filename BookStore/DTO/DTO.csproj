@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookStoreDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CTSachVM.cs" />
     <Compile Include="CT_DonHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
@@ -81,6 +82,7 @@
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DonHangVM.cs" />
+    <Compile Include="DSPhieuNhapVM.cs" />
     <Compile Include="EmployeeViewModel.cs" />
     <Compile Include="KhachHang.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
@@ -103,6 +105,7 @@
     <Compile Include="PhieuNhapSach.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="PhieuNhapSachVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sach.cs">
       <DependentUpon>BookStoreDB.tt</DependentUpon>
