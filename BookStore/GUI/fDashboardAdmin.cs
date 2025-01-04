@@ -107,13 +107,6 @@ namespace GUI
             AddControlsToPanel(uC_KhachhangAdmin);
         }
 
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnNhanVien);
-            UC_NhanvienAdmin uC_NhanvienAdmin = new UC_NhanvienAdmin(); 
-            AddControlsToPanel(uC_NhanvienAdmin);
-        }
-
         private void btnTaikhoan_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnTaikhoan);

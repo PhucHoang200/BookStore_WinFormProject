@@ -20,9 +20,11 @@ namespace DTO
         }
     
         public int Id { get; set; }
-        public System.DateTime NgayNhapSach { get; set; }
+        public int MaNCC { get; set; }
+        public Nullable<System.DateTime> NgayNhapSach { get; set; }
         public Nullable<decimal> TongTienNhap { get; set; }
     
         public virtual ICollection<CT_PhieuNhap> CT_PhieuNhap { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

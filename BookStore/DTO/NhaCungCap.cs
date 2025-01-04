@@ -16,14 +16,14 @@ namespace DTO
     {
         public NhaCungCap()
         {
-            this.CT_PhieuNhap = new HashSet<CT_PhieuNhap>();
+            this.PhieuNhapSaches = new HashSet<PhieuNhapSach>();
             this.Saches = new HashSet<Sach>();
         }
     
         public int Id { get; set; }
         public string TenNCC { get; set; }
     
-        public virtual ICollection<CT_PhieuNhap> CT_PhieuNhap { get; set; }
+        public virtual ICollection<PhieuNhapSach> PhieuNhapSaches { get; set; }
         public virtual ICollection<Sach> Saches { get; set; }
     }
 }

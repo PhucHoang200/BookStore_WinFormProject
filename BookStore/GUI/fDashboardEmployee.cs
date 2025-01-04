@@ -71,13 +71,6 @@ namespace GUI
             AddControlsToPanel(uC_KhachhangEmployee );
         }
 
-        private void btnThongke_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnThongke);
-            UC_ThongkeEmployee uC_ThongkeEmployee=new UC_ThongkeEmployee();
-            AddControlsToPanel(uC_ThongkeEmployee );
-        }
-
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             DialogResult res = new DialogResult();
@@ -114,6 +107,13 @@ namespace GUI
         private void lblTenNhanVien_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnDoanhThu);
+            UC_ThongkeEmployee uC_ThongkeEmployee = new UC_ThongkeEmployee();
+            AddControlsToPanel(uC_ThongkeEmployee);
         }
     }
 }

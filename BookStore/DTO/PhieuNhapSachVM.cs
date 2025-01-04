@@ -9,7 +9,7 @@ namespace DTO
     public class PhieuNhapSachVM
     {
         public int Id { get; set; }
-        public System.DateTime NgayNhapSach { get; set; }
+        public Nullable<System.DateTime> NgayNhapSach { get; set; }
         public Nullable<decimal> TongTienNhap { get; set; }
     }
 }

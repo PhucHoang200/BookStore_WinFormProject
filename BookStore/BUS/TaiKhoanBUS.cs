@@ -44,7 +44,7 @@ namespace BUS
 
         public bool CheckEmailExist(string email)
         {
-            using (var context = new BookStoreDBEntities()) 
+            using (var context = new BookStoreDBEntities())
             {
                 // Kiểm tra xem email có tồn tại trong bảng TaiKhoan không
                 return context.TaiKhoans.Any(tk => tk.Email == email);
@@ -96,123 +96,5 @@ namespace BUS
             return true;
         }
 
-        public int GetIdNhanVienByEmail(string email)
-        {
-            return taiKhoanDAL.GetIdNhanVienByEmail(email);
-        }
-
-        public List<TaiKhoan> GetAllTaiKhoan()
-        {
-            return taiKhoanDAL.GetAllTaiKhoan();
-        }
-
-        public List<TaiKhoan> GetTaiKhoanChuaCoNguoiDung()
-        {
-            return taiKhoanDAL.GetTaiKhoanChuaCoNguoiDung();
-        }
-
-        public string AddTaiKhoan(string email, string matKhau, int idVaiTro)
-        {
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                return "Email không được để trống!";
-            }
-
-            if (string.IsNullOrWhiteSpace(matKhau))
-            {
-                return "Mật khẩu không được để trống!";
-            }
-
-            // Kiểm tra trùng lặp email
-            var existingTaiKhoan = taiKhoanDAL.GetAllTaiKhoan().FirstOrDefault(i => i.Email == email);
-            if (existingTaiKhoan != null)
-            {
-                return "Email đã tồn tại.";
-            }
-
-            // Băm mật khẩu
-            byte[] passHash = HashPassword(matKhau);
-
-            // Tạo tài khoản mới
-            var taiKhoan = new TaiKhoan
-            {
-                Email = email,
-                MatKhau = passHash,
-                IdVaiTro = idVaiTro
-            };
-
-            // Thêm vào cơ sở dữ liệu
-            taiKhoanDAL.AddTaiKhoan(taiKhoan);
-
-            return "Thêm tài khoản thành công!";
-
-        }
-
-        public string UpdateTaiKhoan(int id, string email, int idVaiTro)
-        {
-            var existingTaiKhoan = taiKhoanDAL.GetAllTaiKhoan().FirstOrDefault(i => i.Id == id);
-            if (existingTaiKhoan != null)
-            {
-                if (string.IsNullOrWhiteSpace(email))
-                {
-                    return "Không được để trống thông tin!";
-                }
-
-                var existingEmail = taiKhoanDAL.GetAllTaiKhoan()
-                                            .FirstOrDefault(i => i.Email == email && i.Id != id);
-                if (existingEmail != null)
-                {
-                    return "Tên tài khoản đã tồn tại.";
-                }
-
-                var taiKhoan = new TaiKhoan
-                {
-                    Id = id,
-                    Email = email,
-                    IdVaiTro = idVaiTro
-                };
-
-                bool kq = taiKhoanDAL.UpdateTaiKhoan(taiKhoan);
-                if (kq)
-                {
-                    return "Cập nhật thông tin tài khoản thành công";
-                }
-                else
-                {
-                    return "Cập nhật thông tin tài khoản thất bại";
-                }
-            }
-            else
-            {
-                return "Mã tài khoản không tồn tại";
-            }
-        }
-
-        public string DeleteTaiKhoan(string Id)
-        {
-            if (string.IsNullOrWhiteSpace(Id) || !int.TryParse(Id, out int parsedId))
-            {
-                return "Mã tài khoản không hợp lệ";
-            }
-
-            bool kq = taiKhoanDAL.DeleteTaiKhoan(parsedId);
-            if (kq)
-            {
-                return "Xóa tài khoản thành công";
-            }
-            else
-            {
-                return "Xóa tài khoản thất bại!";
-            }
-        }
-
-        public List<TaiKhoan> FindTaiKhoanByNameOfEmployee(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                return new List<TaiKhoan>();
-            }
-            return taiKhoanDAL.FindTaiKhoanByNameOfEmployee(name);
-        }
-    }
+    }  
 }

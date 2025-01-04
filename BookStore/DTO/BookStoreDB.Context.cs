@@ -31,7 +31,6 @@ namespace DTO
         public DbSet<KhachHang> KhachHangs { get; set; }
         public DbSet<Kho> Khoes { get; set; }
         public DbSet<NhaCungCap> NhaCungCaps { get; set; }
-        public DbSet<NhanVien> NhanViens { get; set; }
         public DbSet<NhaXuatBan> NhaXuatBans { get; set; }
         public DbSet<PhieuNhapSach> PhieuNhapSaches { get; set; }
         public DbSet<Sach> Saches { get; set; }

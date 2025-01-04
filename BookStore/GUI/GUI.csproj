@@ -171,12 +171,6 @@
     <Compile Include="UserControl_Admin\UC_NhacungcapAdmin.Designer.cs">
       <DependentUpon>UC_NhacungcapAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl_Admin\UC_NhanvienAdmin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl_Admin\UC_NhanvienAdmin.Designer.cs">
-      <DependentUpon>UC_NhanvienAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl_Admin\UC_NhapSachDaCo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -348,9 +342,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_NhacungcapAdmin.resx">
       <DependentUpon>UC_NhacungcapAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Admin\UC_NhanvienAdmin.resx">
-      <DependentUpon>UC_NhanvienAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_NhapSachDaCo.resx">
       <DependentUpon>UC_NhapSachDaCo.cs</DependentUpon>

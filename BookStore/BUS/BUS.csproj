@@ -69,7 +69,6 @@
     <Compile Include="EmailBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
-    <Compile Include="NhanVienBUS.cs" />
     <Compile Include="NhapSachDaCoBUS.cs" />
     <Compile Include="NhapSachMoiBUS.cs" />
     <Compile Include="NhaXuatBanBUS.cs" />
@@ -79,7 +78,6 @@
     <Compile Include="TacGiaBUS.cs" />
     <Compile Include="TaiKhoanBUS.cs" />
     <Compile Include="TheLoaiBUS.cs" />
-    <Compile Include="VaiTroBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

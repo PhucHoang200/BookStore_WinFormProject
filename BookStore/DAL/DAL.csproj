@@ -64,7 +64,6 @@
     <Compile Include="DonHangDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
-    <Compile Include="NhanVienDAL.cs" />
     <Compile Include="NhapSachDaCoDAL.cs" />
     <Compile Include="NhapSachMoiDAL.cs" />
     <Compile Include="NhaXuatBanDAL.cs" />
@@ -74,7 +73,6 @@
     <Compile Include="TacGiaDAL.cs" />
     <Compile Include="TaiKhoanDAL.cs" />
     <Compile Include="TheLoaiDAL.cs" />
-    <Compile Include="VaiTroDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

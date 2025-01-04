@@ -86,7 +86,7 @@ namespace DAL
                         .Where(p => p.MaSach == maSach)
                         .Select(p => new ChiTietPhieuNhapDTO
                         {
-                            TenNCC = p.NhaCungCap.TenNCC,
+                            //TenNCC = p.NhaCungCap.TenNCC,
                             SoLuongNhap = p.SoLuongNhap,
                             DonGiaNhap = p.DonGiaNhap,
                             DonGiaBan = p.DonGiaBan,

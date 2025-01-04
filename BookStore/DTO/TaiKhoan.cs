@@ -17,16 +17,18 @@ namespace DTO
         public TaiKhoan()
         {
             this.CT_DonHang = new HashSet<CT_DonHang>();
-            this.NhanViens = new HashSet<NhanVien>();
         }
     
         public int Id { get; set; }
+        public string HoTen { get; set; }
+        public string SoDienThoai { get; set; }
         public string Email { get; set; }
         public byte[] MatKhau { get; set; }
+        public Nullable<System.DateTime> NgayTaoTaiKhoan { get; set; }
+        public Nullable<decimal> Luong { get; set; }
         public int IdVaiTro { get; set; }
     
         public virtual ICollection<CT_DonHang> CT_DonHang { get; set; }
-        public virtual ICollection<NhanVien> NhanViens { get; set; }
         public virtual VaiTro VaiTro { get; set; }
     }
 }

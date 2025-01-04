@@ -29,8 +29,8 @@ namespace GUI
             if (thongTinPhieuNhap != null)
             {
                 lblMaPN.Text = thongTinPhieuNhap.Id.ToString();
-                lblNgayNhapSach.Text = thongTinPhieuNhap.NgayNhapSach.ToString("dd/MM/yyyy");
-                if(thongTinPhieuNhap.TongTienNhap != null)
+                lblNgayNhapSach.Text = thongTinPhieuNhap.NgayNhapSach?.ToString("dd/MM/yyyy") ?? "Không có dữ liệu";
+                if (thongTinPhieuNhap.TongTienNhap != null)
                 {
                     lblTongTien.Text = thongTinPhieuNhap.TongTienNhap.Value.ToString("C");
                 }                

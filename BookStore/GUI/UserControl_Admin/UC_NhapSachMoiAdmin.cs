@@ -289,7 +289,7 @@ namespace GUI.UserControl_Admin
                 {
                     MaPhieuNhap = phieuNhapId,
                     MaSach = sachId,
-                    MaNCC = nhaCungCapId,
+                    //MaNCC = nhaCungCapId,
                     SoLuongNhap = soLuongNhap,
                     DonGiaNhap = donGiaNhap,
                     DonGiaBan = donGiaBan,
