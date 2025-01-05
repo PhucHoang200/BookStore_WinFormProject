@@ -96,5 +96,54 @@ namespace BUS
             return true;
         }
 
+        public List<TaiKhoan> GetAllTaiKhoans()
+        {
+            return taiKhoanDAL.GetAllTaiKhoans();
+        }
+
+        public List<TaiKhoan> GetTaiKhoansByVaiTro(string tenVaiTro)
+        {
+            return taiKhoanDAL.GetTaiKhoansByVaiTro(tenVaiTro);
+        }
+
+        // Lấy danh sách vai trò
+        public List<VaiTro> GetAllVaiTro()
+        {
+            return taiKhoanDAL.GetAllVaiTro();
+        }
+
+        // Lưu tài khoản mới
+        public bool SaveTaiKhoan(TaiKhoan taiKhoan)
+        {
+            return taiKhoanDAL.SaveTaiKhoan(taiKhoan);
+        }
+
+        // Phương thức GetTaiKhoanById
+        public TaiKhoan GetTaiKhoanById(int id)
+        {
+            // Gọi phương thức DAL để lấy tài khoản theo ID
+            return taiKhoanDAL.GetTaiKhoanById(id);
+        }
+
+        // Phương thức UpdateTaiKhoan
+        public bool UpdateTaiKhoan(TaiKhoan taiKhoan)
+        {
+            // Gọi phương thức DAL để cập nhật tài khoản
+            return taiKhoanDAL.UpdateTaiKhoan(taiKhoan);
+        }
+
+        // Phương thức DeleteTaiKhoan
+        public bool DeleteTaiKhoan(int id)
+        {
+            // Gọi phương thức DAL để xóa tài khoản
+            return taiKhoanDAL.DeleteTaiKhoan(id);
+        }
+
+        // Phương thức ResetMatKhau
+        public bool ResetMatKhau(int id, byte[] matKhauHash)
+        {
+            // Gọi phương thức DAL để reset mật khẩu
+            return taiKhoanDAL.ResetMatKhau(id, matKhauHash);
+        }
     }  
 }
