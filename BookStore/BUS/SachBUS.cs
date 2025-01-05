@@ -37,5 +37,14 @@ namespace BUS
             return sachDAL.GetSachDetailsById(maSach);
         }
 
+        public bool UpdateSach(int maSach, string tenSach, string tacGia, string theLoai, string nhaXuatBan, int namXuatBan)
+        {
+            return sachDAL.UpdateSach(maSach, tenSach, tacGia, theLoai, nhaXuatBan, namXuatBan);
+        }
+
+        public bool DeleteSach(int maSach)
+        {
+            return sachDAL.DeleteSach(maSach);
+        }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTimkiemnxb = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemNxb = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,13 +68,14 @@
             this.btnTimkiemnxb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimkiemnxb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTimkiemnxb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemnxb.FillColor = System.Drawing.Color.White;
             this.btnTimkiemnxb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiemnxb.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemnxb.Location = new System.Drawing.Point(245, 66);
+            this.btnTimkiemnxb.Image = global::GUI.Properties.Resources.search_interface_symbol2;
+            this.btnTimkiemnxb.Location = new System.Drawing.Point(310, 70);
             this.btnTimkiemnxb.Name = "btnTimkiemnxb";
-            this.btnTimkiemnxb.Size = new System.Drawing.Size(163, 36);
+            this.btnTimkiemnxb.Size = new System.Drawing.Size(30, 28);
             this.btnTimkiemnxb.TabIndex = 6;
-            this.btnTimkiemnxb.Text = "Tìm kiếm";
             this.btnTimkiemnxb.Click += new System.EventHandler(this.btnTimkiemnxb_Click);
             // 
             // txtTimkiemNxb
@@ -96,7 +97,7 @@
             this.txtTimkiemNxb.PasswordChar = '\0';
             this.txtTimkiemNxb.PlaceholderText = "Nhập tên NXB";
             this.txtTimkiemNxb.SelectedText = "";
-            this.txtTimkiemNxb.Size = new System.Drawing.Size(203, 36);
+            this.txtTimkiemNxb.Size = new System.Drawing.Size(320, 36);
             this.txtTimkiemNxb.TabIndex = 5;
             // 
             // btnRefesh
@@ -106,13 +107,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(620, 22);
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option3;
+            this.btnRefesh.Location = new System.Drawing.Point(370, 66);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(135, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Làm mới";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnXoa
@@ -124,6 +126,7 @@
             this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.remove3;
             this.btnXoa.Location = new System.Drawing.Point(495, 22);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 36);
@@ -140,6 +143,7 @@
             this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = global::GUI.Properties.Resources.service__1_1;
             this.btnSua.Location = new System.Drawing.Point(370, 22);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 36);
@@ -156,6 +160,7 @@
             this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_;
             this.btnThem.Location = new System.Drawing.Point(245, 22);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 36);
@@ -199,26 +204,26 @@
             this.datagridviewNxb.AllowUserToAddRows = false;
             this.datagridviewNxb.AllowUserToDeleteRows = false;
             this.datagridviewNxb.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.datagridviewNxb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewNxb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.datagridviewNxb.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagridviewNxb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.datagridviewNxb.ColumnHeadersHeight = 35;
             this.datagridviewNxb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewNxb.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 15.75F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagridviewNxb.DefaultCellStyle = dataGridViewCellStyle9;
             this.datagridviewNxb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridviewNxb.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewNxb.Location = new System.Drawing.Point(0, 0);

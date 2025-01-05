@@ -41,34 +41,6 @@ namespace DAL
             return query.ToList();
         }
 
-        //public SachChiTietDTO GetSachDetailsById(int maSach)
-        //{
-        //    var sach = db.Saches.Where(s => s.Id == maSach)
-        //        .Select(s => new SachChiTietDTO
-        //        {
-        //            MaSach = s.Id,
-        //            TenSach = s.TenSach,
-        //            TacGia = string.Join(", ", s.TacGias.Select(t => t.TenTG)),
-        //            TheLoai = string.Join(", ", s.TheLoais.Select(t => t.TenTL)),
-        //            NhaXuatBan = s.NhaXuatBan.TenNXB,
-        //            NamXuatBan = s.NamXuatBan,
-        //            SoLuongTon = db.Khoes.Where(k => k.IdSach == maSach).Select(k => k.SoLuongTon).FirstOrDefault(),
-        //            ChiTietPhieuNhap = db.CT_PhieuNhap
-        //                .Where(p => p.MaSach == maSach)
-        //                .Select(p => new ChiTietPhieuNhapDTO
-        //                {
-        //                    TenNCC = p.NhaCungCap.TenNCC,
-        //                    SoLuongNhap = p.SoLuongNhap,
-        //                    DonGiaNhap = p.DonGiaNhap,
-        //                    DonGiaBan = p.DonGiaBan,
-        //                    NgayNhap = p.PhieuNhapSach.NgayNhapSach,
-        //                    ThanhTien = p.DonGiaNhap*p.SoLuongNhap
-        //                }).ToList()
-        //        }).FirstOrDefault();
-
-        //    return sach;
-        //}
-
         public SachChiTietDTO GetSachDetailsById(int maSach)
         {
             var sach = db.Saches
@@ -86,7 +58,7 @@ namespace DAL
                         .Where(p => p.MaSach == maSach)
                         .Select(p => new ChiTietPhieuNhapDTO
                         {
-                            //TenNCC = p.NhaCungCap.TenNCC,
+                            TenNCC = p.PhieuNhapSach.NhaCungCap.TenNCC,
                             SoLuongNhap = p.SoLuongNhap,
                             DonGiaNhap = p.DonGiaNhap,
                             DonGiaBan = p.DonGiaBan,
@@ -109,6 +81,64 @@ namespace DAL
                 .FirstOrDefault();
 
             return sach;
+        }
+
+        public bool UpdateSach(int maSach, string tenSach, string tacGia, string theLoai, string nhaXuatBan, int namXuatBan)
+        {
+            try
+            {
+                var sach = db.Saches.FirstOrDefault(s => s.Id == maSach);
+                if (sach == null) return false;
+
+                // Cập nhật thông tin sách
+                sach.TenSach = tenSach;
+                sach.TacGias.Clear();
+                var tacGiaList = tacGia.Split(',').Select(t => t.Trim()).ToList();
+                foreach (var tenTG in tacGiaList)
+                {
+                    var tacGiaEntity = db.TacGias.FirstOrDefault(t => t.TenTG == tenTG) ?? new TacGia { TenTG = tenTG };
+                    sach.TacGias.Add(tacGiaEntity);
+                }
+
+                sach.TheLoais.Clear();
+                var theLoaiList = theLoai.Split(',').Select(t => t.Trim()).ToList();
+                foreach (var tenTL in theLoaiList)
+                {
+                    var theLoaiEntity = db.TheLoais.FirstOrDefault(t => t.TenTL == tenTL) ?? new TheLoai { TenTL = tenTL };
+                    sach.TheLoais.Add(theLoaiEntity);
+                }
+
+                sach.NhaXuatBan = db.NhaXuatBans.FirstOrDefault(n => n.TenNXB == nhaXuatBan) ?? new NhaXuatBan { TenNXB = nhaXuatBan };
+                sach.NamXuatBan = namXuatBan;
+
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteSach(int maSach)
+        {
+            try
+            {
+                var sach = db.Saches.FirstOrDefault(s => s.Id == maSach);
+                if (sach == null) return false;
+
+                // Xóa các liên kết với tác giả, thể loại và các bảng liên quan khác
+                sach.TacGias.Clear();
+                sach.TheLoais.Clear();
+
+                db.Saches.Remove(sach);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }

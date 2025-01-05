@@ -42,9 +42,9 @@
             this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSĐT = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbbVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.btnResetMatKhau = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2ControlBox1
@@ -247,21 +247,22 @@
             this.cbbVaiTro.Size = new System.Drawing.Size(200, 27);
             this.cbbVaiTro.TabIndex = 15;
             // 
-            // btnXoa
+            // btnResetMatKhau
             // 
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(533, 170);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(110, 40);
-            this.btnXoa.TabIndex = 16;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnResetMatKhau.BorderRadius = 8;
+            this.btnResetMatKhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetMatKhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnResetMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnResetMatKhau.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnResetMatKhau.ForeColor = System.Drawing.Color.White;
+            this.btnResetMatKhau.Image = global::GUI.Properties.Resources.reset;
+            this.btnResetMatKhau.Location = new System.Drawing.Point(374, 230);
+            this.btnResetMatKhau.Name = "btnResetMatKhau";
+            this.btnResetMatKhau.Size = new System.Drawing.Size(188, 40);
+            this.btnResetMatKhau.TabIndex = 18;
+            this.btnResetMatKhau.Text = "Reset mật khẩu";
+            this.btnResetMatKhau.Click += new System.EventHandler(this.btnResetMatKhau_Click);
             // 
             // btnCapNhat
             // 
@@ -272,6 +273,7 @@
             this.btnCapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Image = global::GUI.Properties.Resources.updated;
             this.btnCapNhat.Location = new System.Drawing.Point(374, 170);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(132, 40);
@@ -279,21 +281,22 @@
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
-            // btnResetMatKhau
+            // btnXoa
             // 
-            this.btnResetMatKhau.BorderRadius = 8;
-            this.btnResetMatKhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnResetMatKhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnResetMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnResetMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnResetMatKhau.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnResetMatKhau.ForeColor = System.Drawing.Color.White;
-            this.btnResetMatKhau.Location = new System.Drawing.Point(374, 230);
-            this.btnResetMatKhau.Name = "btnResetMatKhau";
-            this.btnResetMatKhau.Size = new System.Drawing.Size(169, 40);
-            this.btnResetMatKhau.TabIndex = 18;
-            this.btnResetMatKhau.Text = "Reset mật khẩu";
-            this.btnResetMatKhau.Click += new System.EventHandler(this.btnResetMatKhau_Click);
+            this.btnXoa.BorderRadius = 8;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.remove1;
+            this.btnXoa.Location = new System.Drawing.Point(533, 170);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(110, 40);
+            this.btnXoa.TabIndex = 16;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // fUpdateTaiKhoan
             // 

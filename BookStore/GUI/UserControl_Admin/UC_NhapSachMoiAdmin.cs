@@ -170,8 +170,15 @@ namespace GUI.UserControl_Admin
                     row.Cells[7].Value = decimal.Parse(txtDonGiaBan.Text.Trim());
                     row.Cells[8].Value = (int)numSLNhap.Value * decimal.Parse(txtDonGiaNhap.Text.Trim());
 
-                    // Cập nhật lại tổng tiền
-                    lblTinhTongTien.Text = _phieuNhapList.Sum(x => x.ThanhTien).ToString("N2");
+                    // Tính toán tổng tiền cho phiếu nhập
+                    decimal tongTien = 0;
+                    foreach (DataGridViewRow r in dgvChitietPhieunhap.Rows)
+                    {
+                        tongTien += Convert.ToDecimal(r.Cells["Column9"].Value);
+                    }
+
+                    // Cập nhật tổng tiền vào label lblTinhTongTien
+                    lblTinhTongTien.Text = $"{tongTien:N2}";  // Định dạng tiền tệ
 
                     MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -648,6 +655,7 @@ namespace GUI.UserControl_Admin
 
             // Xóa dữ liệu trong DataGridView
             dgvChitietPhieunhap.Rows.Clear();
+            lblTinhTongTien.Text = string.Empty;
         }
 
     }

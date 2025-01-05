@@ -118,26 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="order-processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\order-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="description" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="client1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh-page-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-page-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="client" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-eberhard-grossgasteiger-1624496" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pexels-eberhard-grossgasteiger-1624496.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,40 +133,139 @@
   <data name="account-login_17515464" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account-login_17515464.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-interface-symbol1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-interface-symbol1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stack-of-books" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stack-of-books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="order1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\order1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-eberhard-grossgasteiger-1624496" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pexels-eberhard-grossgasteiger-1624496.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="service" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\service.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="books" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh-page-option1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-page-option1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse_3045703" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse_3045703.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="house" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\house.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="service" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\service.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="order1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employee_912267" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_912267.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="book-shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book-shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salary1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\service (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="service (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\service (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-interface-symbol3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-interface-symbol3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="house" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-page-option3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-page-option3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="revenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="removed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-interface-symbol2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-interface-symbol2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stack-of-books" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stack-of-books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-page-option2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-page-option2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-interface-symbol1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-interface-symbol1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="removed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\removed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multiply" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="client1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="books" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\books.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book-shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="updated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-page-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-page-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salary2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salary2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="client" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\client.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="order-processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

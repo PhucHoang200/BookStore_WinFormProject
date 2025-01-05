@@ -36,16 +36,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnTimkiemtheloai = new Guna.UI2.WinForms.Guna2Button();
             this.txtTimkiemtheloai = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.txtTentheloai = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.datagridviewTheloai = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnTimkiemtheloai = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
@@ -67,22 +67,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(816, 110);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnTimkiemtheloai
-            // 
-            this.btnTimkiemtheloai.BorderRadius = 8;
-            this.btnTimkiemtheloai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemtheloai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemtheloai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimkiemtheloai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimkiemtheloai.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnTimkiemtheloai.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemtheloai.Location = new System.Drawing.Point(245, 66);
-            this.btnTimkiemtheloai.Name = "btnTimkiemtheloai";
-            this.btnTimkiemtheloai.Size = new System.Drawing.Size(146, 36);
-            this.btnTimkiemtheloai.TabIndex = 6;
-            this.btnTimkiemtheloai.Text = "Tìm kiếm ";
-            this.btnTimkiemtheloai.Click += new System.EventHandler(this.btnTimkiemtheloai_Click);
-            // 
             // txtTimkiemtheloai
             // 
             this.txtTimkiemtheloai.BorderRadius = 8;
@@ -102,72 +86,8 @@
             this.txtTimkiemtheloai.PasswordChar = '\0';
             this.txtTimkiemtheloai.PlaceholderText = "Nhập tên thể loại";
             this.txtTimkiemtheloai.SelectedText = "";
-            this.txtTimkiemtheloai.Size = new System.Drawing.Size(195, 36);
+            this.txtTimkiemtheloai.Size = new System.Drawing.Size(320, 36);
             this.txtTimkiemtheloai.TabIndex = 5;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BorderRadius = 8;
-            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(620, 22);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(134, 36);
-            this.btnRefesh.TabIndex = 4;
-            this.btnRefesh.Text = "Làm mới";
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(495, 22);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 36);
-            this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(370, 22);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 36);
-            this.btnSua.TabIndex = 2;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BorderRadius = 8;
-            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(245, 22);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 36);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTentheloai
             // 
@@ -317,6 +237,91 @@
             this.datagridviewTheloai.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagridviewTheloai.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.datagridviewTheloai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewTheloai_CellClick);
+            // 
+            // btnTimkiemtheloai
+            // 
+            this.btnTimkiemtheloai.BorderRadius = 8;
+            this.btnTimkiemtheloai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemtheloai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemtheloai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimkiemtheloai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemtheloai.FillColor = System.Drawing.Color.White;
+            this.btnTimkiemtheloai.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnTimkiemtheloai.ForeColor = System.Drawing.Color.White;
+            this.btnTimkiemtheloai.Image = global::GUI.Properties.Resources.search_interface_symbol3;
+            this.btnTimkiemtheloai.Location = new System.Drawing.Point(310, 70);
+            this.btnTimkiemtheloai.Name = "btnTimkiemtheloai";
+            this.btnTimkiemtheloai.Size = new System.Drawing.Size(30, 28);
+            this.btnTimkiemtheloai.TabIndex = 6;
+            this.btnTimkiemtheloai.Click += new System.EventHandler(this.btnTimkiemtheloai_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BorderRadius = 8;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
+            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option3;
+            this.btnRefesh.Location = new System.Drawing.Point(370, 64);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
+            this.btnRefesh.TabIndex = 4;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderRadius = 8;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.remove3;
+            this.btnXoa.Location = new System.Drawing.Point(495, 22);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 36);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BorderRadius = 8;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = global::GUI.Properties.Resources.service__1_1;
+            this.btnSua.Location = new System.Drawing.Point(370, 22);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 36);
+            this.btnSua.TabIndex = 2;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BorderRadius = 8;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_2;
+            this.btnThem.Location = new System.Drawing.Point(245, 22);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 36);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // UC_Theloaisachadmin
             // 

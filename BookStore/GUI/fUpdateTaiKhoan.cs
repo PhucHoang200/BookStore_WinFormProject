@@ -18,13 +18,13 @@ namespace GUI
     {
         private int TaiKhoanId;
         private TaiKhoanBUS _bus = new TaiKhoanBUS();
-        private UC_TaikhoanAdmin _ucTaikhoanAdmin;
+        private Action _onReloadData;
 
-        public fUpdateTaiKhoan(int id, UC_TaikhoanAdmin ucTaikhoanAdmin)
+        public fUpdateTaiKhoan(int id, Action onReloadData)
         {
             InitializeComponent();
             TaiKhoanId = id;
-            _ucTaikhoanAdmin = ucTaikhoanAdmin;
+            _onReloadData = onReloadData;
 
             // Load thông tin tài khoản
             LoadTaiKhoan();
@@ -71,8 +71,8 @@ namespace GUI
             if (result)
             {
                 MessageBox.Show("Cập nhật thành công!");
-                _ucTaikhoanAdmin.LoadData();
-                this.Close();
+                _onReloadData?.Invoke();
+                this.Close(); // Đóng form
             }
             else
             {
@@ -135,7 +135,7 @@ namespace GUI
 
         private void fUpdateTaiKhoan_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _ucTaikhoanAdmin.LoadData();
+            
         }
     }
 }

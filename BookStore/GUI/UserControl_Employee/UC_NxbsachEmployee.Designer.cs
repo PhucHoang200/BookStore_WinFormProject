@@ -60,13 +60,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(436, 22);
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option;
+            this.btnRefesh.Location = new System.Drawing.Point(358, 22);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(145, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 2;
-            this.btnRefesh.Text = "Làm mới";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimkiemNxb
@@ -76,13 +77,14 @@
             this.btnTimkiemNxb.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimkiemNxb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTimkiemNxb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemNxb.FillColor = System.Drawing.Color.White;
             this.btnTimkiemNxb.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiemNxb.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemNxb.Location = new System.Drawing.Point(245, 22);
+            this.btnTimkiemNxb.Image = global::GUI.Properties.Resources.search_interface_symbol;
+            this.btnTimkiemNxb.Location = new System.Drawing.Point(300, 28);
             this.btnTimkiemNxb.Name = "btnTimkiemNxb";
-            this.btnTimkiemNxb.Size = new System.Drawing.Size(155, 36);
+            this.btnTimkiemNxb.Size = new System.Drawing.Size(30, 27);
             this.btnTimkiemNxb.TabIndex = 1;
-            this.btnTimkiemNxb.Text = "Tìm kiếm ";
             this.btnTimkiemNxb.Click += new System.EventHandler(this.btnTimkiemNxb_Click);
             // 
             // txtTimkiemNxb
@@ -104,7 +106,7 @@
             this.txtTimkiemNxb.PasswordChar = '\0';
             this.txtTimkiemNxb.PlaceholderText = "Nhập tên NXB";
             this.txtTimkiemNxb.SelectedText = "";
-            this.txtTimkiemNxb.Size = new System.Drawing.Size(195, 36);
+            this.txtTimkiemNxb.Size = new System.Drawing.Size(309, 36);
             this.txtTimkiemNxb.TabIndex = 0;
             // 
             // guna2Panel2

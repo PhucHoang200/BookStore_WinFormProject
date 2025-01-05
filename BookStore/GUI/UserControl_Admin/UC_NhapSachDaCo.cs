@@ -54,42 +54,6 @@ namespace GUI.UserControl_Admin
             }
         }
 
-        private void txtTacGia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTheLoai_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNXB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNamXB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numSLNhap_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDonGiaNhap_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDonGiaBan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void btnThemVaoPhieuNhap_Click(object sender, EventArgs e)
         {
             // Kiểm tra các trường nhập liệu
@@ -273,11 +237,6 @@ namespace GUI.UserControl_Admin
             txtDonGiaNhap.Clear();
         }
 
-        private void lblTinhTongTien_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLuuPhieuNhap_Click(object sender, EventArgs e)
         {
             try
@@ -389,8 +348,7 @@ namespace GUI.UserControl_Admin
                 MessageBox.Show($"Lưu phiếu nhập thành công! Mã phiếu nhập: {phieuNhapId}");
 
                 // Xóa dữ liệu trong DataGridView và reset tổng tiền
-                dgvChitietPhieunhap.Rows.Clear();
-                lblTinhTongTien.Text = "0.00"; // Reset tổng tiền về 0
+                ClearAll();
             }
             catch (Exception ex)
             {
@@ -526,5 +484,26 @@ namespace GUI.UserControl_Admin
             cbbTenSach.ValueMember = "Id";
         }
 
+        private void ClearAll()
+        {
+            // Xóa tất cả các TextBox
+            cbbTenSach.Items.Clear(); // Xóa toàn bộ mục trong ComboBox
+            cbbTenSach.SelectedIndex = -1; // Đặt ComboBox về trạng thái không chọn gì
+            txtTacGia.Clear();
+            txtTheLoai.Clear();
+            txtNXB.Clear();
+            txtNamXB.Clear();
+            txtDonGiaNhap.Clear();
+            txtDonGiaBan.Clear();
+            cbbLocNCC.Items.Clear(); // Xóa toàn bộ mục trong ComboBox
+            cbbLocNCC.SelectedIndex = -1; // Đặt ComboBox về trạng thái không chọn gì
+
+            // Đặt lại giá trị của numSLNhap về mặc định (0)
+            numSLNhap.Value = 0;
+
+            // Xóa dữ liệu trong DataGridView
+            dgvChitietPhieunhap.Rows.Clear();
+            lblTinhTongTien.Text = string.Empty;
+        }
     }
 }

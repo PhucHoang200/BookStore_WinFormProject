@@ -29,13 +29,13 @@ namespace GUI.UserControl_Admin
             DateTime endDate = dtpEndDate.Value.Date;
 
             // Lấy dữ liệu doanh thu
-            var doanhThuData = GetDoanhThuTheoSanPham(startDate, endDate);
+            var doanhThuData = GetSoLuongBanTheoSanPham(startDate, endDate);
             var theLoaiData = GetThongKeTheLoai(startDate, endDate); // Dữ liệu thể loại bán ra
             var nhanVienData = GetThongKeNhanVien(startDate, endDate); // Dữ liệu nhân viên
 
             // Tính tổng doanh thu
-            decimal tongDoanhThu = doanhThuData.Sum(item => item.TongDoanhThu);
-            label1.Text = $"Tổng Doanh Thu: {tongDoanhThu:C}";
+            decimal tongSoLuongBan = doanhThuData.Sum(item => item.TongSoLuongBan);
+            label1.Text = $"Tổng số lượng bán: {tongSoLuongBan:C}";
 
             // Xóa dữ liệu cũ trên biểu đồ
             chartRevenue.Series.Clear();
@@ -52,10 +52,13 @@ namespace GUI.UserControl_Admin
             };
             chartRevenue.Series.Add(series);
 
+            // Lặp qua dữ liệu doanh thu để tính tổng số lượng bán ra của mỗi sách
             foreach (var item in doanhThuData)
             {
-                series.Points.AddXY(item.TenSach, item.TongDoanhThu);
+                // Giả sử mỗi item có thuộc tính "TongSoLuongBan" đại diện cho tổng số lượng bán ra của sách
+                series.Points.AddXY(item.TenSach, item.TongSoLuongBan);
             }
+
 
             chartRevenue.Titles.Clear();
             chartRevenue.Titles.Add("Báo Cáo Doanh Thu Theo Sách");
@@ -64,10 +67,15 @@ namespace GUI.UserControl_Admin
             chartRevenue.ChartAreas[0].AxisY.Title = "Tổng Doanh Thu (VNĐ)";
 
             // Biểu đồ tròn thống kê thể loại bán ra
+            // Biểu đồ tròn thống kê thể loại bán ra
             chartCategoryRevenue.Series.Clear();
             chartCategoryRevenue.ChartAreas.Clear();
+
+            // Tạo ChartArea
             ChartArea chartAreaCategory = new ChartArea("ChartArea2");
             chartCategoryRevenue.ChartAreas.Add(chartAreaCategory);
+
+            // Tạo Series cho biểu đồ
             Series seriesCategory = new Series("Thể Loại")
             {
                 ChartType = SeriesChartType.Pie,
@@ -83,35 +91,55 @@ namespace GUI.UserControl_Admin
                 // Tính tỷ lệ phần trăm
                 decimal percentage = (item.TongDoanhThu / totalRevenue) * 100;
 
-                // Thêm điểm vào biểu đồ với giá trị phần trăm
-                seriesCategory.Points.AddXY(item.TenTL, item.TongDoanhThu);
-                seriesCategory.Points[seriesCategory.Points.Count - 1].Label = $"{percentage:F2}%"; // Hiển thị phần trăm với 2 chữ số thập phân
+                // Thêm điểm vào biểu đồ với giá trị doanh thu
+                var point = seriesCategory.Points.AddXY(item.TenTL, item.TongDoanhThu);
+
+                // Hiển thị phần trăm trên biểu đồ
+                seriesCategory.Points[point].Label = $"{percentage:F2}%";
+
+                // Hiển thị tên thể loại trong legend
+                seriesCategory.Points[point].LegendText = item.TenTL;
             }
+
 
 
             chartCategoryRevenue.Titles.Clear();
             chartCategoryRevenue.Titles.Add("Thống Kê Thể Loại Bán Ra");
 
             // Biểu đồ đường thống kê hiệu suất bán hàng của nhân viên
+            // Biểu đồ đường thống kê hiệu suất bán hàng của nhân viên
             chartEmployeePerformance.Series.Clear();
             chartEmployeePerformance.ChartAreas.Clear();
+
+            // Tạo ChartArea
             ChartArea chartAreaEmployee = new ChartArea("ChartArea3");
             chartEmployeePerformance.ChartAreas.Add(chartAreaEmployee);
-            Series seriesEmployee = new Series("Hiệu Suất Bán Hàng")
-            {
-                ChartType = SeriesChartType.Line,
-                XValueType = ChartValueType.Date,
-                IsValueShownAsLabel = true
-            };
-            chartEmployeePerformance.Series.Add(seriesEmployee);
 
-            foreach (var item in nhanVienData)
+            // Lặp qua danh sách nhân viên
+            foreach (var nhanVien in nhanVienData.GroupBy(x => x.TenNhanVien))
             {
-                seriesEmployee.Points.AddXY(item.Ngay, item.TongDoanhThu);
+                // Tạo Series cho từng nhân viên
+                Series seriesEmployee = new Series(nhanVien.Key) // Tên nhân viên làm tên Series
+                {
+                    ChartType = SeriesChartType.Line,
+                    XValueType = ChartValueType.Date,
+                    IsValueShownAsLabel = true
+                };
+
+                // Thêm dữ liệu vào Series
+                foreach (var item in nhanVien)
+                {
+                    seriesEmployee.Points.AddXY(item.Ngay, item.TongDoanhThu);
+                }
+
+                // Thêm Series vào biểu đồ
+                chartEmployeePerformance.Series.Add(seriesEmployee);
             }
 
+            // Thêm tiêu đề biểu đồ
             chartEmployeePerformance.Titles.Clear();
             chartEmployeePerformance.Titles.Add("Hiệu Suất Bán Hàng Của Nhân Viên");
+
         }
 
         // Lấy dữ liệu hiệu suất bán hàng của nhân viên
@@ -166,29 +194,30 @@ namespace GUI.UserControl_Admin
             public decimal TongDoanhThu { get; set; }
         }
 
-        public List<BaoCaoDoanhThuTheoSanPham> GetDoanhThuTheoSanPham(DateTime startDate, DateTime endDate)
+        public List<BaoCaoSoLuongBanTheoSanPham> GetSoLuongBanTheoSanPham(DateTime startDate, DateTime endDate)
         {
             using (var context = new BookStoreDBEntities())
             {
-                var doanhThu = context.CT_DonHang
-                    .Where(ct => ct.DonHang.NgayMuaHang >= startDate && ct.DonHang.NgayMuaHang <= endDate)
-                    .GroupBy(ct => ct.Sach.TenSach) // Group by product name (Sach)
-                    .Select(g => new BaoCaoDoanhThuTheoSanPham
+                var soLuongBan = context.CT_DonHang
+                    .Where(ct => ct.DonHang.NgayMuaHang >= startDate && ct.DonHang.NgayMuaHang <= endDate) // Lọc theo ngày mua hàng
+                    .GroupBy(ct => ct.Sach.TenSach) // Group theo tên sách
+                    .Select(g => new BaoCaoSoLuongBanTheoSanPham
                     {
-                        TenSach = g.Key,
-                        TongDoanhThu = g.Sum(x => x.SoLuongBan * x.DonGiaBan)
+                        TenSach = g.Key, // Tên sách
+                        TongSoLuongBan = g.Sum(x => x.SoLuongBan) // Tính tổng số lượng sách bán ra
                     })
                     .ToList();
 
-                return doanhThu;
+                return soLuongBan;
             }
         }
 
-        public class BaoCaoDoanhThuTheoSanPham
+        public class BaoCaoSoLuongBanTheoSanPham
         {
-            public string TenSach { get; set; }
-            public decimal TongDoanhThu { get; set; }
+            public string TenSach { get; set; } // Tên sách
+            public int TongSoLuongBan { get; set; } // Tổng số lượng sách bán ra
         }
+
 
         private void btnXuatThongKe_Click(object sender, EventArgs e)
         {

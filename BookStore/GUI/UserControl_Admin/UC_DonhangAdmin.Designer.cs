@@ -140,7 +140,7 @@
             this.dgvDsSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -159,7 +159,7 @@
             this.Column8});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -275,13 +275,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(523, 86);
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option;
+            this.btnRefesh.Location = new System.Drawing.Point(478, 85);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(117, 30);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 15;
-            this.btnRefesh.Text = "Refesh";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnTimkiemSach
@@ -291,13 +292,14 @@
             this.btnTimkiemSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimkiemSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTimkiemSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemSach.FillColor = System.Drawing.Color.White;
             this.btnTimkiemSach.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiemSach.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemSach.Location = new System.Drawing.Point(357, 86);
+            this.btnTimkiemSach.Image = global::GUI.Properties.Resources.search_interface_symbol3;
+            this.btnTimkiemSach.Location = new System.Drawing.Point(425, 85);
             this.btnTimkiemSach.Name = "btnTimkiemSach";
-            this.btnTimkiemSach.Size = new System.Drawing.Size(160, 30);
+            this.btnTimkiemSach.Size = new System.Drawing.Size(30, 28);
             this.btnTimkiemSach.TabIndex = 14;
-            this.btnTimkiemSach.Text = "Tìm kiếm sách";
             this.btnTimkiemSach.Click += new System.EventHandler(this.btnTimkiemSach_Click);
             // 
             // txtTimkiemSach
@@ -319,7 +321,7 @@
             this.txtTimkiemSach.PasswordChar = '\0';
             this.txtTimkiemSach.PlaceholderText = "Nhập thông tin tìm kiếm";
             this.txtTimkiemSach.SelectedText = "";
-            this.txtTimkiemSach.Size = new System.Drawing.Size(235, 36);
+            this.txtTimkiemSach.Size = new System.Drawing.Size(352, 36);
             this.txtTimkiemSach.TabIndex = 13;
             // 
             // btnCapnhatSach
@@ -331,6 +333,7 @@
             this.btnCapnhatSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCapnhatSach.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapnhatSach.ForeColor = System.Drawing.Color.White;
+            this.btnCapnhatSach.Image = global::GUI.Properties.Resources.service__1_1;
             this.btnCapnhatSach.Location = new System.Drawing.Point(478, 47);
             this.btnCapnhatSach.Name = "btnCapnhatSach";
             this.btnCapnhatSach.Size = new System.Drawing.Size(117, 30);
@@ -347,6 +350,7 @@
             this.btnHuyDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHuyDonHang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyDonHang.ForeColor = System.Drawing.Color.White;
+            this.btnHuyDonHang.Image = global::GUI.Properties.Resources.multiply;
             this.btnHuyDonHang.Location = new System.Drawing.Point(357, 45);
             this.btnHuyDonHang.Name = "btnHuyDonHang";
             this.btnHuyDonHang.Size = new System.Drawing.Size(100, 30);
@@ -363,9 +367,10 @@
             this.btnThemDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThemDonHang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnThemDonHang.ForeColor = System.Drawing.Color.White;
+            this.btnThemDonHang.Image = global::GUI.Properties.Resources.plus__1_2;
             this.btnThemDonHang.Location = new System.Drawing.Point(357, 9);
             this.btnThemDonHang.Name = "btnThemDonHang";
-            this.btnThemDonHang.Size = new System.Drawing.Size(217, 30);
+            this.btnThemDonHang.Size = new System.Drawing.Size(238, 30);
             this.btnThemDonHang.TabIndex = 5;
             this.btnThemDonHang.Text = "Thêm vào đơn hàng";
             this.btnThemDonHang.Click += new System.EventHandler(this.btnThemDonHang_Click);
@@ -470,9 +475,10 @@
             this.btnCapnhatKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCapnhatKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapnhatKH.ForeColor = System.Drawing.Color.White;
+            this.btnCapnhatKH.Image = global::GUI.Properties.Resources.service__1_;
             this.btnCapnhatKH.Location = new System.Drawing.Point(141, 129);
             this.btnCapnhatKH.Name = "btnCapnhatKH";
-            this.btnCapnhatKH.Size = new System.Drawing.Size(117, 30);
+            this.btnCapnhatKH.Size = new System.Drawing.Size(123, 30);
             this.btnCapnhatKH.TabIndex = 11;
             this.btnCapnhatKH.Text = "Cập nhật";
             this.btnCapnhatKH.Click += new System.EventHandler(this.btnCapnhatKH_Click);
@@ -486,6 +492,7 @@
             this.btnHuyKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnHuyKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnHuyKH.ForeColor = System.Drawing.Color.White;
+            this.btnHuyKH.Image = global::GUI.Properties.Resources.multiply;
             this.btnHuyKH.Location = new System.Drawing.Point(7, 129);
             this.btnHuyKH.Name = "btnHuyKH";
             this.btnHuyKH.Size = new System.Drawing.Size(100, 30);
@@ -502,6 +509,7 @@
             this.btnLuuKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLuuKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLuuKH.ForeColor = System.Drawing.Color.White;
+            this.btnLuuKH.Image = global::GUI.Properties.Resources.paper2;
             this.btnLuuKH.Location = new System.Drawing.Point(291, 129);
             this.btnLuuKH.Name = "btnLuuKH";
             this.btnLuuKH.Size = new System.Drawing.Size(110, 30);
@@ -762,6 +770,7 @@
             this.btnLuuDonhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLuuDonhang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnLuuDonhang.ForeColor = System.Drawing.Color.White;
+            this.btnLuuDonhang.Image = global::GUI.Properties.Resources.paper;
             this.btnLuuDonhang.Location = new System.Drawing.Point(157, 208);
             this.btnLuuDonhang.Name = "btnLuuDonhang";
             this.btnLuuDonhang.Size = new System.Drawing.Size(180, 45);
@@ -778,6 +787,7 @@
             this.btnXoaDonhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoaDonhang.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnXoaDonhang.ForeColor = System.Drawing.Color.White;
+            this.btnXoaDonhang.Image = global::GUI.Properties.Resources.remove3;
             this.btnXoaDonhang.Location = new System.Drawing.Point(22, 208);
             this.btnXoaDonhang.Name = "btnXoaDonhang";
             this.btnXoaDonhang.Size = new System.Drawing.Size(100, 45);

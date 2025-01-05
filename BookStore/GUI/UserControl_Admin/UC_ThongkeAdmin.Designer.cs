@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnXuatThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,14 +43,14 @@
             this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartCategoryRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartEmployeePerformance = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartCategoryRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartEmployeePerformance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -77,6 +77,7 @@
             this.btnXuatThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXuatThongKe.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnXuatThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnXuatThongKe.Image = global::GUI.Properties.Resources.paper1;
             this.btnXuatThongKe.Location = new System.Drawing.Point(237, 46);
             this.btnXuatThongKe.Name = "btnXuatThongKe";
             this.btnXuatThongKe.Size = new System.Drawing.Size(246, 36);
@@ -121,6 +122,7 @@
             this.btnViewReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnViewReport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReport.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.Image = global::GUI.Properties.Resources.salary1;
             this.btnViewReport.Location = new System.Drawing.Point(21, 46);
             this.btnViewReport.Name = "btnViewReport";
             this.btnViewReport.Size = new System.Drawing.Size(180, 36);
@@ -169,16 +171,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1185, 643);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // chartRevenue
+            // chartEmployeePerformance
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend3);
-            this.chartRevenue.Location = new System.Drawing.Point(0, 0);
-            this.chartRevenue.Name = "chartRevenue";
-            this.chartRevenue.Size = new System.Drawing.Size(593, 322);
-            this.chartRevenue.TabIndex = 4;
+            chartArea1.Name = "ChartArea3";
+            this.chartEmployeePerformance.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartEmployeePerformance.Legends.Add(legend1);
+            this.chartEmployeePerformance.Location = new System.Drawing.Point(39, 263);
+            this.chartEmployeePerformance.Name = "chartEmployeePerformance";
+            this.chartEmployeePerformance.Size = new System.Drawing.Size(1146, 380);
+            this.chartEmployeePerformance.TabIndex = 6;
             // 
             // chartCategoryRevenue
             // 
@@ -188,19 +190,19 @@
             this.chartCategoryRevenue.Legends.Add(legend2);
             this.chartCategoryRevenue.Location = new System.Drawing.Point(601, 0);
             this.chartCategoryRevenue.Name = "chartCategoryRevenue";
-            this.chartCategoryRevenue.Size = new System.Drawing.Size(584, 322);
+            this.chartCategoryRevenue.Size = new System.Drawing.Size(584, 263);
             this.chartCategoryRevenue.TabIndex = 5;
             // 
-            // chartEmployeePerformance
+            // chartRevenue
             // 
-            chartArea1.Name = "ChartArea3";
-            this.chartEmployeePerformance.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartEmployeePerformance.Legends.Add(legend1);
-            this.chartEmployeePerformance.Location = new System.Drawing.Point(36, 323);
-            this.chartEmployeePerformance.Name = "chartEmployeePerformance";
-            this.chartEmployeePerformance.Size = new System.Drawing.Size(1146, 321);
-            this.chartEmployeePerformance.TabIndex = 6;
+            chartArea3.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend3);
+            this.chartRevenue.Location = new System.Drawing.Point(0, 0);
+            this.chartRevenue.Name = "chartRevenue";
+            this.chartRevenue.Size = new System.Drawing.Size(593, 263);
+            this.chartRevenue.TabIndex = 4;
             // 
             // UC_ThongkeAdmin
             // 
@@ -214,9 +216,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartEmployeePerformance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
             this.ResumeLayout(false);
 
         }

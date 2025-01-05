@@ -77,7 +77,7 @@ namespace GUI.UserControl_Admin
                 int id = Convert.ToInt32(dgvTaiKhoan.Rows[e.RowIndex].Cells["Column1"].Value);
 
                 // Khởi tạo và truyền Id sang form fUpdateTaiKhoan
-                fUpdateTaiKhoan formUpdate = new fUpdateTaiKhoan(id, this);
+                fUpdateTaiKhoan formUpdate = new fUpdateTaiKhoan(id, ReloadData);
                 formUpdate.ShowDialog();
 
                 // Cập nhật lại DataGridView sau khi sửa/xóa
@@ -90,5 +90,7 @@ namespace GUI.UserControl_Admin
             LoadData();
             PopulateRoleFilter();
         }
+
+        public void ReloadData() { LoadData(); }    
     }
 }

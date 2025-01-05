@@ -31,15 +31,15 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnXuatBCDoanhThu = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnViewReport = new Guna.UI2.WinForms.Guna2Button();
             this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnXuatBCDoanhThu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnViewReport = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
@@ -59,22 +59,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1185, 97);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // btnXuatBCDoanhThu
-            // 
-            this.btnXuatBCDoanhThu.BorderRadius = 8;
-            this.btnXuatBCDoanhThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatBCDoanhThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatBCDoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXuatBCDoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXuatBCDoanhThu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXuatBCDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.btnXuatBCDoanhThu.Location = new System.Drawing.Point(237, 46);
-            this.btnXuatBCDoanhThu.Name = "btnXuatBCDoanhThu";
-            this.btnXuatBCDoanhThu.Size = new System.Drawing.Size(246, 36);
-            this.btnXuatBCDoanhThu.TabIndex = 8;
-            this.btnXuatBCDoanhThu.Text = "Xuất báo cáo doanh thu";
-            this.btnXuatBCDoanhThu.Click += new System.EventHandler(this.btnXuatBCDoanhThu_Click);
             // 
             // label3
             // 
@@ -103,22 +87,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(341, 27);
             this.label1.TabIndex = 5;
-            // 
-            // btnViewReport
-            // 
-            this.btnViewReport.BorderRadius = 8;
-            this.btnViewReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViewReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViewReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViewReport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewReport.ForeColor = System.Drawing.Color.White;
-            this.btnViewReport.Location = new System.Drawing.Point(21, 46);
-            this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(180, 36);
-            this.btnViewReport.TabIndex = 3;
-            this.btnViewReport.Text = "Xem doanh thu";
-            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
             // 
             // dtpEndDate
             // 
@@ -170,6 +138,40 @@
             this.chartRevenue.Name = "chartRevenue";
             this.chartRevenue.Size = new System.Drawing.Size(1185, 643);
             this.chartRevenue.TabIndex = 4;
+            // 
+            // btnXuatBCDoanhThu
+            // 
+            this.btnXuatBCDoanhThu.BorderRadius = 8;
+            this.btnXuatBCDoanhThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatBCDoanhThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatBCDoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXuatBCDoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXuatBCDoanhThu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXuatBCDoanhThu.ForeColor = System.Drawing.Color.White;
+            this.btnXuatBCDoanhThu.Image = global::GUI.Properties.Resources.paper;
+            this.btnXuatBCDoanhThu.Location = new System.Drawing.Point(237, 46);
+            this.btnXuatBCDoanhThu.Name = "btnXuatBCDoanhThu";
+            this.btnXuatBCDoanhThu.Size = new System.Drawing.Size(255, 36);
+            this.btnXuatBCDoanhThu.TabIndex = 8;
+            this.btnXuatBCDoanhThu.Text = "Xuất báo cáo doanh thu";
+            this.btnXuatBCDoanhThu.Click += new System.EventHandler(this.btnXuatBCDoanhThu_Click);
+            // 
+            // btnViewReport
+            // 
+            this.btnViewReport.BorderRadius = 8;
+            this.btnViewReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewReport.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewReport.ForeColor = System.Drawing.Color.White;
+            this.btnViewReport.Image = global::GUI.Properties.Resources.salary;
+            this.btnViewReport.Location = new System.Drawing.Point(21, 46);
+            this.btnViewReport.Name = "btnViewReport";
+            this.btnViewReport.Size = new System.Drawing.Size(180, 36);
+            this.btnViewReport.TabIndex = 3;
+            this.btnViewReport.Text = "Xem doanh thu";
+            this.btnViewReport.Click += new System.EventHandler(this.btnViewReport_Click);
             // 
             // UC_BCDoanhThuAdmin
             // 

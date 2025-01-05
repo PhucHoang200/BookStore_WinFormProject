@@ -348,7 +348,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2ControlBox2);
@@ -362,7 +362,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(299, 60);
@@ -372,9 +372,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(800, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 60);
@@ -384,8 +384,8 @@
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1070, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(57, 60);
@@ -395,8 +395,8 @@
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.CustomClick = true;
-            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1127, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(58, 60);

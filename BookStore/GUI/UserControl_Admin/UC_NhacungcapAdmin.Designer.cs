@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dgvNhaCungCap = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtTenNCC = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
-            this.txtTimkiemNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTimkiemNCC = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTimkiemNCC = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRefesh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSua = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTenNCC = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dgvNhaCungCap = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
@@ -62,34 +62,165 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1185, 126);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // btnTimkiemNCC
+            // 
+            this.btnTimkiemNCC.BorderRadius = 8;
+            this.btnTimkiemNCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemNCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimkiemNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimkiemNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemNCC.FillColor = System.Drawing.Color.White;
+            this.btnTimkiemNCC.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimkiemNCC.ForeColor = System.Drawing.Color.White;
+            this.btnTimkiemNCC.Image = global::GUI.Properties.Resources.search_interface_symbol;
+            this.btnTimkiemNCC.Location = new System.Drawing.Point(310, 80);
+            this.btnTimkiemNCC.Name = "btnTimkiemNCC";
+            this.btnTimkiemNCC.Size = new System.Drawing.Size(30, 28);
+            this.btnTimkiemNCC.TabIndex = 7;
+            this.btnTimkiemNCC.Click += new System.EventHandler(this.btnTimkiemNCC_Click);
+            // 
+            // txtTimkiemNCC
+            // 
+            this.txtTimkiemNCC.BorderRadius = 8;
+            this.txtTimkiemNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimkiemNCC.DefaultText = "";
+            this.txtTimkiemNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimkiemNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimkiemNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimkiemNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimkiemNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimkiemNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.txtTimkiemNCC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTimkiemNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimkiemNCC.Location = new System.Drawing.Point(18, 77);
+            this.txtTimkiemNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimkiemNCC.Name = "txtTimkiemNCC";
+            this.txtTimkiemNCC.PasswordChar = '\0';
+            this.txtTimkiemNCC.PlaceholderText = "Nhập tên nhà cung cấp\r\n";
+            this.txtTimkiemNCC.SelectedText = "";
+            this.txtTimkiemNCC.Size = new System.Drawing.Size(327, 36);
+            this.txtTimkiemNCC.TabIndex = 6;
+            this.txtTimkiemNCC.TextChanged += new System.EventHandler(this.txtTimkiemNCC_TextChanged);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BorderRadius = 8;
+            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
+            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option1;
+            this.btnRefesh.Location = new System.Drawing.Point(382, 77);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
+            this.btnRefesh.TabIndex = 5;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BorderRadius = 8;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.remove3;
+            this.btnXoa.Location = new System.Drawing.Point(519, 21);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 36);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BorderRadius = 8;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = global::GUI.Properties.Resources.service__1_1;
+            this.btnSua.Location = new System.Drawing.Point(382, 21);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 36);
+            this.btnSua.TabIndex = 3;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BorderRadius = 8;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_;
+            this.btnThem.Location = new System.Drawing.Point(245, 21);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 36);
+            this.btnThem.TabIndex = 2;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtTenNCC
+            // 
+            this.txtTenNCC.BorderRadius = 8;
+            this.txtTenNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNCC.DefaultText = "";
+            this.txtTenNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F);
+            this.txtTenNCC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNCC.Location = new System.Drawing.Point(18, 21);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.PasswordChar = '\0';
+            this.txtTenNCC.PlaceholderText = "Tên nhà cung cấp";
+            this.txtTenNCC.SelectedText = "";
+            this.txtTenNCC.Size = new System.Drawing.Size(195, 36);
+            this.txtTenNCC.TabIndex = 1;
+            this.txtTenNCC.TextChanged += new System.EventHandler(this.txtTenNCC_TextChanged);
+            // 
             // dgvNhaCungCap
             // 
             this.dgvNhaCungCap.AllowUserToAddRows = false;
             this.dgvNhaCungCap.AllowUserToDeleteRows = false;
             this.dgvNhaCungCap.AllowUserToResizeRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.dgvNhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dgvNhaCungCap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhaCungCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvNhaCungCap.ColumnHeadersHeight = 35;
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Times New Roman", 15.75F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvNhaCungCap.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgvNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhaCungCap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNhaCungCap.Location = new System.Drawing.Point(0, 126);
@@ -122,132 +253,6 @@
             this.dgvNhaCungCap.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNhaCungCap.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
-            // 
-            // txtTenNCC
-            // 
-            this.txtTenNCC.BorderRadius = 8;
-            this.txtTenNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenNCC.DefaultText = "";
-            this.txtTenNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.txtTenNCC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNCC.Location = new System.Drawing.Point(18, 21);
-            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.PasswordChar = '\0';
-            this.txtTenNCC.PlaceholderText = "Tên nhà cung cấp";
-            this.txtTenNCC.SelectedText = "";
-            this.txtTenNCC.Size = new System.Drawing.Size(195, 36);
-            this.txtTenNCC.TabIndex = 1;
-            this.txtTenNCC.TextChanged += new System.EventHandler(this.txtTenNCC_TextChanged);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BorderRadius = 8;
-            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(245, 21);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 36);
-            this.btnThem.TabIndex = 2;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(382, 21);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 36);
-            this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BorderRadius = 8;
-            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(519, 21);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 36);
-            this.btnXoa.TabIndex = 4;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BorderRadius = 8;
-            this.btnRefesh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Location = new System.Drawing.Point(655, 21);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(100, 36);
-            this.btnRefesh.TabIndex = 5;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // txtTimkiemNCC
-            // 
-            this.txtTimkiemNCC.BorderRadius = 8;
-            this.txtTimkiemNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimkiemNCC.DefaultText = "";
-            this.txtTimkiemNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimkiemNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimkiemNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimkiemNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimkiemNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimkiemNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F);
-            this.txtTimkiemNCC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTimkiemNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimkiemNCC.Location = new System.Drawing.Point(18, 77);
-            this.txtTimkiemNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTimkiemNCC.Name = "txtTimkiemNCC";
-            this.txtTimkiemNCC.PasswordChar = '\0';
-            this.txtTimkiemNCC.PlaceholderText = "Nhập tên nhà cung cấp\r\n";
-            this.txtTimkiemNCC.SelectedText = "";
-            this.txtTimkiemNCC.Size = new System.Drawing.Size(327, 36);
-            this.txtTimkiemNCC.TabIndex = 6;
-            this.txtTimkiemNCC.TextChanged += new System.EventHandler(this.txtTimkiemNCC_TextChanged);
-            // 
-            // btnTimkiemNCC
-            // 
-            this.btnTimkiemNCC.BorderRadius = 8;
-            this.btnTimkiemNCC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemNCC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimkiemNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimkiemNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimkiemNCC.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimkiemNCC.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemNCC.Location = new System.Drawing.Point(382, 77);
-            this.btnTimkiemNCC.Name = "btnTimkiemNCC";
-            this.btnTimkiemNCC.Size = new System.Drawing.Size(153, 36);
-            this.btnTimkiemNCC.TabIndex = 7;
-            this.btnTimkiemNCC.Text = "Tìm kiếm ";
-            this.btnTimkiemNCC.Click += new System.EventHandler(this.btnTimkiemNCC_Click);
             // 
             // Column1
             // 

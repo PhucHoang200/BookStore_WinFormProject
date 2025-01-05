@@ -62,13 +62,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option;
             this.btnRefesh.Location = new System.Drawing.Point(365, 8);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(100, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 2;
-            this.btnRefesh.Text = "Refesh";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnXoa
@@ -80,6 +81,7 @@
             this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Image = global::GUI.Properties.Resources.remove1;
             this.btnXoa.Location = new System.Drawing.Point(237, 8);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 36);

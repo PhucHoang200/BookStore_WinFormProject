@@ -53,7 +53,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1185, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 68);
             this.guna2Panel1.TabIndex = 0;
             // 
             // cbbLocTheoVaiTro
@@ -67,9 +67,9 @@
             this.cbbLocTheoVaiTro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLocTheoVaiTro.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cbbLocTheoVaiTro.ItemHeight = 30;
-            this.cbbLocTheoVaiTro.Location = new System.Drawing.Point(316, 12);
+            this.cbbLocTheoVaiTro.Location = new System.Drawing.Point(221, 12);
             this.cbbLocTheoVaiTro.Name = "cbbLocTheoVaiTro";
-            this.cbbLocTheoVaiTro.Size = new System.Drawing.Size(187, 36);
+            this.cbbLocTheoVaiTro.Size = new System.Drawing.Size(213, 36);
             this.cbbLocTheoVaiTro.TabIndex = 16;
             this.cbbLocTheoVaiTro.SelectedIndexChanged += new System.EventHandler(this.cbbLocTheoVaiTro_SelectedIndexChanged);
             // 
@@ -80,13 +80,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option2;
             this.btnRefesh.Location = new System.Drawing.Point(162, 12);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(100, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 15;
-            this.btnRefesh.Text = "Refesh";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnThem
@@ -98,6 +99,7 @@
             this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_1;
             this.btnThem.Location = new System.Drawing.Point(24, 12);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 36);
@@ -138,11 +140,11 @@
             this.dgvTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTaiKhoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTaiKhoan.Location = new System.Drawing.Point(0, 74);
+            this.dgvTaiKhoan.Location = new System.Drawing.Point(0, 68);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.ReadOnly = true;
             this.dgvTaiKhoan.RowHeadersVisible = false;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(1185, 673);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(1185, 679);
             this.dgvTaiKhoan.TabIndex = 7;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvTaiKhoan.ThemeStyle.AlternatingRowsStyle.Font = null;

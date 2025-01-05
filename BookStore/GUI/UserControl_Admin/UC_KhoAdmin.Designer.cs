@@ -53,6 +53,7 @@
             // 
             // btnChiTietSach
             // 
+            this.btnChiTietSach.BorderRadius = 8;
             this.btnChiTietSach.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnChiTietSach.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnChiTietSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -73,6 +74,7 @@
             // 
             // btnDSPhieuNhap
             // 
+            this.btnDSPhieuNhap.BorderRadius = 8;
             this.btnDSPhieuNhap.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDSPhieuNhap.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnDSPhieuNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -93,6 +95,7 @@
             // 
             // btnNhapSachDaCo
             // 
+            this.btnNhapSachDaCo.BorderRadius = 8;
             this.btnNhapSachDaCo.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhapSachDaCo.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnNhapSachDaCo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -113,6 +116,7 @@
             // 
             // btnNhapSachMoi
             // 
+            this.btnNhapSachMoi.BorderRadius = 8;
             this.btnNhapSachMoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhapSachMoi.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnNhapSachMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -133,6 +137,7 @@
             // 
             // btnNhaCungCap
             // 
+            this.btnNhaCungCap.BorderRadius = 8;
             this.btnNhaCungCap.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhaCungCap.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnNhaCungCap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

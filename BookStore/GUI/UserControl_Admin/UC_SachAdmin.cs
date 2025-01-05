@@ -54,6 +54,10 @@ namespace GUI.UserControl_Admin
             AddControlsToPanel(uC_Sachsachadmin);
         }
 
-
+        private void btnChiTietSachTrongKho_Click(object sender, EventArgs e)
+        {
+            UC_ChiTietSachTrongKho uC_ChiTietSachTrongKho = new UC_ChiTietSachTrongKho();
+            AddControlsToPanel(uC_ChiTietSachTrongKho);
+        }
     }
 }

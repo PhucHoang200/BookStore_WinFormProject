@@ -59,8 +59,8 @@ namespace GUI
         private void btnDonhang_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnDonhang);
-            UC_DonhangEmployee uC_DonhangEmployee=new UC_DonhangEmployee();
-            AddControlsToPanel(uC_DonhangEmployee );
+            UC_QLDonhangAdmin uC_QLDonhangAdmin = new UC_QLDonhangAdmin(currentUser);
+            AddControlsToPanel(uC_QLDonhangAdmin);
         }
 
         private void btnKhachhang_Click(object sender, EventArgs e)
@@ -111,11 +111,5 @@ namespace GUI
 
         }
 
-        private void btnDoanhThu_Click(object sender, EventArgs e)
-        {
-            moveSidePanel(btnDoanhThu);
-            UC_ThongkeEmployee uC_ThongkeEmployee = new UC_ThongkeEmployee();
-            AddControlsToPanel(uC_ThongkeEmployee);
-        }
     }
 }

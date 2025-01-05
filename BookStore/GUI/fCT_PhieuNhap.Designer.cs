@@ -53,9 +53,9 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.lblTinhTongTien = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -283,6 +283,7 @@
             this.btnInPhieuNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInPhieuNhap.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInPhieuNhap.ForeColor = System.Drawing.Color.White;
+            this.btnInPhieuNhap.Image = global::GUI.Properties.Resources.paper;
             this.btnInPhieuNhap.Location = new System.Drawing.Point(245, 99);
             this.btnInPhieuNhap.Name = "btnInPhieuNhap";
             this.btnInPhieuNhap.Size = new System.Drawing.Size(180, 45);
@@ -319,6 +320,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(700, 39);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(655, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 39);
+            this.guna2ControlBox1.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -334,16 +345,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(655, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 39);
-            this.guna2ControlBox1.TabIndex = 2;
             // 
             // fCT_PhieuNhap
             // 

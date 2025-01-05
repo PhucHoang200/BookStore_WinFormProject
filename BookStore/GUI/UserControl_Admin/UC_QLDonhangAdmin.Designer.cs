@@ -47,6 +47,7 @@
             // 
             // btnDanhsachdonhang
             // 
+            this.btnDanhsachdonhang.BorderRadius = 8;
             this.btnDanhsachdonhang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDanhsachdonhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDanhsachdonhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -65,6 +66,7 @@
             // 
             // btnDonhangmoi
             // 
+            this.btnDonhangmoi.BorderRadius = 8;
             this.btnDonhangmoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDonhangmoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDonhangmoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

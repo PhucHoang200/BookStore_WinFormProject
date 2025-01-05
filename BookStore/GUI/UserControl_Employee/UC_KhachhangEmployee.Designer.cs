@@ -69,7 +69,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(816, 170);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 170);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnRefesh
@@ -79,13 +79,14 @@
             this.btnRefesh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefesh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefesh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefesh.FillColor = System.Drawing.Color.White;
             this.btnRefesh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.refresh_page_option;
             this.btnRefesh.Location = new System.Drawing.Point(284, 126);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(115, 36);
+            this.btnRefesh.Size = new System.Drawing.Size(24, 36);
             this.btnRefesh.TabIndex = 14;
-            this.btnRefesh.Text = "Làm mới";
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
             // btnSua
@@ -97,6 +98,7 @@
             this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Image = global::GUI.Properties.Resources.service__1_;
             this.btnSua.Location = new System.Drawing.Point(159, 126);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 36);
@@ -113,6 +115,7 @@
             this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_;
             this.btnThem.Location = new System.Drawing.Point(34, 126);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 36);
@@ -133,13 +136,13 @@
             this.txtSodienthoai.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtSodienthoai.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSodienthoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSodienthoai.Location = new System.Drawing.Point(497, 89);
+            this.txtSodienthoai.Location = new System.Drawing.Point(762, 85);
             this.txtSodienthoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSodienthoai.Name = "txtSodienthoai";
             this.txtSodienthoai.PasswordChar = '\0';
             this.txtSodienthoai.PlaceholderText = "";
             this.txtSodienthoai.SelectedText = "";
-            this.txtSodienthoai.Size = new System.Drawing.Size(194, 27);
+            this.txtSodienthoai.Size = new System.Drawing.Size(295, 27);
             this.txtSodienthoai.TabIndex = 10;
             // 
             // txtDiachi
@@ -155,20 +158,20 @@
             this.txtDiachi.Font = new System.Drawing.Font("Times New Roman", 14.25F);
             this.txtDiachi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiachi.Location = new System.Drawing.Point(497, 50);
+            this.txtDiachi.Location = new System.Drawing.Point(762, 50);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.PasswordChar = '\0';
             this.txtDiachi.PlaceholderText = "";
             this.txtDiachi.SelectedText = "";
-            this.txtDiachi.Size = new System.Drawing.Size(194, 27);
+            this.txtDiachi.Size = new System.Drawing.Size(295, 27);
             this.txtDiachi.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(378, 95);
+            this.label4.Location = new System.Drawing.Point(621, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 21);
             this.label4.TabIndex = 8;
@@ -178,7 +181,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(378, 56);
+            this.label3.Location = new System.Drawing.Point(621, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 7;
@@ -203,7 +206,7 @@
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(194, 27);
+            this.txtEmail.Size = new System.Drawing.Size(300, 27);
             this.txtEmail.TabIndex = 6;
             // 
             // txtHotenKH
@@ -225,7 +228,7 @@
             this.txtHotenKH.PasswordChar = '\0';
             this.txtHotenKH.PlaceholderText = "";
             this.txtHotenKH.SelectedText = "";
-            this.txtHotenKH.Size = new System.Drawing.Size(194, 27);
+            this.txtHotenKH.Size = new System.Drawing.Size(300, 27);
             this.txtHotenKH.TabIndex = 5;
             // 
             // label2
@@ -255,13 +258,14 @@
             this.btnTimkiemKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimkiemKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTimkiemKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimkiemKH.FillColor = System.Drawing.Color.White;
             this.btnTimkiemKH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiemKH.ForeColor = System.Drawing.Color.White;
-            this.btnTimkiemKH.Location = new System.Drawing.Point(652, 3);
+            this.btnTimkiemKH.Image = global::GUI.Properties.Resources.search_interface_symbol1;
+            this.btnTimkiemKH.Location = new System.Drawing.Point(1148, 6);
             this.btnTimkiemKH.Name = "btnTimkiemKH";
-            this.btnTimkiemKH.Size = new System.Drawing.Size(160, 27);
+            this.btnTimkiemKH.Size = new System.Drawing.Size(30, 27);
             this.btnTimkiemKH.TabIndex = 2;
-            this.btnTimkiemKH.Text = "Tìm kiếm ";
             this.btnTimkiemKH.Click += new System.EventHandler(this.btnTimkiemKH_Click);
             // 
             // txtTimkiemKH
@@ -277,13 +281,13 @@
             this.txtTimkiemKH.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimkiemKH.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTimkiemKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimkiemKH.Location = new System.Drawing.Point(369, 3);
+            this.txtTimkiemKH.Location = new System.Drawing.Point(762, 4);
             this.txtTimkiemKH.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTimkiemKH.Name = "txtTimkiemKH";
             this.txtTimkiemKH.PasswordChar = '\0';
             this.txtTimkiemKH.PlaceholderText = "Nhập tên khách hàng cần tìm";
             this.txtTimkiemKH.SelectedText = "";
-            this.txtTimkiemKH.Size = new System.Drawing.Size(275, 27);
+            this.txtTimkiemKH.Size = new System.Drawing.Size(418, 32);
             this.txtTimkiemKH.TabIndex = 1;
             // 
             // datagridviewKhachhang
@@ -319,7 +323,7 @@
             this.datagridviewKhachhang.RowHeadersVisible = false;
             this.datagridviewKhachhang.RowHeadersWidth = 51;
             this.datagridviewKhachhang.RowTemplate.Height = 30;
-            this.datagridviewKhachhang.Size = new System.Drawing.Size(816, 307);
+            this.datagridviewKhachhang.Size = new System.Drawing.Size(1185, 570);
             this.datagridviewKhachhang.TabIndex = 2;
             this.datagridviewKhachhang.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.datagridviewKhachhang.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -352,7 +356,7 @@
             this.Controls.Add(this.datagridviewKhachhang);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_KhachhangEmployee";
-            this.Size = new System.Drawing.Size(816, 477);
+            this.Size = new System.Drawing.Size(1185, 740);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewKhachhang)).EndInit();

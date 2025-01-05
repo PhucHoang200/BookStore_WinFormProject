@@ -59,10 +59,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.btnInHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblTongTien = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -395,6 +395,14 @@
             this.guna2Panel3.Size = new System.Drawing.Size(700, 197);
             this.guna2Panel3.TabIndex = 2;
             // 
+            // lblTongTien
+            // 
+            this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.Location = new System.Drawing.Point(176, 23);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(187, 23);
+            this.lblTongTien.TabIndex = 3;
+            // 
             // btnInHoaDon
             // 
             this.btnInHoaDon.BorderRadius = 8;
@@ -404,6 +412,7 @@
             this.btnInHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInHoaDon.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnInHoaDon.Image = global::GUI.Properties.Resources.paper;
             this.btnInHoaDon.Location = new System.Drawing.Point(245, 99);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.Size = new System.Drawing.Size(180, 45);
@@ -425,14 +434,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // lblTongTien
-            // 
-            this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(176, 23);
-            this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(187, 23);
-            this.lblTongTien.TabIndex = 3;
             // 
             // fCT_DonHang
             // 

@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbLocTheoThoiGianVaSoLuongTon = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvChiTietSach = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbLocTheoThoiGianVaSoLuongTon = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietSach)).BeginInit();
@@ -50,16 +50,33 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1185, 100);
+            this.guna2Panel1.Size = new System.Drawing.Size(1185, 66);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // cbbLocTheoThoiGianVaSoLuongTon
+            // 
+            this.cbbLocTheoThoiGianVaSoLuongTon.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLocTheoThoiGianVaSoLuongTon.BorderRadius = 8;
+            this.cbbLocTheoThoiGianVaSoLuongTon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLocTheoThoiGianVaSoLuongTon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLocTheoThoiGianVaSoLuongTon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocTheoThoiGianVaSoLuongTon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocTheoThoiGianVaSoLuongTon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLocTheoThoiGianVaSoLuongTon.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbbLocTheoThoiGianVaSoLuongTon.ItemHeight = 30;
+            this.cbbLocTheoThoiGianVaSoLuongTon.Location = new System.Drawing.Point(15, 13);
+            this.cbbLocTheoThoiGianVaSoLuongTon.Name = "cbbLocTheoThoiGianVaSoLuongTon";
+            this.cbbLocTheoThoiGianVaSoLuongTon.Size = new System.Drawing.Size(216, 36);
+            this.cbbLocTheoThoiGianVaSoLuongTon.TabIndex = 0;
+            this.cbbLocTheoThoiGianVaSoLuongTon.SelectedIndexChanged += new System.EventHandler(this.cbbLocTheoThoiGianVaSoLuongTon_SelectedIndexChanged);
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.dgvChiTietSach);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 100);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 66);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1185, 580);
+            this.guna2Panel2.Size = new System.Drawing.Size(1185, 614);
             this.guna2Panel2.TabIndex = 1;
             // 
             // dgvChiTietSach
@@ -98,7 +115,7 @@
             this.dgvChiTietSach.Name = "dgvChiTietSach";
             this.dgvChiTietSach.ReadOnly = true;
             this.dgvChiTietSach.RowHeadersVisible = false;
-            this.dgvChiTietSach.Size = new System.Drawing.Size(1185, 580);
+            this.dgvChiTietSach.Size = new System.Drawing.Size(1185, 614);
             this.dgvChiTietSach.TabIndex = 9;
             this.dgvChiTietSach.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvChiTietSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -150,23 +167,6 @@
             this.Column4.HeaderText = "Ngày nhập cuối cùng";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            // 
-            // cbbLocTheoThoiGianVaSoLuongTon
-            // 
-            this.cbbLocTheoThoiGianVaSoLuongTon.BackColor = System.Drawing.Color.Transparent;
-            this.cbbLocTheoThoiGianVaSoLuongTon.BorderRadius = 8;
-            this.cbbLocTheoThoiGianVaSoLuongTon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbLocTheoThoiGianVaSoLuongTon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLocTheoThoiGianVaSoLuongTon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbLocTheoThoiGianVaSoLuongTon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbLocTheoThoiGianVaSoLuongTon.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbLocTheoThoiGianVaSoLuongTon.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbbLocTheoThoiGianVaSoLuongTon.ItemHeight = 30;
-            this.cbbLocTheoThoiGianVaSoLuongTon.Location = new System.Drawing.Point(26, 20);
-            this.cbbLocTheoThoiGianVaSoLuongTon.Name = "cbbLocTheoThoiGianVaSoLuongTon";
-            this.cbbLocTheoThoiGianVaSoLuongTon.Size = new System.Drawing.Size(216, 36);
-            this.cbbLocTheoThoiGianVaSoLuongTon.TabIndex = 0;
-            this.cbbLocTheoThoiGianVaSoLuongTon.SelectedIndexChanged += new System.EventHandler(this.cbbLocTheoThoiGianVaSoLuongTon_SelectedIndexChanged);
             // 
             // UC_ChiTietSachTrongKho
             // 

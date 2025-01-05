@@ -34,12 +34,14 @@
             this.btnTacgia = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoaisach = new Guna.UI2.WinForms.Guna2Button();
             this.container = new Guna.UI2.WinForms.Guna2ContainerControl();
+            this.btnChiTietSachTrongKho = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2Panel1.Controls.Add(this.btnChiTietSachTrongKho);
             this.guna2Panel1.Controls.Add(this.btnSach);
             this.guna2Panel1.Controls.Add(this.btnNhaxuatban);
             this.guna2Panel1.Controls.Add(this.btnTacgia);
@@ -53,6 +55,7 @@
             // 
             // btnSach
             // 
+            this.btnSach.BorderRadius = 8;
             this.btnSach.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -73,6 +76,7 @@
             // 
             // btnNhaxuatban
             // 
+            this.btnNhaxuatban.BorderRadius = 8;
             this.btnNhaxuatban.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhaxuatban.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNhaxuatban.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -92,6 +96,7 @@
             // 
             // btnTacgia
             // 
+            this.btnTacgia.BorderRadius = 8;
             this.btnTacgia.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnTacgia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTacgia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -111,6 +116,7 @@
             // 
             // btnLoaisach
             // 
+            this.btnLoaisach.BorderRadius = 8;
             this.btnLoaisach.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnLoaisach.CustomBorderColor = System.Drawing.SystemColors.HighlightText;
             this.btnLoaisach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -138,6 +144,27 @@
             this.container.TabIndex = 1;
             this.container.Text = "guna2ContainerControl1";
             // 
+            // btnChiTietSachTrongKho
+            // 
+            this.btnChiTietSachTrongKho.BorderRadius = 8;
+            this.btnChiTietSachTrongKho.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnChiTietSachTrongKho.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTietSachTrongKho.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChiTietSachTrongKho.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChiTietSachTrongKho.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChiTietSachTrongKho.FillColor = System.Drawing.SystemColors.HighlightText;
+            this.btnChiTietSachTrongKho.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.btnChiTietSachTrongKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnChiTietSachTrongKho.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnChiTietSachTrongKho.Location = new System.Drawing.Point(680, 0);
+            this.btnChiTietSachTrongKho.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChiTietSachTrongKho.Name = "btnChiTietSachTrongKho";
+            this.btnChiTietSachTrongKho.PressedColor = System.Drawing.Color.DimGray;
+            this.btnChiTietSachTrongKho.Size = new System.Drawing.Size(170, 60);
+            this.btnChiTietSachTrongKho.TabIndex = 4;
+            this.btnChiTietSachTrongKho.Text = "Chi tiết sách";
+            this.btnChiTietSachTrongKho.Click += new System.EventHandler(this.btnChiTietSachTrongKho_Click);
+            // 
             // UC_SachAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,5 +187,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNhaxuatban;
         private Guna.UI2.WinForms.Guna2Button btnTacgia;
         private Guna.UI2.WinForms.Guna2ContainerControl container;
+        private Guna.UI2.WinForms.Guna2Button btnChiTietSachTrongKho;
     }
 }

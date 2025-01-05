@@ -38,15 +38,15 @@ namespace GUI
             // Lấy dữ liệu từ các biểu đồ
             var theLoaiData = GetThongKeTheLoai(startDate, endDate); // Biểu đồ thể loại
             var nhanVienData = GetThongKeNhanVien(startDate, endDate); // Biểu đồ nhân viên
-            var sachData = GetDoanhThuTheoSanPham(startDate, endDate); // Biểu đồ sách bán
+            var sachData = GetSoLuongBanTheoSanPham(startDate, endDate); // Biểu đồ sách bán
 
             // Thay thế các placeholder trong tệp Word
             document.Replace("{Ngày bắt đầu:}", startDate.ToString("dd/MM/yyyy"), false, true);
             document.Replace("{Ngày kết thúc:}", endDate.ToString("dd/MM/yyyy"), false, true);
 
             // Sách bán chạy nhất
-            var sachBanChay = sachData.OrderByDescending(s => s.TongDoanhThu).FirstOrDefault();
-            string sachBanChayText = sachBanChay != null ? $"{sachBanChay.TenSach} - {sachBanChay.TongDoanhThu:C}" : "Không có dữ liệu";
+            var sachBanChay = sachData.OrderByDescending(s => s.TongSoLuongBan).FirstOrDefault();
+            string sachBanChayText = sachBanChay != null ? $"{sachBanChay.TenSach} - {sachBanChay.TongSoLuongBan:C}" : "Không có dữ liệu";
             document.Replace("{Sách bán chạy nhất:}", sachBanChayText, false, true);
 
             // Thể loại bán chạy nhất
@@ -78,24 +78,28 @@ namespace GUI
                 throw new Exception($"Có lỗi xảy ra khi chuyển đổi sang PDF: {ex.Message}");
             }
         }
-
-        // Phương thức lấy doanh thu theo sản phẩm (sách)
-        private static List<BaoCaoDoanhThuTheoSanPham> GetDoanhThuTheoSanPham(DateTime startDate, DateTime endDate)
+        public static List<BaoCaoSoLuongBanTheoSanPham> GetSoLuongBanTheoSanPham(DateTime startDate, DateTime endDate)
         {
             using (var context = new BookStoreDBEntities())
             {
-                var doanhThu = context.CT_DonHang
-                    .Where(ct => ct.DonHang.NgayMuaHang >= startDate && ct.DonHang.NgayMuaHang <= endDate)
-                    .GroupBy(ct => ct.Sach.TenSach)
-                    .Select(g => new BaoCaoDoanhThuTheoSanPham
+                var soLuongBan = context.CT_DonHang
+                    .Where(ct => ct.DonHang.NgayMuaHang >= startDate && ct.DonHang.NgayMuaHang <= endDate) // Lọc theo ngày mua hàng
+                    .GroupBy(ct => ct.Sach.TenSach) // Group theo tên sách
+                    .Select(g => new BaoCaoSoLuongBanTheoSanPham
                     {
-                        TenSach = g.Key,
-                        TongDoanhThu = g.Sum(x => x.SoLuongBan * x.DonGiaBan)
+                        TenSach = g.Key, // Tên sách
+                        TongSoLuongBan = g.Sum(x => x.SoLuongBan) // Tính tổng số lượng sách bán ra
                     })
                     .ToList();
 
-                return doanhThu;
+                return soLuongBan;
             }
+        }
+
+        public class BaoCaoSoLuongBanTheoSanPham
+        {
+            public string TenSach { get; set; } // Tên sách
+            public int TongSoLuongBan { get; set; } // Tổng số lượng sách bán ra
         }
 
         // Phương thức lấy thống kê thể loại

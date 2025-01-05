@@ -76,7 +76,7 @@ namespace DAL
                     DonGiaNhap = ct.DonGiaNhap,
                     DonGiaBan = ct.DonGiaBan,
                     ThanhTien = ct.SoLuongNhap * ct.DonGiaNhap,
-                    //TenNCC = ct.NhaCungCap.TenNCC
+                    TenNCC = ct.PhieuNhapSach.NhaCungCap.TenNCC
                 })
                 .ToList();
         }

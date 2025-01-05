@@ -250,18 +250,6 @@
     <Compile Include="UserControl_Admin\UC_ThongkeAdmin.Designer.cs">
       <DependentUpon>UC_ThongkeAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl_Employee\UC_DonhangEmployee.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl_Employee\UC_DonhangEmployee.Designer.cs">
-      <DependentUpon>UC_DonhangEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl_Employee\UC_HomeEmployee.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl_Employee\UC_HomeEmployee.Designer.cs">
-      <DependentUpon>UC_HomeEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl_Employee\UC_KhachhangEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,12 +285,6 @@
     </Compile>
     <Compile Include="UserControl_Employee\UC_TheloaisachEmployee.Designer.cs">
       <DependentUpon>UC_TheloaisachEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl_Employee\UC_ThongkeEmployee.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl_Employee\UC_ThongkeEmployee.Designer.cs">
-      <DependentUpon>UC_ThongkeEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="XuatBaoCaoDoanhThu.cs" />
     <EmbeddedResource Include="ConfirmOtp.resx">
@@ -402,9 +384,6 @@
     <EmbeddedResource Include="UserControl_Admin\UC_ThongkeAdmin.resx">
       <DependentUpon>UC_ThongkeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Employee\UC_HomeEmployee.resx">
-      <DependentUpon>UC_HomeEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Employee\UC_KhachhangEmployee.resx">
       <DependentUpon>UC_KhachhangEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Employee\UC_TheloaisachEmployee.resx">
       <DependentUpon>UC_TheloaisachEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Employee\UC_ThongkeEmployee.resx">
-      <DependentUpon>UC_ThongkeEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -452,6 +428,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\pexels-eberhard-grossgasteiger-1624496.jpg" />
+    <None Include="Resources\paper2.png" />
+    <None Include="Resources\multiply.png" />
+    <None Include="Resources\service %281%291.png" />
+    <None Include="Resources\salary2.png" />
+    <None Include="Resources\remove3.png" />
+    <None Include="Resources\remove2.png" />
+    <None Include="Resources\plus %281%292.png" />
+    <None Include="Resources\add2.png" />
+    <None Include="Resources\refresh-page-option3.png" />
+    <None Include="Resources\search-interface-symbol3.png" />
+    <None Include="Resources\salary1.png" />
+    <None Include="Resources\paper1.png" />
+    <None Include="Resources\paper.png" />
+    <None Include="Resources\salary.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\remove1.png" />
+    <None Include="Resources\updated.png" />
+    <None Include="Resources\refresh-page-option2.png" />
+    <None Include="Resources\plus %281%291.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\search-interface-symbol2.png" />
+    <None Include="Resources\refresh-page-option1.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\removed1.png" />
+    <None Include="Resources\removed.png" />
+    <None Include="Resources\service %281%29.png" />
+    <None Include="Resources\plus %281%29.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\plus.png" />
     <None Include="Resources\revenue.png" />
     <None Include="Resources\description.png" />
     <None Include="Resources\warehouse_3045703.png" />

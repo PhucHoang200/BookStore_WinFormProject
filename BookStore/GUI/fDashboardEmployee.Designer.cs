@@ -30,13 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox10 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelSide = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnDoanhThu = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonhang = new Guna.UI2.WinForms.Guna2Button();
             this.btnSach = new Guna.UI2.WinForms.Guna2Button();
@@ -51,7 +49,6 @@
             this.panelControls = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -64,13 +61,11 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox10);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.panelSide);
-            this.guna2Panel1.Controls.Add(this.btnDoanhThu);
             this.guna2Panel1.Controls.Add(this.btnKhachhang);
             this.guna2Panel1.Controls.Add(this.btnDonhang);
             this.guna2Panel1.Controls.Add(this.btnSach);
@@ -81,17 +76,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(215, 800);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2PictureBox10
-            // 
-            this.guna2PictureBox10.Image = global::GUI.Properties.Resources.revenue;
-            this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(10, 406);
-            this.guna2PictureBox10.Name = "guna2PictureBox10";
-            this.guna2PictureBox10.Size = new System.Drawing.Size(52, 58);
-            this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox10.TabIndex = 21;
-            this.guna2PictureBox10.TabStop = false;
             // 
             // guna2PictureBox5
             // 
@@ -144,23 +128,6 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(10, 70);
             this.panelSide.TabIndex = 6;
-            // 
-            // btnDoanhThu
-            // 
-            this.btnDoanhThu.BorderRadius = 8;
-            this.btnDoanhThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoanhThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDoanhThu.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.btnDoanhThu.Location = new System.Drawing.Point(10, 400);
-            this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(205, 70);
-            this.btnDoanhThu.TabIndex = 5;
-            this.btnDoanhThu.Text = "Doanh thu";
-            this.btnDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
             // 
             // btnKhachhang
             // 
@@ -249,7 +216,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.guna2ControlBox1);
@@ -262,9 +229,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(800, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 60);
@@ -273,7 +240,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(299, 60);
@@ -285,8 +252,8 @@
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.CustomClick = true;
-            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ControlBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1124, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(58, 60);
@@ -297,8 +264,8 @@
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.DarkGray;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1070, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(55, 60);
@@ -332,7 +299,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.fDashboardEmployee_Load);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
@@ -355,7 +321,6 @@
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnSach;
         private Guna.UI2.WinForms.Guna2Panel panelSide;
-        private Guna.UI2.WinForms.Guna2Button btnDoanhThu;
         private Guna.UI2.WinForms.Guna2Button btnKhachhang;
         private Guna.UI2.WinForms.Guna2Button btnDonhang;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
@@ -366,6 +331,5 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox10;
     }
 }

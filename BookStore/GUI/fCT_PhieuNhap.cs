@@ -44,7 +44,7 @@ namespace GUI
             if (danhSachSanPham.Any())
             {
                 // Lấy tên nhà cung cấp từ sản phẩm đầu tiên
-                string tenNCC = danhSachSanPham.First().TenNCC;
+                string tenNCC = danhSachSanPham.FirstOrDefault().TenNCC;
                 lblTenNCC.Text = tenNCC; // Giả sử bạn có một label để hiển thị tên nhà cung cấp
             }
 
