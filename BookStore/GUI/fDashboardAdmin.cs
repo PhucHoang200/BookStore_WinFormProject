@@ -27,7 +27,6 @@ namespace GUI
             
         }
 
-
         private void fDashboardAdmin_Load(object sender, EventArgs e)
         {
             // Khởi tạo Timer
@@ -46,7 +45,7 @@ namespace GUI
 
         private void AddHomeAdminControl()
         {
-            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin();
+            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin(currentUser);
             AddControlsToPanel(uC_HomeAdmin);
         }
 
@@ -82,7 +81,7 @@ namespace GUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnHome);
-            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin();
+            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin(currentUser);
             AddControlsToPanel(uC_HomeAdmin);
         }
 
@@ -130,7 +129,9 @@ namespace GUI
 
         private void btnDoanhThu_Click(object sender, EventArgs e)
         {
-
+            moveSidePanel(btnDoanhThu);
+            UC_BCDoanhThuAdmin uC_BCDoanhThuAdmin = new UC_BCDoanhThuAdmin();
+            AddControlsToPanel(uC_BCDoanhThuAdmin);
         }
     }
 }

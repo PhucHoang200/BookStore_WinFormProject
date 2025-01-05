@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
+using GUI.UserControl_Admin;
 using GUI.UserControl_Employee;
 
 namespace GUI
@@ -25,9 +26,7 @@ namespace GUI
 
         public fDashboardEmployee()
         {
-            InitializeComponent();
-            UC_HomeEmployee uC_HomeEmployee = new UC_HomeEmployee();
-            AddControlsToPanel(uC_HomeEmployee);
+            InitializeComponent();          
         } 
 
         private void moveSidePanel(Control btn)
@@ -46,8 +45,8 @@ namespace GUI
         private void btnHome_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnHome);
-            UC_HomeEmployee uC_HomeEmployee=new UC_HomeEmployee();
-            AddControlsToPanel(uC_HomeEmployee );
+            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin(currentUser);
+            AddControlsToPanel(uC_HomeAdmin);
         }
 
         private void btnSach_Click(object sender, EventArgs e)
@@ -96,6 +95,9 @@ namespace GUI
             timer.Tick += Timer_Tick;
             timer.Start();
             label1.Text = DateTime.Now.ToString("dddd, dd/MM/yyyy hh:mm:ss tt");
+
+            UC_HomeAdmin uC_HomeAdmin = new UC_HomeAdmin(currentUser);
+            AddControlsToPanel(uC_HomeAdmin);
         }
 
         private void Timer_Tick(object sender, EventArgs e)

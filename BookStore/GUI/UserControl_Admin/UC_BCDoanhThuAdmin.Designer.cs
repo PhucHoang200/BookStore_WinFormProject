@@ -1,6 +1,6 @@
 ﻿namespace GUI.UserControl_Admin
 {
-    partial class UC_ThongkeAdmin
+    partial class UC_BCDoanhThuAdmin
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnXuatThongKe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXuatBCDoanhThu = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,18 +40,14 @@
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartCategoryRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartEmployeePerformance = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartEmployeePerformance)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.btnXuatThongKe);
+            this.guna2Panel1.Controls.Add(this.btnXuatBCDoanhThu);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -66,23 +58,23 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1185, 97);
-            this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1.TabIndex = 0;
             // 
-            // btnXuatThongKe
+            // btnXuatBCDoanhThu
             // 
-            this.btnXuatThongKe.BorderRadius = 8;
-            this.btnXuatThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuatThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXuatThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXuatThongKe.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnXuatThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnXuatThongKe.Location = new System.Drawing.Point(237, 46);
-            this.btnXuatThongKe.Name = "btnXuatThongKe";
-            this.btnXuatThongKe.Size = new System.Drawing.Size(246, 36);
-            this.btnXuatThongKe.TabIndex = 8;
-            this.btnXuatThongKe.Text = "Xuất dữ liệu thống kê";
-            this.btnXuatThongKe.Click += new System.EventHandler(this.btnXuatThongKe_Click);
+            this.btnXuatBCDoanhThu.BorderRadius = 8;
+            this.btnXuatBCDoanhThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatBCDoanhThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXuatBCDoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXuatBCDoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXuatBCDoanhThu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnXuatBCDoanhThu.ForeColor = System.Drawing.Color.White;
+            this.btnXuatBCDoanhThu.Location = new System.Drawing.Point(237, 46);
+            this.btnXuatBCDoanhThu.Name = "btnXuatBCDoanhThu";
+            this.btnXuatBCDoanhThu.Size = new System.Drawing.Size(246, 36);
+            this.btnXuatBCDoanhThu.TabIndex = 8;
+            this.btnXuatBCDoanhThu.Text = "Xuất báo cáo doanh thu";
+            this.btnXuatBCDoanhThu.Click += new System.EventHandler(this.btnXuatBCDoanhThu_Click);
             // 
             // label3
             // 
@@ -160,63 +152,38 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.chartEmployeePerformance);
-            this.guna2Panel2.Controls.Add(this.chartCategoryRevenue);
             this.guna2Panel2.Controls.Add(this.chartRevenue);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 97);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1185, 643);
-            this.guna2Panel2.TabIndex = 2;
+            this.guna2Panel2.TabIndex = 1;
             // 
             // chartRevenue
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea1);
+            this.chartRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend1);
             this.chartRevenue.Location = new System.Drawing.Point(0, 0);
             this.chartRevenue.Name = "chartRevenue";
-            this.chartRevenue.Size = new System.Drawing.Size(593, 322);
+            this.chartRevenue.Size = new System.Drawing.Size(1185, 643);
             this.chartRevenue.TabIndex = 4;
             // 
-            // chartCategoryRevenue
-            // 
-            chartArea2.Name = "ChartArea2";
-            this.chartCategoryRevenue.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartCategoryRevenue.Legends.Add(legend2);
-            this.chartCategoryRevenue.Location = new System.Drawing.Point(601, 0);
-            this.chartCategoryRevenue.Name = "chartCategoryRevenue";
-            this.chartCategoryRevenue.Size = new System.Drawing.Size(584, 322);
-            this.chartCategoryRevenue.TabIndex = 5;
-            // 
-            // chartEmployeePerformance
-            // 
-            chartArea1.Name = "ChartArea3";
-            this.chartEmployeePerformance.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartEmployeePerformance.Legends.Add(legend1);
-            this.chartEmployeePerformance.Location = new System.Drawing.Point(36, 323);
-            this.chartEmployeePerformance.Name = "chartEmployeePerformance";
-            this.chartEmployeePerformance.Size = new System.Drawing.Size(1146, 321);
-            this.chartEmployeePerformance.TabIndex = 6;
-            // 
-            // UC_ThongkeAdmin
+            // UC_BCDoanhThuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "UC_ThongkeAdmin";
+            this.Name = "UC_BCDoanhThuAdmin";
             this.Size = new System.Drawing.Size(1185, 740);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCategoryRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartEmployeePerformance)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,16 +191,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button btnXuatThongKe;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
+        private Guna.UI2.WinForms.Guna2Button btnViewReport;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnViewReport;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartEmployeePerformance;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartCategoryRevenue;
+        private Guna.UI2.WinForms.Guna2Button btnXuatBCDoanhThu;
     }
 }

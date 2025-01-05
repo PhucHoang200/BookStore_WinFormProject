@@ -77,6 +77,7 @@
     <Compile Include="ConfirmOtp.Designer.cs">
       <DependentUpon>ConfirmOtp.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportReportHelper.cs" />
     <Compile Include="fCT_DonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +135,12 @@
     </Compile>
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_BCDoanhThuAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Admin\UC_BCDoanhThuAdmin.Designer.cs">
+      <DependentUpon>UC_BCDoanhThuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_Admin\UC_ChiTietSachTrongKho.cs">
       <SubType>UserControl</SubType>
@@ -297,6 +304,7 @@
     <Compile Include="UserControl_Employee\UC_ThongkeEmployee.Designer.cs">
       <DependentUpon>UC_ThongkeEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuatBaoCaoDoanhThu.cs" />
     <EmbeddedResource Include="ConfirmOtp.resx">
       <DependentUpon>ConfirmOtp.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +344,9 @@
     </Compile>
     <EmbeddedResource Include="ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Admin\UC_BCDoanhThuAdmin.resx">
+      <DependentUpon>UC_BCDoanhThuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Admin\UC_ChiTietSachTrongKho.resx">
       <DependentUpon>UC_ChiTietSachTrongKho.cs</DependentUpon>

@@ -96,6 +96,12 @@ namespace BUS
             return true;
         }
 
+        public bool CheckOldPassword(TaiKhoan taiKhoan, string inputPassword)
+        {
+            var inputHash = HashPassword(inputPassword);
+            return CompareHashes(taiKhoan.MatKhau, inputHash);
+        }
+
         public List<TaiKhoan> GetAllTaiKhoans()
         {
             return taiKhoanDAL.GetAllTaiKhoans();
@@ -145,5 +151,14 @@ namespace BUS
             // Gọi phương thức DAL để reset mật khẩu
             return taiKhoanDAL.ResetMatKhau(id, matKhauHash);
         }
-    }  
+
+        public TaiKhoan GetTaiKhoanByEmail(string email)
+        {
+            using (var context = new BookStoreDBEntities())
+            {
+                return context.TaiKhoans.Include("VaiTro").SingleOrDefault(t => t.Email == email);
+            }
+        }
+
+    }
 }
