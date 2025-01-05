@@ -12,6 +12,18 @@ namespace BUS
     {
         private NhapSachDaCoDAL _dal = new NhapSachDaCoDAL();
 
+        // Lấy danh sách nhà cung cấp
+        public List<NhaCungCapViewModel> GetAllNhaCungCap()
+        {
+            return _dal.GetNhaCungCapList();
+        }
+
+        // Lấy danh sách sách theo nhà cung cấp
+        public List<SachViewModel> GetSachByNhaCungCap(int nhaCungCapId)
+        {
+            return _dal.GetSachListByNhaCungCap(nhaCungCapId);
+        }
+
         // Lấy danh sách sách
         public List<SachViewModel> LoadSachList()
         {
@@ -24,25 +36,10 @@ namespace BUS
             return _dal.GetSachDetailsById(sachId);
         }
 
-        public int SavePhieuNhap(decimal tongTien)
+        public int SavePhieuNhap(int nhaCungCapId, decimal tongTien)
         {
-            return _dal.SavePhieuNhap(tongTien);
+            return _dal.SavePhieuNhap(nhaCungCapId, tongTien);
         }
-
-        //public void SaveCTPhieuNhap(int phieuNhapId, List<CT_PhieuNhap> chiTietPhieuNhaps)
-        //{
-        //     _dal.SaveCTPhieuNhap(phieuNhapId, chiTietPhieuNhaps);
-        //}
-        // Lưu phiếu nhập và chi tiết phiếu nhập
-        //public int SavePhieuNhap(decimal tongTien, List<CT_PhieuNhap> chiTietPhieuNhaps)
-        //{
-        //    return _dal.SavePhieuNhap(tongTien, chiTietPhieuNhaps);
-        //}
-
-        //public void UpdateKhoAfterPhieuNhap(int sachId, int soLuongNhap, decimal donGiaNhap, decimal donGiaBan)
-        //{
-        //    _dal.UpdateKho(sachId, soLuongNhap, donGiaNhap, donGiaBan);
-        //}
 
     }
 }

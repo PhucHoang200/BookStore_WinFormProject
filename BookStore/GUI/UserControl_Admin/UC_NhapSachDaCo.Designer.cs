@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtNXB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTheLoai = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTacGia = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbTenSach = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemVaoPhieuNhap = new Guna.UI2.WinForms.Guna2Button();
@@ -55,6 +59,7 @@
             this.btnLuuPhieuNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvChitietPhieunhap = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cbbLocNCC = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,11 +70,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbTenSach = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtTacGia = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTheLoai = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNXB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSLNhap)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.txtNCC);
+            this.guna2Panel1.Controls.Add(this.cbbLocNCC);
             this.guna2Panel1.Controls.Add(this.txtNXB);
             this.guna2Panel1.Controls.Add(this.txtTheLoai);
             this.guna2Panel1.Controls.Add(this.txtTacGia);
@@ -105,6 +105,95 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1185, 199);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // txtNXB
+            // 
+            this.txtNXB.BorderRadius = 8;
+            this.txtNXB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNXB.DefaultText = "";
+            this.txtNXB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNXB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNXB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNXB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNXB.Enabled = false;
+            this.txtNXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNXB.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNXB.Location = new System.Drawing.Point(554, 11);
+            this.txtNXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.PasswordChar = '\0';
+            this.txtNXB.PlaceholderText = "";
+            this.txtNXB.SelectedText = "";
+            this.txtNXB.Size = new System.Drawing.Size(180, 27);
+            this.txtNXB.TabIndex = 24;
+            this.txtNXB.TextChanged += new System.EventHandler(this.txtNXB_TextChanged);
+            // 
+            // txtTheLoai
+            // 
+            this.txtTheLoai.BorderRadius = 8;
+            this.txtTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTheLoai.DefaultText = "";
+            this.txtTheLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTheLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTheLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTheLoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTheLoai.Enabled = false;
+            this.txtTheLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTheLoai.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTheLoai.Location = new System.Drawing.Point(110, 102);
+            this.txtTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTheLoai.Name = "txtTheLoai";
+            this.txtTheLoai.PasswordChar = '\0';
+            this.txtTheLoai.PlaceholderText = "";
+            this.txtTheLoai.SelectedText = "";
+            this.txtTheLoai.Size = new System.Drawing.Size(180, 27);
+            this.txtTheLoai.TabIndex = 23;
+            this.txtTheLoai.TextChanged += new System.EventHandler(this.txtTheLoai_TextChanged);
+            // 
+            // txtTacGia
+            // 
+            this.txtTacGia.BorderRadius = 8;
+            this.txtTacGia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTacGia.DefaultText = "";
+            this.txtTacGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTacGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTacGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTacGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTacGia.Enabled = false;
+            this.txtTacGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTacGia.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTacGia.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTacGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTacGia.Location = new System.Drawing.Point(110, 53);
+            this.txtTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTacGia.Name = "txtTacGia";
+            this.txtTacGia.PasswordChar = '\0';
+            this.txtTacGia.PlaceholderText = "";
+            this.txtTacGia.SelectedText = "";
+            this.txtTacGia.Size = new System.Drawing.Size(180, 27);
+            this.txtTacGia.TabIndex = 22;
+            this.txtTacGia.TextChanged += new System.EventHandler(this.txtTacGia_TextChanged);
+            // 
+            // cbbTenSach
+            // 
+            this.cbbTenSach.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTenSach.BorderRadius = 8;
+            this.cbbTenSach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTenSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTenSach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTenSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTenSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTenSach.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbbTenSach.ItemHeight = 21;
+            this.cbbTenSach.Location = new System.Drawing.Point(110, 11);
+            this.cbbTenSach.Name = "cbbTenSach";
+            this.cbbTenSach.Size = new System.Drawing.Size(306, 27);
+            this.cbbTenSach.TabIndex = 21;
+            this.cbbTenSach.SelectedIndexChanged += new System.EventHandler(this.cbbTenSach_SelectedIndexChanged);
             // 
             // btnHuy
             // 
@@ -167,13 +256,13 @@
             this.txtDonGiaBan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGiaBan.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDonGiaBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGiaBan.Location = new System.Drawing.Point(933, 53);
+            this.txtDonGiaBan.Location = new System.Drawing.Point(923, 53);
             this.txtDonGiaBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDonGiaBan.Name = "txtDonGiaBan";
             this.txtDonGiaBan.PasswordChar = '\0';
             this.txtDonGiaBan.PlaceholderText = "";
             this.txtDonGiaBan.SelectedText = "";
-            this.txtDonGiaBan.Size = new System.Drawing.Size(180, 27);
+            this.txtDonGiaBan.Size = new System.Drawing.Size(232, 27);
             this.txtDonGiaBan.TabIndex = 16;
             this.txtDonGiaBan.TextChanged += new System.EventHandler(this.txtDonGiaBan_TextChanged);
             // 
@@ -190,13 +279,13 @@
             this.txtDonGiaNhap.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGiaNhap.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDonGiaNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGiaNhap.Location = new System.Drawing.Point(933, 11);
+            this.txtDonGiaNhap.Location = new System.Drawing.Point(923, 11);
             this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.PasswordChar = '\0';
             this.txtDonGiaNhap.PlaceholderText = "";
             this.txtDonGiaNhap.SelectedText = "";
-            this.txtDonGiaNhap.Size = new System.Drawing.Size(180, 27);
+            this.txtDonGiaNhap.Size = new System.Drawing.Size(232, 27);
             this.txtDonGiaNhap.TabIndex = 15;
             this.txtDonGiaNhap.TextChanged += new System.EventHandler(this.txtDonGiaNhap_TextChanged);
             // 
@@ -209,6 +298,7 @@
             this.txtNamXB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtNamXB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNamXB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNamXB.Enabled = false;
             this.txtNamXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNamXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamXB.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -239,7 +329,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(812, 108);
+            this.label9.Location = new System.Drawing.Point(800, 102);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 21);
             this.label9.TabIndex = 8;
@@ -249,7 +339,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(812, 59);
+            this.label8.Location = new System.Drawing.Point(800, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 21);
             this.label8.TabIndex = 7;
@@ -259,7 +349,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(812, 17);
+            this.label7.Location = new System.Drawing.Point(800, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 21);
             this.label7.TabIndex = 6;
@@ -462,7 +552,24 @@
             this.dgvChitietPhieunhap.ThemeStyle.RowsStyle.Height = 22;
             this.dgvChitietPhieunhap.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvChitietPhieunhap.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvChitietPhieunhap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitietPhieunhap_CellContentClick);
+            this.dgvChitietPhieunhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitietPhieunhap_CellClick);
+            // 
+            // cbbLocNCC
+            // 
+            this.cbbLocNCC.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLocNCC.BorderRadius = 8;
+            this.cbbLocNCC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLocNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLocNCC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLocNCC.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbbLocNCC.ItemHeight = 21;
+            this.cbbLocNCC.Location = new System.Drawing.Point(923, 96);
+            this.cbbLocNCC.Name = "cbbLocNCC";
+            this.cbbLocNCC.Size = new System.Drawing.Size(232, 27);
+            this.cbbLocNCC.TabIndex = 25;
+            this.cbbLocNCC.SelectedIndexChanged += new System.EventHandler(this.cbbLocNCC_SelectedIndexChanged);
             // 
             // Column1
             // 
@@ -523,7 +630,7 @@
             // Column9
             // 
             this.Column9.DataPropertyName = "Column9";
-            this.Column9.HeaderText = "NCC";
+            this.Column9.HeaderText = "Mã NCC";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
@@ -533,115 +640,6 @@
             this.Column10.HeaderText = "Thành tiền";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            // 
-            // cbbTenSach
-            // 
-            this.cbbTenSach.BackColor = System.Drawing.Color.Transparent;
-            this.cbbTenSach.BorderRadius = 8;
-            this.cbbTenSach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTenSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTenSach.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTenSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTenSach.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTenSach.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbbTenSach.ItemHeight = 21;
-            this.cbbTenSach.Location = new System.Drawing.Point(110, 11);
-            this.cbbTenSach.Name = "cbbTenSach";
-            this.cbbTenSach.Size = new System.Drawing.Size(180, 27);
-            this.cbbTenSach.TabIndex = 21;
-            this.cbbTenSach.SelectedIndexChanged += new System.EventHandler(this.cbbTenSach_SelectedIndexChanged);
-            // 
-            // txtTacGia
-            // 
-            this.txtTacGia.BorderRadius = 8;
-            this.txtTacGia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTacGia.DefaultText = "";
-            this.txtTacGia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTacGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTacGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTacGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTacGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTacGia.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTacGia.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTacGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTacGia.Location = new System.Drawing.Point(110, 53);
-            this.txtTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTacGia.Name = "txtTacGia";
-            this.txtTacGia.PasswordChar = '\0';
-            this.txtTacGia.PlaceholderText = "";
-            this.txtTacGia.SelectedText = "";
-            this.txtTacGia.Size = new System.Drawing.Size(180, 27);
-            this.txtTacGia.TabIndex = 22;
-            this.txtTacGia.TextChanged += new System.EventHandler(this.txtTacGia_TextChanged);
-            // 
-            // txtTheLoai
-            // 
-            this.txtTheLoai.BorderRadius = 8;
-            this.txtTheLoai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTheLoai.DefaultText = "";
-            this.txtTheLoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTheLoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTheLoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTheLoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTheLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTheLoai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTheLoai.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTheLoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTheLoai.Location = new System.Drawing.Point(110, 102);
-            this.txtTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.PasswordChar = '\0';
-            this.txtTheLoai.PlaceholderText = "";
-            this.txtTheLoai.SelectedText = "";
-            this.txtTheLoai.Size = new System.Drawing.Size(180, 27);
-            this.txtTheLoai.TabIndex = 23;
-            this.txtTheLoai.TextChanged += new System.EventHandler(this.txtTheLoai_TextChanged);
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.BorderRadius = 8;
-            this.txtNXB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNXB.DefaultText = "";
-            this.txtNXB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNXB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNXB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNXB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNXB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNXB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNXB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtNXB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNXB.Location = new System.Drawing.Point(554, 11);
-            this.txtNXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.PasswordChar = '\0';
-            this.txtNXB.PlaceholderText = "";
-            this.txtNXB.SelectedText = "";
-            this.txtNXB.Size = new System.Drawing.Size(180, 27);
-            this.txtNXB.TabIndex = 24;
-            this.txtNXB.TextChanged += new System.EventHandler(this.txtNXB_TextChanged);
-            // 
-            // txtNCC
-            // 
-            this.txtNCC.BorderRadius = 8;
-            this.txtNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNCC.DefaultText = "";
-            this.txtNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNCC.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNCC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNCC.Location = new System.Drawing.Point(933, 102);
-            this.txtNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNCC.Name = "txtNCC";
-            this.txtNCC.PasswordChar = '\0';
-            this.txtNCC.PlaceholderText = "";
-            this.txtNCC.SelectedText = "";
-            this.txtNCC.Size = new System.Drawing.Size(180, 27);
-            this.txtNCC.TabIndex = 25;
-            this.txtNCC.TextChanged += new System.EventHandler(this.txtNCC_TextChanged);
             // 
             // UC_NhapSachDaCo
             // 
@@ -691,6 +689,11 @@
         private Guna.UI2.WinForms.Guna2Button btnLuuPhieuNhap;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvChitietPhieunhap;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbTenSach;
+        private Guna.UI2.WinForms.Guna2TextBox txtNXB;
+        private Guna.UI2.WinForms.Guna2TextBox txtTheLoai;
+        private Guna.UI2.WinForms.Guna2TextBox txtTacGia;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbLocNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -701,10 +704,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbTenSach;
-        private Guna.UI2.WinForms.Guna2TextBox txtNCC;
-        private Guna.UI2.WinForms.Guna2TextBox txtNXB;
-        private Guna.UI2.WinForms.Guna2TextBox txtTheLoai;
-        private Guna.UI2.WinForms.Guna2TextBox txtTacGia;
     }
 }

@@ -18,4 +18,10 @@ namespace DTO
         public decimal DonGiaBan { get; set; }
         public string TenNCC { get; set; }
     }
+
+    public class NhaCungCapViewModel
+    {
+        public int Id { get; set; }  // Mã nhà cung cấp
+        public string TenNCC { get; set; }  // Tên nhà cung cấp
+    }
 }

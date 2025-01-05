@@ -25,16 +25,18 @@ namespace GUI.UserControl_Admin
 
         private void UC_NhapSachDaCo_Load(object sender, EventArgs e)
         {
-            LoadSachToComboBox();
+            //LoadSachToComboBox();
+            LoadNhaCungCapToComboBox();
         }
 
-        private void LoadSachToComboBox()
+        private void LoadNhaCungCapToComboBox()
         {
-            var sachList = _bus.LoadSachList();
-            cbbTenSach.DataSource = sachList;
-            cbbTenSach.DisplayMember = "TenSach";
-            cbbTenSach.ValueMember = "Id";
+            var nhaCungCapList = _bus.GetAllNhaCungCap();  // Lấy tất cả nhà cung cấp
+            cbbLocNCC.DataSource = nhaCungCapList;
+            cbbLocNCC.DisplayMember = "TenNCC";
+            cbbLocNCC.ValueMember = "Id";
         }
+
         private void cbbTenSach_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbTenSach.SelectedValue is int selectedId)
@@ -48,7 +50,6 @@ namespace GUI.UserControl_Admin
                     txtNamXB.Text = sachDetails.NamXuatBan.ToString();
                     txtDonGiaNhap.Text = sachDetails.DonGiaNhap.ToString();
                     txtDonGiaBan.Text = sachDetails.DonGiaBan.ToString();
-                    txtNCC.Text = sachDetails.TenNCC;
                 }
             }
         }
@@ -88,30 +89,66 @@ namespace GUI.UserControl_Admin
 
         }
 
-        private void txtNCC_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvChitietPhieunhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnThemVaoPhieuNhap_Click(object sender, EventArgs e)
         {
-            if (cbbTenSach.SelectedValue is int selectedId)
+            // Kiểm tra các trường nhập liệu
+            if (string.IsNullOrEmpty(txtDonGiaNhap.Text) || string.IsNullOrEmpty(txtDonGiaBan.Text))
             {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin giá nhập và giá bán.");
+                return;
+            }
+
+            if (numSLNhap.Value <= 0)
+            {
+                MessageBox.Show("Số lượng nhập phải lớn hơn 0.");
+                return;
+            }
+
+            // Kiểm tra giá nhập phải bé hơn hoặc bằng giá bán
+            if (Convert.ToDecimal(txtDonGiaNhap.Text) > Convert.ToDecimal(txtDonGiaBan.Text))
+            {
+                MessageBox.Show("Giá nhập không thể lớn hơn giá bán.");
+                return;
+            }
+
+            // Lấy mã sách từ SelectedValue (nếu đã thiết lập ValueMember là mã sách)
+            if (cbbTenSach.SelectedValue is int selectedSachId)
+            {
+                var tenSach = cbbTenSach.Text; // Lấy tên sách từ ComboBox (SelectedItem là tên sách)
+                int selectedNCCId = (int)cbbLocNCC.SelectedValue; // Lấy ID nhà cung cấp từ cbbLocNCC
+
+                // Kiểm tra nếu sách đã có trong DataGridView
+                foreach (DataGridViewRow row in dgvChitietPhieunhap.Rows)
+                {
+                    if (row.Cells["Column1"].Value.ToString() == tenSach)  // Kiểm tra tên sách đã có chưa
+                    {
+                        MessageBox.Show("Sách này đã được thêm vào phiếu nhập. Vui lòng cập nhật thông tin.");
+                        return;
+                    }
+
+                    // Kiểm tra nếu đã có sách và ID nhà cung cấp khác
+                    int nhaCungCapIdInRow = Convert.ToInt32(row.Cells["Column9"].Value);  // Cột ID nhà cung cấp trong DataGridView
+                    if (nhaCungCapIdInRow != selectedNCCId)
+                    {
+                        MessageBox.Show("Các sách trong phiếu nhập phải cùng một nhà cung cấp. Vui lòng kiểm tra lại.");
+                        return;
+                    }
+                }
+
+                // Tạo chi tiết phiếu nhập
                 var chiTiet = new CT_PhieuNhap
                 {
                     SoLuongNhap = (int)numSLNhap.Value,
                     DonGiaNhap = Convert.ToDecimal(txtDonGiaNhap.Text),
-                    DonGiaBan = Convert.ToDecimal(txtDonGiaBan.Text)
+                    DonGiaBan = Convert.ToDecimal(txtDonGiaBan.Text),
+                    MaSach = selectedSachId, // Lưu mã sách vào chi tiết phiếu nhập
                 };
 
                 // Tính thành tiền cho sách này
                 decimal thanhTien = chiTiet.SoLuongNhap * chiTiet.DonGiaNhap;
 
+                // Thêm chi tiết vào danh sách tạm thời
                 _chiTietPhieuNhapList.Add(chiTiet);
 
                 // Tính toán tổng tiền cho phiếu nhập
@@ -120,31 +157,120 @@ namespace GUI.UserControl_Admin
                 // Cập nhật tổng tiền vào label lblTinhTongTien
                 lblTinhTongTien.Text = $"{tongTien:N2}";  // Định dạng tiền tệ
 
+                // Thêm vào DataGridView
                 dgvChitietPhieunhap.Rows.Add(
-                    cbbTenSach.Text,
-                    txtTacGia.Text,
-                    txtTheLoai.Text,
-                    txtNXB.Text,
-                    txtNamXB.Text,
-                    numSLNhap.Value,
-                    txtDonGiaNhap.Text,
-                    txtDonGiaBan.Text,
-                    txtNCC.Text,
-                    thanhTien
+                    tenSach,               // Tên sách (lấy từ cbbTenSach.Text)
+                    txtTacGia.Text,        // Tác giả
+                    txtTheLoai.Text,       // Thể loại
+                    txtNXB.Text,           // Nhà xuất bản
+                    txtNamXB.Text,         // Năm xuất bản
+                    numSLNhap.Value,       // Số lượng nhập
+                    txtDonGiaNhap.Text,    // Đơn giá nhập
+                    txtDonGiaBan.Text,     // Đơn giá bán
+                    selectedNCCId,          // ID nhà cung cấp (lưu vào cột trước thành tiền)
+                    thanhTien             // Thành tiền
+
                 );
 
                 MessageBox.Show("Thêm sách vào phiếu nhập thành công!");
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sách.");
+            }
         }
 
+        private void dgvChitietPhieunhap_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra nếu người dùng click vào một hàng (không phải tiêu đề)
+            if (e.RowIndex >= 0)
+            {
+                // Lấy thông tin từ hàng đã click
+                var row = dgvChitietPhieunhap.Rows[e.RowIndex];
+
+                // Cập nhật thông tin vào các TextBox và ComboBox tương ứng
+                cbbTenSach.Text = row.Cells["Column1"].Value.ToString();
+                txtTacGia.Text = row.Cells["Column2"].Value.ToString();
+                txtTheLoai.Text = row.Cells["Column3"].Value.ToString();
+                txtNXB.Text = row.Cells["Column4"].Value.ToString();
+                txtNamXB.Text = row.Cells["Column5"].Value.ToString();
+                numSLNhap.Value = Convert.ToDecimal(row.Cells["Column6"].Value);
+                txtDonGiaNhap.Text = row.Cells["Column7"].Value.ToString();
+                txtDonGiaBan.Text = row.Cells["Column8"].Value.ToString();
+            }
+        }
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            // Kiểm tra các trường nhập liệu
+            if (string.IsNullOrEmpty(txtDonGiaNhap.Text) || string.IsNullOrEmpty(txtDonGiaBan.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin giá nhập và giá bán.");
+                return;
+            }
 
-        }
+            if (numSLNhap.Value <= 0)
+            {
+                MessageBox.Show("Số lượng nhập phải lớn hơn 0.");
+                return;
+            }
+
+            // Kiểm tra giá nhập phải bé hơn hoặc bằng giá bán
+            if (Convert.ToDecimal(txtDonGiaNhap.Text) > Convert.ToDecimal(txtDonGiaBan.Text))
+            {
+                MessageBox.Show("Giá nhập không thể lớn hơn giá bán.");
+                return;
+            }
+
+            // Kiểm tra nếu sách đã được chọn
+            if (cbbTenSach.SelectedValue is int selectedSachId)
+            {
+                var tenSach = cbbTenSach.Text; // Lấy tên sách từ ComboBox
+
+                // Duyệt qua danh sách chi tiết phiếu nhập để cập nhật thông tin
+                foreach (DataGridViewRow row in dgvChitietPhieunhap.Rows)
+                {
+                    // Kiểm tra xem sách có tên tương ứng với tên sách đã chọn
+                    if (row.Cells["Column1"].Value.ToString() == tenSach)
+                    {
+                        // Cập nhật thông tin vào dòng tương ứng
+                        row.Cells["Column2"].Value = txtTacGia.Text;
+                        row.Cells["Column3"].Value = txtTheLoai.Text;
+                        row.Cells["Column4"].Value = txtNXB.Text;
+                        row.Cells["Column5"].Value = txtNamXB.Text;
+                        row.Cells["Column6"].Value = numSLNhap.Value;
+                        row.Cells["Column7"].Value = txtDonGiaNhap.Text;
+                        row.Cells["Column8"].Value = txtDonGiaBan.Text;
+
+                        // Tính lại thành tiền cho sách này
+                        decimal thanhTien = (decimal)numSLNhap.Value * Convert.ToDecimal(txtDonGiaNhap.Text);
+                        row.Cells["Column10"].Value = thanhTien;
+
+                        // Tính toán tổng tiền cho phiếu nhập
+                        decimal tongTien = 0;
+                        foreach (DataGridViewRow r in dgvChitietPhieunhap.Rows)
+                        {
+                            tongTien += Convert.ToDecimal(r.Cells["Column10"].Value);
+                        }
+
+                        // Cập nhật tổng tiền vào label lblTinhTongTien
+                        lblTinhTongTien.Text = $"{tongTien:N2}";  // Định dạng tiền tệ
+
+                        MessageBox.Show("Cập nhật thông tin sách thành công!");
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sách để cập nhật.");
+            }
+        }   
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            numSLNhap.Value = 0;
+            txtDonGiaBan.Clear();
+            txtDonGiaNhap.Clear();
         }
 
         private void lblTinhTongTien_Click(object sender, EventArgs e)
@@ -173,41 +299,96 @@ namespace GUI.UserControl_Admin
                     return;
                 }
 
+                int? nhaCungCapId = null;
+                foreach (DataGridViewRow row in dgvChitietPhieunhap.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    // Kiểm tra xem ô có giá trị hay không
+                    if (row.Cells["Column9"].Value != null)
+                    {
+                        // Lấy ID nhà cung cấp từ cột "Mã nhà cung cấp"
+                        int currentNCCId;
+                        if (int.TryParse(row.Cells["Column9"].Value.ToString(), out currentNCCId))
+                        {
+                            // Nếu chưa có nhà cung cấp, gán nhà cung cấp từ sách đầu tiên
+                            if (nhaCungCapId == null)
+                            {
+                                nhaCungCapId = currentNCCId;
+                            }
+                            else if (nhaCungCapId != currentNCCId)
+                            {
+                                // Nếu có sách có nhà cung cấp khác, thông báo lỗi và dừng lại
+                                MessageBox.Show("Các sách trong phiếu nhập phải cùng một nhà cung cấp. Vui lòng kiểm tra lại.");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mã nhà cung cấp không hợp lệ.");
+                            return;
+                        }
+                    }
+                }
+
+                // Nếu không tìm thấy nhà cung cấp hoặc nhà cung cấp không hợp lệ
+                if (nhaCungCapId == null)
+                {
+                    MessageBox.Show("Không thể xác định nhà cung cấp cho phiếu nhập.");
+                    return;
+                }
+
                 // Lưu phiếu nhập và lấy ID của phiếu nhập vừa lưu
-                var phieuNhapId = _bus.SavePhieuNhap(tongTien);
+                int phieuNhapId = _bus.SavePhieuNhap(nhaCungCapId.Value, tongTien);
+
+                if (phieuNhapId <= 0) // Kiểm tra nếu ID phiếu nhập không hợp lệ
+                {
+                    MessageBox.Show("Lỗi khi tạo phiếu nhập. Vui lòng kiểm tra lại.");
+                    return;
+                }
 
                 // Lưu chi tiết phiếu nhập
                 foreach (DataGridViewRow row in dgvChitietPhieunhap.Rows)
                 {
                     if (row.IsNewRow) continue;
 
-                    // Lấy sachId từ cbbTenSach
-                    int sachId = Convert.ToInt32(cbbTenSach.SelectedValue);
-
-                    // Lấy TenNCC từ txtNCC và tìm nhaCungCapId từ cơ sở dữ liệu
-                    string tenNCC = txtNCC.Text.Trim();
-                    int nhaCungCapId = GetNhaCungCapIdByName(tenNCC);
-
-                    if (nhaCungCapId == -1)
+                    // Kiểm tra giá trị trước khi chuyển đổi
+                    if (row.Cells["Column1"].Value == null || row.Cells["Column6"].Value == null || row.Cells["Column7"].Value == null || row.Cells["Column8"].Value == null || row.Cells["Column10"].Value == null)
                     {
-                        MessageBox.Show("Không tìm thấy nhà cung cấp với tên đã nhập.");
+                        MessageBox.Show("Một hoặc nhiều ô không có giá trị hợp lệ. Vui lòng kiểm tra lại.");
                         return;
                     }
 
-                    // Lấy các giá trị khác từ DataGridView
-                    int soLuongNhap = Convert.ToInt32(row.Cells["Column6"].Value);
-                    decimal donGiaNhap = Convert.ToDecimal(row.Cells["Column7"].Value);
-                    decimal donGiaBan = Convert.ToDecimal(row.Cells["Column8"].Value);
-                    decimal thanhTien = Convert.ToDecimal(row.Cells["Column10"].Value);
+                    // Lấy tên sách từ cột "Column1"
+                    string tenSach = row.Cells["Column1"].Value.ToString();
 
-                    // Gọi phương thức lưu chi tiết phiếu nhập
-                    LuuCTPhieuNhap(phieuNhapId, sachId, nhaCungCapId, soLuongNhap, donGiaNhap, donGiaBan, thanhTien);
+                    // Tra cứu IdSach từ tên sách
+                    int sachId = GetSachIdByName(tenSach); // Phương thức này sẽ trả về Id của sách
+
+                    if (sachId == 0)
+                    {
+                        MessageBox.Show($"Không tìm thấy sách với tên {tenSach}. Vui lòng kiểm tra lại.");
+                        return;
+                    }
+                    // Chuyển đổi giá trị từ các ô trong DataGridView
+                    if (
+                        !int.TryParse(row.Cells["Column6"].Value.ToString(), out int soLuongNhap) ||
+                        !decimal.TryParse(row.Cells["Column7"].Value.ToString(), out decimal donGiaNhap) ||
+                        !decimal.TryParse(row.Cells["Column8"].Value.ToString(), out decimal donGiaBan) ||
+                        !decimal.TryParse(row.Cells["Column10"].Value.ToString(), out decimal thanhTien))
+                    {
+                        MessageBox.Show("Dữ liệu không hợp lệ trong các ô. Vui lòng kiểm tra lại.");
+                        return;
+                    }
+
+                    // Lưu chi tiết phiếu nhập
+                    LuuCTPhieuNhap(phieuNhapId, sachId, soLuongNhap, donGiaNhap, donGiaBan, thanhTien);
                 }
 
                 // Hiển thị thông báo thành công
                 MessageBox.Show($"Lưu phiếu nhập thành công! Mã phiếu nhập: {phieuNhapId}");
 
-                // Xóa dữ liệu trong DataGridView và danh sách chi tiết phiếu nhập
+                // Xóa dữ liệu trong DataGridView và reset tổng tiền
                 dgvChitietPhieunhap.Rows.Clear();
                 lblTinhTongTien.Text = "0.00"; // Reset tổng tiền về 0
             }
@@ -218,23 +399,46 @@ namespace GUI.UserControl_Admin
             }
         }
 
-        private void LuuCTPhieuNhap(int phieuNhapId, int sachId, int nhaCungCapId, int soLuongNhap, decimal donGiaNhap, decimal donGiaBan, decimal thanhTien)
+        private void LuuCTPhieuNhap(int phieuNhapId, int sachId, int soLuongNhap, decimal donGiaNhap, decimal donGiaBan, decimal thanhTien)
         {
-            // Lưu chi tiết phiếu nhập vào bảng CT_PhieuNhap
+            try
+            {
+                if (phieuNhapId <= 0) // Kiểm tra phieuNhapId hợp lệ
+                {
+                    MessageBox.Show("Mã phiếu nhập không hợp lệ.");
+                    return;
+                }
+
+                using (var context = new BookStoreDBEntities())
+                {
+                    var ctPhieuNhap = new CT_PhieuNhap
+                    {
+                        MaPhieuNhap = phieuNhapId,
+                        MaSach = sachId,
+                        SoLuongNhap = soLuongNhap,
+                        DonGiaNhap = donGiaNhap,
+                        DonGiaBan = donGiaBan,
+                        ThanhTien = thanhTien
+                    };
+
+                    context.CT_PhieuNhap.Add(ctPhieuNhap);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lưu chi tiết phiếu nhập: {ex.Message}");
+            }
+        }
+
+        // Phương thức để tra cứu IdSach dựa trên tên sách
+        private int GetSachIdByName(string tenSach)
+        {
             using (var context = new BookStoreDBEntities())
             {
-                var ctPhieuNhap = new CT_PhieuNhap
-                {
-                    MaPhieuNhap = phieuNhapId,
-                    MaSach = sachId,
-                    //MaNCC = nhaCungCapId,
-                    SoLuongNhap = soLuongNhap,
-                    DonGiaNhap = donGiaNhap,
-                    DonGiaBan = donGiaBan,
-                    ThanhTien = thanhTien
-                };
-                context.CT_PhieuNhap.Add(ctPhieuNhap);
-                context.SaveChanges();
+                // Tra cứu sách theo tên
+                var sach = context.Saches.FirstOrDefault(s => s.TenSach == tenSach);
+                return sach?.Id ?? 0; // Nếu không tìm thấy sách, trả về 0
             }
         }
 
@@ -257,9 +461,69 @@ namespace GUI.UserControl_Admin
                 return -1;
             }
         }
+
+        private int GetNhaCungCapIdForSach(int sachId)
+        {
+            using (var context = new BookStoreDBEntities())
+            {
+                // Tìm nhà cung cấp của sách dựa trên mã sách thông qua bảng trung gian
+                var sach = context.Saches
+                    .Where(s => s.Id == sachId)
+                    .SelectMany(s => s.NhaCungCaps)  // Lấy danh sách nhà cung cấp của sách qua mối quan hệ nhiều-nhiều
+                    .FirstOrDefault();  // Lấy nhà cung cấp đầu tiên liên kết với sách
+
+                if (sach != null)
+                {
+                    return sach.Id; // Trả về mã nhà cung cấp của sách
+                }
+
+                // Nếu không tìm thấy nhà cung cấp, trả về -1 để báo lỗi
+                return -1;
+            }
+        }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Kiểm tra xem có dòng nào được chọn trong DataGridView không
+                if (dgvChitietPhieunhap.SelectedRows.Count > 0)
+                {
+                    // Xóa dòng đã chọn
+                    foreach (DataGridViewRow row in dgvChitietPhieunhap.SelectedRows)
+                    {
+                        // Xóa dòng
+                        dgvChitietPhieunhap.Rows.RemoveAt(row.Index);
+                    }
+                    // Thông báo xóa thành công
+                    MessageBox.Show("Xóa hàng thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn dòng cần xóa!");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi
+                MessageBox.Show($"Lỗi khi xóa hàng: {ex.Message}");
+            }
+        }
 
+        private void cbbLocNCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbLocNCC.SelectedValue is int nhaCungCapId)
+            {
+                LoadSachByNhaCungCap(nhaCungCapId);  // Load sách theo nhà cung cấp
+            }
+        }
+
+        private void LoadSachByNhaCungCap(int nhaCungCapId)
+        {
+            var sachList = _bus.GetSachByNhaCungCap(nhaCungCapId);  // Lấy sách của nhà cung cấp
+            cbbTenSach.DataSource = sachList;
+            cbbTenSach.DisplayMember = "TenSach";
+            cbbTenSach.ValueMember = "Id";
         }
 
     }
