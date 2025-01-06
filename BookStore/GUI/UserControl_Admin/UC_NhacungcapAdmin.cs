@@ -57,14 +57,20 @@ namespace GUI.UserControl_Admin
         {
             if (!string.IsNullOrWhiteSpace(txtTenNCC.Text))
             {
+                if (_bus.IsTenNCCExists(txtTenNCC.Text))
+                {
+                    MessageBox.Show("Tên nhà cung cấp đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (_bus.AddNhaCungCap(txtTenNCC.Text))
                 {
-                    MessageBox.Show("Thêm nhà cung cấp thành công!");
+                    MessageBox.Show("Thêm nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại!");
+                    MessageBox.Show("Thêm thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -73,16 +79,23 @@ namespace GUI.UserControl_Admin
         {
             if (selectedMaNCC > 0 && !string.IsNullOrWhiteSpace(txtTenNCC.Text))
             {
+                if (_bus.IsTenNCCExists(txtTenNCC.Text))
+                {
+                    MessageBox.Show("Tên nhà cung cấp đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (_bus.UpdateNhaCungCap(selectedMaNCC, txtTenNCC.Text))
                 {
-                    MessageBox.Show("Cập nhật thành công!");
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thất bại!");
+                    MessageBox.Show("Cập nhật thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

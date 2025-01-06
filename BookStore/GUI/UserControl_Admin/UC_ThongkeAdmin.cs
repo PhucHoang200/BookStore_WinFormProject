@@ -33,10 +33,6 @@ namespace GUI.UserControl_Admin
             var theLoaiData = GetThongKeTheLoai(startDate, endDate); // Dữ liệu thể loại bán ra
             var nhanVienData = GetThongKeNhanVien(startDate, endDate); // Dữ liệu nhân viên
 
-            // Tính tổng doanh thu
-            decimal tongSoLuongBan = doanhThuData.Sum(item => item.TongSoLuongBan);
-            label1.Text = $"Tổng số lượng bán: {tongSoLuongBan:C}";
-
             // Xóa dữ liệu cũ trên biểu đồ
             chartRevenue.Series.Clear();
             chartRevenue.ChartAreas.Clear();
@@ -108,12 +104,16 @@ namespace GUI.UserControl_Admin
 
             // Biểu đồ đường thống kê hiệu suất bán hàng của nhân viên
             // Biểu đồ đường thống kê hiệu suất bán hàng của nhân viên
+            // Xóa dữ liệu cũ trên biểu đồ
             chartEmployeePerformance.Series.Clear();
             chartEmployeePerformance.ChartAreas.Clear();
 
             // Tạo ChartArea
             ChartArea chartAreaEmployee = new ChartArea("ChartArea3");
             chartEmployeePerformance.ChartAreas.Add(chartAreaEmployee);
+
+            // Lấy dữ liệu thống kê
+             nhanVienData = GetThongKeNhanVien(startDate, endDate);
 
             // Lặp qua danh sách nhân viên
             foreach (var nhanVien in nhanVienData.GroupBy(x => x.TenNhanVien))
@@ -127,7 +127,7 @@ namespace GUI.UserControl_Admin
                 };
 
                 // Thêm dữ liệu vào Series
-                foreach (var item in nhanVien)
+                foreach (var item in nhanVien.OrderBy(x => x.Ngay)) // Sắp xếp theo ngày
                 {
                     seriesEmployee.Points.AddXY(item.Ngay, item.TongDoanhThu);
                 }
@@ -139,6 +139,7 @@ namespace GUI.UserControl_Admin
             // Thêm tiêu đề biểu đồ
             chartEmployeePerformance.Titles.Clear();
             chartEmployeePerformance.Titles.Add("Hiệu Suất Bán Hàng Của Nhân Viên");
+
 
         }
 
@@ -160,6 +161,7 @@ namespace GUI.UserControl_Admin
                 return nhanVien;
             }
         }
+
 
         // Lấy dữ liệu thể loại bán ra
         public List<BaoCaoDoanhThuTheoTheLoai> GetThongKeTheLoai(DateTime startDate, DateTime endDate)

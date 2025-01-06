@@ -141,5 +141,26 @@ namespace DAL
             }
         }
 
+        public List<Sach> FindSach(string keyword)
+        {
+            // Chuyển từ khóa tìm kiếm về dạng chữ thường để so sánh không phân biệt hoa thường
+            keyword = keyword.ToLower();
+
+            return db.Saches
+                     .Where(sach => sach.TenSach.ToLower().Contains(keyword) || // Tìm theo tên sách
+                                    sach.TacGias.Any(tg => tg.TenTG.ToLower().Contains(keyword)) || // Tìm theo tác giả
+                                    sach.TheLoais.Any(tl => tl.TenTL.ToLower().Contains(keyword)) || // Tìm theo thể loại
+                                    sach.NhaXuatBan.TenNXB.ToLower().Contains(keyword) || // Tìm theo nhà xuất bản
+                                    sach.NamXuatBan.ToString().Contains(keyword)) // Tìm theo năm xuất bản
+                     .ToList();
+        }
+
+        public List<Sach> GetAllSachesWithKho()
+        {
+            return db.Saches
+                     .Include("Khoes") // Chỉ định bảng liên quan bằng tên chuỗi
+                     .ToList();
+        }
+
     }
 }

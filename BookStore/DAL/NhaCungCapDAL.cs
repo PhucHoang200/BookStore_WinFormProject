@@ -27,6 +27,9 @@ namespace DAL
         {
             if (string.IsNullOrWhiteSpace(tenNCC)) return false;
 
+            // Kiểm tra trùng lặp tên
+            if (IsTenNCCExists(tenNCC)) return false;
+
             var newNCC = new NhaCungCap
             {
                 TenNCC = tenNCC
@@ -40,6 +43,9 @@ namespace DAL
         public bool UpdateNhaCungCap(int maNCC, string tenNCC)
         {
             if (maNCC <= 0 || string.IsNullOrWhiteSpace(tenNCC)) return false;
+
+            // Kiểm tra trùng lặp tên
+            if (IsTenNCCExists(tenNCC)) return false;
 
             var ncc = _context.NhaCungCaps.FirstOrDefault(n => n.Id == maNCC);
             if (ncc != null)
@@ -72,6 +78,14 @@ namespace DAL
             return _context.NhaCungCaps
                            .Where(ncc => ncc.TenNCC.Contains(keyword))
                            .ToList();
+        }
+
+        // Kiểm tra tên nhà cung cấp có tồn tại hay không
+        public bool IsTenNCCExists(string tenNCC)
+        {
+            if (string.IsNullOrWhiteSpace(tenNCC)) return false;
+
+            return _context.NhaCungCaps.Any(ncc => ncc.TenNCC == tenNCC);
         }
     }
 }

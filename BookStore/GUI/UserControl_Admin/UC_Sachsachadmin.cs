@@ -24,6 +24,8 @@ namespace GUI.UserControl_Admin
 
         public void hienThiDS_Sach(List<Sach> ds_Sach)
         {
+            
+
             // Tạo DataTable
             DataTable dt = new DataTable();
             dt.Columns.Add("MaSach");
@@ -32,11 +34,13 @@ namespace GUI.UserControl_Admin
             dt.Columns.Add("TheLoai");
             dt.Columns.Add("NhaXuatBan");
             dt.Columns.Add("NamXuatBan");
-            dt.Columns.Add("SoLuong");
+            dt.Columns.Add("DonGiaBan");
 
             // Duyệt qua danh sách sách và thêm vào DataTable
             foreach (var sach in ds_Sach)
             {
+                decimal? donGiaBan = sach.Khoes.FirstOrDefault()?.DonGiaBan;
+
                 dt.Rows.Add(
                     sach.Id,
                     sach.TenSach,
@@ -44,7 +48,7 @@ namespace GUI.UserControl_Admin
                     String.Join(", ", sach.TheLoais.Select(i => i.TenTL)), // Nối tên thể loại thành chuỗi
                     sach.NhaXuatBan.TenNXB,
                     sach.NamXuatBan,
-                    sach.Khoes.Sum(i => i.SoLuongTon) // Tính tổng số lượng tồn (nếu cần)
+                    donGiaBan.HasValue ? donGiaBan.Value.ToString("N0") : "Chưa có giá"
                 );
             }
 
@@ -58,7 +62,7 @@ namespace GUI.UserControl_Admin
             datagridviewSach.Columns["TheLoai"].HeaderText = "Thể Loại";
             datagridviewSach.Columns["NhaXuatBan"].HeaderText = "Nhà Xuất Bản";
             datagridviewSach.Columns["NamXuatBan"].HeaderText = "Năm Xuất Bản";
-            datagridviewSach.Columns["SoLuong"].HeaderText = "Số Lượng";
+            datagridviewSach.Columns["DonGiaBan"].HeaderText = "Đơn giá bán";
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
@@ -70,25 +74,81 @@ namespace GUI.UserControl_Admin
 
         private void btnTimkiemsach_Click(object sender, EventArgs e)
         {
-            string TimKiem = txtTimkiemsach.Text;
+            string TimKiem = txtTimkiemsach.Text.Trim();
 
-            if (TimKiem == "")
+            if (string.IsNullOrEmpty(TimKiem))
             {
-                MessageBox.Show("Khung nhập không được để trống");
+                MessageBox.Show("Nhập thông tin tìm kiếm.");
             }
             else
             {
-                var ds_Sach = sachBUS.FindNhaXuatBanByName(TimKiem);
+                // Gọi hàm tìm kiếm từ lớp BUS
+                var ds_Sach = sachBUS.FindSach(TimKiem);
 
-                if (ds_Sach.Count == 0)
+                if (ds_Sach == null || ds_Sach.Count == 0)
                 {
                     MessageBox.Show("Không có dữ liệu cần tìm.");
                 }
                 else
                 {
-                    hienThiDS_Sach(ds_Sach);
+                    hienThiDS_Sach(ds_Sach); // Hiển thị danh sách sách tìm được
                 }
             }
+        }
+
+        private void cbbLocTheoGiaBan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Lấy giá trị được chọn trong ComboBox
+            string selectedValue = cbbLocTheoGiaBan.SelectedItem?.ToString();
+
+            if (selectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn cách sắp xếp.");
+                return;
+            }
+
+            // Lấy danh sách sách kèm giá bán từ Kho
+            List<Sach> ds_Sach = sachBUS.GetAllSachesWithKho();
+
+            if (ds_Sach == null || ds_Sach.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu sách để lọc.");
+                return;
+            }
+
+            // Sắp xếp danh sách theo lựa chọn
+            switch (selectedValue)
+            {
+                case "Tăng dần":
+                    ds_Sach = ds_Sach
+                        .OrderBy(s => s.Khoes.FirstOrDefault()?.DonGiaBan ?? decimal.MaxValue)
+                        .ToList();
+                    break;
+
+                case "Giảm dần":
+                    ds_Sach = ds_Sach
+                        .OrderByDescending(s => s.Khoes.FirstOrDefault()?.DonGiaBan ?? decimal.MinValue)
+                        .ToList();
+                    break;
+
+                default:
+                    MessageBox.Show("Lựa chọn không hợp lệ.");
+                    return;
+            }
+
+            // Hiển thị danh sách sau khi sắp xếp
+            hienThiDS_Sach(ds_Sach);
+        }
+
+        private void UC_Sachsachadmin_Load(object sender, EventArgs e)
+        {
+            // Thêm tùy chọn vào ComboBox
+            cbbLocTheoGiaBan.Items.Clear();
+            cbbLocTheoGiaBan.Items.Add("Tăng dần");
+            cbbLocTheoGiaBan.Items.Add("Giảm dần");
+
+            // Đặt giá trị mặc định
+            cbbLocTheoGiaBan.SelectedIndex = 0;
         }
     }
 }

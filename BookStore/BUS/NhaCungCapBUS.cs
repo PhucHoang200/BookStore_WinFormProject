@@ -40,5 +40,10 @@ namespace BUS
                       .Where(ncc => ncc.TenNCC.ToLower().Contains(keyword.ToLower()))
                       .ToList();
         }
+
+        public bool IsTenNCCExists(string tenNCC)
+        {
+            return dal.IsTenNCCExists(tenNCC);
+        }
     }
 }

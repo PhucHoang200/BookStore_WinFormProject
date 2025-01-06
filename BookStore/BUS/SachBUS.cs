@@ -46,5 +46,17 @@ namespace BUS
         {
             return sachDAL.DeleteSach(maSach);
         }
+
+        public List<Sach> FindSach(string keyword)
+        {
+            return sachDAL.FindSach(keyword);
+        }
+
+        public List<Sach> GetAllSachesWithKho()
+        {
+            return sachDAL.GetAllSachesWithKho();
+        }
+
+
     }
 }
