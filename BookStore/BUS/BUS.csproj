@@ -68,6 +68,7 @@
     <Compile Include="DonHangBUS.cs" />
     <Compile Include="EmailBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
+    <Compile Include="LoginBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
     <Compile Include="NhapSachDaCoBUS.cs" />
     <Compile Include="NhapSachMoiBUS.cs" />

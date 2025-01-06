@@ -135,9 +135,13 @@ namespace GUI.UserControl_Admin
         public bool KiemTraSoDienThoai(string soDienThoai)
         {
 
-            // Biểu thức chính quy kiểm tra số điện thoại
-            string phonePattern = @"^0\d{9}$";
-            return Regex.IsMatch(soDienThoai, phonePattern);
+            // Kiểm tra nếu không phải chuỗi 10 ký tự số hoặc không bắt đầu bằng số 0
+            if (!System.Text.RegularExpressions.Regex.IsMatch(soDienThoai, @"^0\d{9}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! Số điện thoại phải bao gồm 10 chữ số và bắt đầu bằng số 0.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -241,5 +245,6 @@ namespace GUI.UserControl_Admin
                 
             }
         }
+
     }
 }

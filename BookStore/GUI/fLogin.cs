@@ -11,20 +11,21 @@ using BUS;
 using System.Net;
 using System.Net.Mail;
 using DTO;
+using System.Runtime.CompilerServices;
 
 namespace GUI
 {
     public partial class fLogin : Form
-    {
+    {       
         private TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
         private string tempOtp; // Lưu OTP tạm thời
         private string tempEmail; // Lưu email tạm thời
         private LoginViewModel currentUser;
+        private LoginBUS loginBUS = new LoginBUS();
         public fLogin()
         {
             InitializeComponent();
         }
-
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
@@ -42,7 +43,7 @@ namespace GUI
                 string role;
                 int idTaiKhoan;
 
-                if (taiKhoanBUS.CheckLogin(email, password, out role, out idTaiKhoan))
+                if (loginBUS.CheckLogin(email, password, out role, out idTaiKhoan))
                 {
                     // Lưu thông tin đăng nhập
                     var currentUser = new LoginViewModel
@@ -96,7 +97,7 @@ namespace GUI
             try
             {
                 // Kiểm tra email tồn tại
-                if (!taiKhoanBUS.CheckEmailExist(email))
+                if (!loginBUS.CheckEmailExist(email))
                 {
                     MessageBox.Show("Email không tồn tại trong hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;

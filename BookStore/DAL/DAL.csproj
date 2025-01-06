@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="DonHangDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
+    <Compile Include="LoginDAL.cs" />
     <Compile Include="NhaCungCapDAL.cs" />
     <Compile Include="NhapSachDaCoDAL.cs" />
     <Compile Include="NhapSachMoiDAL.cs" />

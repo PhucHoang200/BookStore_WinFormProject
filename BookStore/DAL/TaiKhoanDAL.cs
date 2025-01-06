@@ -13,11 +13,6 @@ namespace DAL
     {
         private BookStoreDBEntities db = new BookStoreDBEntities();
 
-        public TaiKhoan GetTaiKhoanByEmail(string email)
-        {
-            return db.TaiKhoans.FirstOrDefault(x => x.Email == email);
-        }
-
         public List<TaiKhoan> GetAllTaiKhoans()
         {
             return db.TaiKhoans.Include(t => t.VaiTro).ToList();

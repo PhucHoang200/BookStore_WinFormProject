@@ -14,42 +14,7 @@ namespace BUS
     {
         private TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();
 
-        public bool CheckLogin(string email, string password, out string role, out int idTaiKhoan)
-        {
-            // Lấy thông tin tài khoản từ DAL
-            TaiKhoan taiKhoan = taiKhoanDAL.GetTaiKhoanByEmail(email);
-
-            if (taiKhoan == null)
-            {
-                role = null;
-                idTaiKhoan = 0;
-                return false; // Không tìm thấy tài khoản
-            }
-
-            // Kiểm tra mật khẩu
-            byte[] dbHash = taiKhoan.MatKhau;
-            byte[] userHash = HashPassword(password);
-            if (!CompareHashes(dbHash, userHash))
-            {
-                role = null;
-                idTaiKhoan = 0;
-                return false; // Mật khẩu sai
-            }
-
-            // Lấy vai trò và Id tài khoản
-            role = taiKhoan.VaiTro.TenVaiTro; // Giả sử thuộc tính VaiTro lưu thông tin vai trò
-            idTaiKhoan = taiKhoan.Id; // Lấy Id tài khoản
-            return true;
-        }
-
-        public bool CheckEmailExist(string email)
-        {
-            using (var context = new BookStoreDBEntities())
-            {
-                // Kiểm tra xem email có tồn tại trong bảng TaiKhoan không
-                return context.TaiKhoans.Any(tk => tk.Email == email);
-            }
-        }
+      
 
         // Cập nhật mật khẩu mới (băm SHA256)
         public bool UpdatePassword(string email, string newPasswordHash)

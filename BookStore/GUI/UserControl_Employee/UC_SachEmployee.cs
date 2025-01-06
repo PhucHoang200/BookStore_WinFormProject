@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.UserControl_Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,8 +47,8 @@ namespace GUI.UserControl_Employee
 
         private void btnSach_Click(object sender, EventArgs e)
         {
-            UC_SachsachEmployee uC_SachsachEmployee = new UC_SachsachEmployee();
-            AddControlsToPanel(uC_SachsachEmployee);
+            UC_Sachsachadmin uC_Sachsachadmin = new UC_Sachsachadmin();
+            AddControlsToPanel(uC_Sachsachadmin);
         }
     }
 }
